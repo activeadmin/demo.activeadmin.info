@@ -1,0 +1,22 @@
+<% title "Product" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @product.title %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+<p>
+  <strong>Image File Name:</strong>
+  <%= @product.image_file_name %>
+</p>
+
+<p>
+  <%= link_to "View All", products_path %>
+</p>

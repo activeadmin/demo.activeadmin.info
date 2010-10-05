@@ -1,0 +1,19 @@
+<% title "Products" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Image File Name</th>
+  </tr>
+  <% for product in @products %>
+    <tr>
+      <td><%= product.title %></td>
+      <td><%= product.description %></td>
+      <td><%= product.price %></td>
+      <td><%= product.image_file_name %></td>
+      <td><%= link_to "Show", product %></td>
+    </tr>
+  <% end %>
+</table>
