@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "The Active Admin Store" %></title>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
@@ -9,10 +9,22 @@
   </head>
   <body>
     <div id="container">
+
+      <div id="auth">
+        <% if logged_in? %>
+          Welcome <%= current_user.username %>! Not you?
+          <%= link_to "Log out", logout_path %>
+        <% else %>
+          <%= link_to "Sign up", signup_path %> or
+          <%= link_to "Log in", login_path %>.
+        <% end %>
+      </div>
+      
+      <h1><a href="/">The Active Admin Store</a></h1>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
+      <%= content_tag :h2, yield(:title) if show_title? %>
       <%= yield %>
     </div>
   </body>

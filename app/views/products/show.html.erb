@@ -1,22 +1,27 @@
-<% title "Product" %>
+<% title @product.title %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-<p>
-  <strong>Image File Name:</strong>
-  <%= @product.image_file_name %>
-</p>
+<%= image_tag "products/#{@product.image_file_name}", :id => "product-image" %>
 
-<p>
-  <%= link_to "View All", products_path %>
-</p>
+<div id="product-description">
+  <% if @product.description %>
+    <%= simple_format @product.description %>
+  <% else %>
+    <p><em>No Description</em></p>
+  <% end %>
+
+  <p>
+    <strong>Price:</strong>
+    <%= number_to_currency @product.price %> 
+    (<%= link_to "Add to Card", add_to_cart_path(@product.id) %>)
+  </p>
+
+  <p>
+    <strong>By:</strong>
+    <%= @product.author %>
+  </p>
+
+  <p> <%= link_to "Back to All Products", products_path %> </p>
+</div>
+
+<div style="clear:both;"></div>
+

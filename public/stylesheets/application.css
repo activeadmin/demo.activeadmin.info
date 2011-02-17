@@ -27,6 +27,15 @@ a {
   margin-top: 20px;
 }
 
+#auth { float: right; }
+
+.product { width: 150px; height: 300px; float: left; margin-right: 20px; margin-bottom: 20px }
+.product img { width: 150px; }
+.product h2 { font-size: 0.8em; }
+
+#product-image { width: 150px; float: left; margin-right: 20px;  }
+#product-description { margin-left: 170px;  }
+
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
   margin: 10px 0;

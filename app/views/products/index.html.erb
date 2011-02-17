@@ -1,19 +1,8 @@
-<% title "Products" %>
+<% @products.each do |product| %>
+  <div class="product">
+    <%= link_to image_tag("products/" + product.image_file_name), product_path(product) %>
+    <h2><%= link_to product.title, product_path(product) %></h2>
+  </div>
+<% end %>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Price</th>
-    <th>Image File Name</th>
-  </tr>
-  <% for product in @products %>
-    <tr>
-      <td><%= product.title %></td>
-      <td><%= product.description %></td>
-      <td><%= product.price %></td>
-      <td><%= product.image_file_name %></td>
-      <td><%= link_to "Show", product %></td>
-    </tr>
-  <% end %>
-</table>
+<div style="clear:both"></div>
