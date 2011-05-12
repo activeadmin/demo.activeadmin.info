@@ -1,7 +1,5 @@
 ActiveAdmin.register User, :as => "Customer" do
 
-  actions :index, :show
-
   filter :username
   filter :email
   filter :created_at
