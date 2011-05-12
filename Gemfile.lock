@@ -57,6 +57,9 @@ GEM
       i18n (~> 0.4)
     haml (3.1.1)
     has_scope (0.5.0)
+    hoptoad_notifier (2.4.9)
+      activesupport
+      builder
     i18n (0.5.0)
     inherited_resources (1.2.2)
       has_scope (~> 0.5.0)
@@ -78,6 +81,7 @@ GEM
       activesupport (~> 3.0.2)
       arel (~> 2.0.2)
     mime-types (1.16)
+    newrelic_rpm (3.0.0)
     nifty-generators (0.4.6)
     nokogiri (1.4.4)
     orm_adapter (0.0.5)
@@ -119,7 +123,9 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   faker
+  hoptoad_notifier (= 2.4.9)
   mechanize
+  newrelic_rpm (= 3.0.0)
   nifty-generators
   rails (= 3.0.6)
   sqlite3-ruby
