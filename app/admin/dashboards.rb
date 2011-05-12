@@ -1,19 +1,25 @@
 ActiveAdmin::Dashboards.build do
 
-  section "Recent Orders" do
+  section "Recent Orders", :priority => 1 do
     table_for Order.complete.order('id desc').limit(10) do
-      column("Date")    {|order| pretty_format(order.checked_out_at)                        } 
       column("State")   {|order| status_tag(order.state)                                    } 
       column("Customer"){|order| link_to(order.user.email, admin_customer_path(order.user)) } 
       column("Total")   {|order| number_to_currency order.total_price                       } 
     end
   end
 
-  section "Recent Customers", :priority => 15 do
+  section "Recent Customers", :priority => 2 do
     table_for User.order('id desc').limit(10).each do |customer|
       column(:email)    {|customer| link_to(customer.email, admin_customer_path(customer)) }
     end
   end
+
+  section "ActiveAdmin Demo", :priority => 3 do
+    div do
+      render('/admin/sidebar_links', :model => 'dashboards')
+    end
+  end
+
 
   # Define your dashboard sections here. Each block will be
   # rendered on the dashboard in the context of the view. So just
