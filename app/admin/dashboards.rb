@@ -1,7 +1,7 @@
 ActiveAdmin::Dashboards.build do
 
   section "Recent Orders" do
-    table_for Order.complete.limit(10) do
+    table_for Order.complete.order('id desc').limit(10) do
       column("Order", :sortable => :id){|order| link_to "##{order.id}", admin_order_path(order) }
       column("State"){|order| status_tag(order.state) }
       column("Date", :sortable => :checked_out_at){|order| pretty_format(order.checked_out_at) }
