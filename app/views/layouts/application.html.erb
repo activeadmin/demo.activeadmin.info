@@ -10,7 +10,13 @@
   <body>
     <div id="container">
 
+      <div id="flash_notice">
+        Welcome to the demo application of <a href='http://activeadmin.info'>ActiveAdmin</a>.
+        Go <a href='/admin'>try out the Administration interface</a>!
+      </div>
+
       <div id="auth">
+        <a href='/admin'>Administration interface</a> |
         <% if logged_in? %>
           Welcome <%= current_user.username %>! Not you?
           <%= link_to "Log out", logout_path %>
