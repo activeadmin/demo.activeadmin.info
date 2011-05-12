@@ -3,11 +3,13 @@
   :author: "David Flanagan and Yukihiro Matsumoto "
   :title: The Ruby Programming Language
   :image_file_name: the-ruby-programming-language.jpg
+  :featured: true
   :available_on: 2011-02-16
 - :price: "28.20"
   :author: "Dave Thomas, Chad Fowler,  and Andy Hunt "
   :title: "Programming Ruby 1.9: The Pragmatic Programmers' Guide (Facets of Ruby)"
   :image_file_name: programming-ruby-1-9-the-pragmatic-programmers-guide-facets-of-ruby-.jpg
+  :featured: true
   :available_on: 2011-02-16
 - :price: "22.61"
   :author: "Peter Cooper "
@@ -43,6 +45,7 @@
   :author: "Bruce Tate "
   :title: "Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages (Pragmatic Programmers)"
   :image_file_name: seven-languages-in-seven-weeks-a-pragmatic-guide-to-learning-programming-languages-pragmatic-programmers-.jpg
+  :featured: true
   :available_on: 2011-02-16
 - :price: "9.99"
   :author: "Neil Smyth "
@@ -78,6 +81,7 @@
   :author: "David A. Black "
   :title: The Well-Grounded Rubyist
   :image_file_name: the-well-grounded-rubyist.jpg
+  :featured: true
   :available_on: 2011-02-16
 - :price: "31.17"
   :author: "Lucas Carlson and Leonard Richardson "
