@@ -8,7 +8,7 @@ ActiveAdmin.register Product do
     products.where("available_on > ?", Date.today)
   end
   scope :featured_products do |products|
-    products.where({:featured => true})
+    products.where(:featured => true)
   end
 
   index :as => :grid do |product|
@@ -24,7 +24,7 @@ ActiveAdmin.register Product do
 
   sidebar :product_stats, :only => :show do
     attributes_table_for resource do
-      row("Total Sold:"){ Order.find_with_product(resource).count }
+      row("Total Sold")  { Order.find_with_product(resource).count }
       row("Dollar Value"){ number_to_currency LineItem.where(:product_id => resource.id).sum(:price) }
     end
   end
@@ -35,4 +35,7 @@ ActiveAdmin.register Product do
     end.join(content_tag("br")).html_safe
   end
 
+  sidebar "Demo: Check out the Code!" do
+    link_to "app/admin/products.rb", "https://github.com/gregbell/activeadmin-store/blob/demo/app/admin/products.rb"
+  end
 end
