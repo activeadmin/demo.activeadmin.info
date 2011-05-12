@@ -35,7 +35,7 @@ ActiveAdmin.register User, :as => "Customer" do
     end
   end
 
-  sidebar "Demo: Check out the Code!" do
-    link_to "app/admin/users.rb", "https://github.com/gregbell/activeadmin-store/blob/demo/app/admin/users.rb"
+  sidebar "Active Admin Demo" do
+    render('/admin/sidebar_links', :model => 'users')
   end
 end

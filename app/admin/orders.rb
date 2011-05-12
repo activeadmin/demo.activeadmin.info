@@ -38,7 +38,7 @@ ActiveAdmin.register Order do
     end
   end
 
-  sidebar "Demo: Check out the Code!" do
-    link_to "app/admin/orders.rb", "https://github.com/gregbell/activeadmin-store/blob/demo/app/admin/orders.rb"
+  sidebar "Active Admin Demo" do
+    render('/admin/sidebar_links', :model => 'orders')
   end
 end

@@ -35,7 +35,7 @@ ActiveAdmin.register Product do
     end.join(content_tag("br")).html_safe
   end
 
-  sidebar "Demo: Check out the Code!" do
-    link_to "app/admin/products.rb", "https://github.com/gregbell/activeadmin-store/blob/demo/app/admin/products.rb"
+  sidebar "Active Admin Demo" do
+    render('/admin/sidebar_links', :model => 'products')
   end
 end
