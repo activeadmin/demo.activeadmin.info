@@ -1,6 +1,7 @@
 /* Active Admin CSS */
 span.icon {
-  vertical-align: middle; }
+  vertical-align: middle;
+  display: inline-block; }
 
 span.icon svg {
   vertical-align: baseline; }
@@ -1366,6 +1367,8 @@ table.dashboard {
   -webkit-box-shadow: none;
   background: none;
   width: 150px;
+  font-size: 0.9em;
+  padding-left: 0;
   text-transform: uppercase;
   color: #5e6469;
   text-shadow: white 0 1px 0; }
@@ -1374,6 +1377,9 @@ table.dashboard {
   font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: 0.2em; }
+
+.sidebar_section .attributes_table th {
+  width: 50px; }
 
 .status {
   background: #cacaca;
