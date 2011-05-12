@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-  has_many :line_items
+  has_many :line_items, :dependent => :destroy
   belongs_to :user
 
   scope :in_progress, where("orders.checked_out_at IS NULL")
