@@ -2,11 +2,16 @@ ActiveAdmin::Dashboards.build do
 
   section "Recent Orders" do
     table_for Order.complete.order('id desc').limit(10) do
-      column("Order", :sortable => :id){|order| link_to "##{order.id}", admin_order_path(order) }
-      column("State"){|order| status_tag(order.state) }
-      column("Date", :sortable => :checked_out_at){|order| pretty_format(order.checked_out_at) }
-      column("Customer", :sortable => :user_id){|order| auto_link(order.user) }
-      column("Total"){|order| number_to_currency order.total_price }
+      column("Date")    {|order| pretty_format(order.checked_out_at)                        } 
+      column("State")   {|order| status_tag(order.state)                                    } 
+      column("Customer"){|order| link_to(order.user.email, admin_customer_path(order.user)) } 
+      column("Total")   {|order| number_to_currency order.total_price                       } 
+    end
+  end
+
+  section "Recent Customers", :priority => 15 do
+    table_for User.order('id desc').limit(10).each do |customer|
+      column(:email)    {|customer| link_to(customer.email, admin_customer_path(customer)) }
     end
   end
 
