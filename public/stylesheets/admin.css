@@ -1,0 +1,4 @@
+/* Icons are not looking good in Chrome */
+.icon {
+  display: none !important; 
+}
