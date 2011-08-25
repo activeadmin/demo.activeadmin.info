@@ -448,6 +448,7 @@ form {
     -moz-border-radius: 3px;
     border-radius: 3px;
     font-size: 0.95em;
+    font-family: Helvetica, Arial, sans-serif;
     outline: none;
     padding: 8px 10px 7px; }
     form input[type=text]:focus, form input[type=password]:focus, form input[type=email]:focus, form input[type=url]:focus, form input[type=tel]:focus, form textarea:focus {
@@ -1126,6 +1127,7 @@ a.button, input[type=submit] {
     border-bottom: 1px solid #E8E8E8; }
 
 .blank_slate_container {
+  clear: both;
   text-align: center; }
   .blank_slate_container .blank_slate {
     -webkit-border-radius: 3px;
