@@ -2,3 +2,4 @@
 .icon {
   display: none !important; 
 }
+table.dashboard td { width: 33%; }
