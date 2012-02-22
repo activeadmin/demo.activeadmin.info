@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :orders, :dependent => :destroy
 
+  has_many :user_addresses
 
   attr_accessor :password
   before_save :prepare_password

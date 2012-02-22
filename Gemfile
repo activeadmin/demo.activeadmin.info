@@ -21,6 +21,8 @@ gem "faker"
 gem 'newrelic_rpm', '~> 3.9'
 gem 'airbrake'
 
+gem 'country_select'
+
 group :development do
   gem 'mechanize','2.7.3'
 end
