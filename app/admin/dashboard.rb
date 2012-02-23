@@ -8,7 +8,7 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Recent Orders" do
           table_for Order.complete.order('id desc').limit(10) do
             column("State")   {|order| status_tag(order.state)                                    }
-            column("Customer"){|order| link_to(order.user.email, admin_customer_path(order.user)) }
+            column("Customer"){|order| link_to(order.user.email, admin_user_path(order.user)) }
             column("Total")   {|order| number_to_currency order.total_price                       }
           end
         end
@@ -16,8 +16,8 @@ ActiveAdmin.register_page "Dashboard" do
 
       column do
         panel "Recent Customers" do
-          table_for User.order('id desc').limit(10).each do |customer|
-            column(:email)    {|customer| link_to(customer.email, admin_customer_path(customer)) }
+          table_for User.order('id desc').limit(10).each do |user|
+            column(:email)    {|user| link_to(user.email, admin_user_path(user)) }
           end
         end
       end
