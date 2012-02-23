@@ -1451,7 +1451,7 @@ a:hover {
   -moz-box-shadow: inset 0 1px 4px #dddddd;
   -webkit-box-shadow: inset 0 1px 4px #dddddd;
   margin-bottom: 20px; }
-  .section h3, .panel h3 {
+  .section > h3, .panel > h3 {
     background: #efefef;
     background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#dfe1e2));
     background: -moz-linear-gradient(-90deg, #efefef, #dfe1e2);
@@ -1475,12 +1475,12 @@ a:hover {
     margin-bottom: 0.5em;
     color: #5e6469;
     padding: 5px 10px 3px 10px; }
-    .section h3 span.icon svg path, .section h3 span.icon svg polygon, .section h3 span.icon svg rect, .section h3 span.icon svg circle, .panel h3 span.icon svg path, .panel h3 span.icon svg polygon, .panel h3 span.icon svg rect, .panel h3 span.icon svg circle {
+    .section > h3 span.icon svg path, .section > h3 span.icon svg polygon, .section > h3 span.icon svg rect, .section > h3 span.icon svg circle, .panel > h3 span.icon svg path, .panel > h3 span.icon svg polygon, .panel > h3 span.icon svg rect, .panel > h3 span.icon svg circle {
       fill: #5e6469 !important; }
-    .section h3 span.icon, .panel h3 span.icon {
+    .section > h3 span.icon, .panel > h3 span.icon {
       width: 1em;
       height: 1em; }
-    .section h3 span.icon svg, .panel h3 span.icon svg {
+    .section > h3 span.icon svg, .panel > h3 span.icon svg {
       width: 1em;
       height: 1em; }
   .section > div, .panel > div {
@@ -1498,7 +1498,7 @@ a:hover {
   -moz-box-shadow: inset 0 1px 4px #dddddd;
   -webkit-box-shadow: inset 0 1px 4px #dddddd;
   margin-bottom: 20px; }
-  .sidebar_section h3 {
+  .sidebar_section > h3 {
     background: #efefef;
     background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#dfe1e2));
     background: -moz-linear-gradient(-90deg, #efefef, #dfe1e2);
@@ -1522,12 +1522,12 @@ a:hover {
     margin-bottom: 0.5em;
     color: #5e6469;
     padding: 5px 10px 3px 10px; }
-    .sidebar_section h3 span.icon svg path, .sidebar_section h3 span.icon svg polygon, .sidebar_section h3 span.icon svg rect, .sidebar_section h3 span.icon svg circle {
+    .sidebar_section > h3 span.icon svg path, .sidebar_section > h3 span.icon svg polygon, .sidebar_section > h3 span.icon svg rect, .sidebar_section > h3 span.icon svg circle {
       fill: #5e6469 !important; }
-    .sidebar_section h3 span.icon {
+    .sidebar_section > h3 span.icon {
       width: 1em;
       height: 1em; }
-    .sidebar_section h3 span.icon svg {
+    .sidebar_section > h3 span.icon svg {
       width: 1em;
       height: 1em; }
   .sidebar_section > div {
@@ -1535,6 +1535,9 @@ a:hover {
   .sidebar_section hr {
     border: none;
     border-bottom: 1px solid #E8E8E8; }
+
+.columns {
+  margin-bottom: 10px; }
 
 .scopes li .count {
   color: #8e979e;
@@ -1743,7 +1746,7 @@ table.dashboard {
     -moz-box-shadow: inset 0 1px 4px #dddddd;
     -webkit-box-shadow: inset 0 1px 4px #dddddd;
     margin-bottom: 20px; }
-    table.dashboard .dashboard_section h3 {
+    table.dashboard .dashboard_section > h3 {
       background: #efefef;
       background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#dfe1e2));
       background: -moz-linear-gradient(-90deg, #efefef, #dfe1e2);
@@ -1767,12 +1770,12 @@ table.dashboard {
       margin-bottom: 0.5em;
       color: #5e6469;
       padding: 5px 10px 3px 10px; }
-      table.dashboard .dashboard_section h3 span.icon svg path, table.dashboard .dashboard_section h3 span.icon svg polygon, table.dashboard .dashboard_section h3 span.icon svg rect, table.dashboard .dashboard_section h3 span.icon svg circle {
+      table.dashboard .dashboard_section > h3 span.icon svg path, table.dashboard .dashboard_section > h3 span.icon svg polygon, table.dashboard .dashboard_section > h3 span.icon svg rect, table.dashboard .dashboard_section > h3 span.icon svg circle {
         fill: #5e6469 !important; }
-      table.dashboard .dashboard_section h3 span.icon {
+      table.dashboard .dashboard_section > h3 span.icon {
         width: 1em;
         height: 1em; }
-      table.dashboard .dashboard_section h3 span.icon svg {
+      table.dashboard .dashboard_section > h3 span.icon svg {
         width: 1em;
         height: 1em; }
     table.dashboard .dashboard_section > div {

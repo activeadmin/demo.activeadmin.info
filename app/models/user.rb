@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
 
   has_many :orders, :dependent => :destroy
 
+  has_many :user_addresses
+
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :username, :email, :password, :password_confirmation
 
@@ -39,3 +41,4 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest([pass, password_salt].join)
   end
 end
+
