@@ -1,10 +1,13 @@
 ActiveAdmin.register User, :as => "Customer" do
 
+  config.batch_actions = true
+
   filter :username
   filter :email
   filter :created_at
 
   index do
+    selectable_column
     id_column
     column :username
     column :email
