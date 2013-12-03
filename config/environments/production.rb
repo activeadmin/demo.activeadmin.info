@@ -27,9 +27,11 @@ ActiveadminDepot::Application.configure do
   # Use a different cache store in production
   # config.cache_store = :mem_cache_store
 
-  # Disable Rails's static asset server
-  # In production, Apache or nginx will already do this
-  config.serve_static_assets = false
+  # Enable Rails's static asset server for Heroku
+  config.serve_static_assets = true
+
+  # Set static assets cache header. rack-cache will cache those.
+  config.static_cache_control = "public, max-age=31536000"
 
   # Enable serving of images, stylesheets, and javascripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
