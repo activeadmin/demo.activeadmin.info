@@ -7,6 +7,7 @@ gem "activeadmin", '0.5.0'
 gem "faker"
 gem 'newrelic_rpm', '3.1.1'
 gem 'hoptoad_notifier', '2.4.11'
+gem 'rack-throttle'
 
 group :development do
   gem 'mechanize'
