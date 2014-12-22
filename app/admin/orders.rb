@@ -1,4 +1,5 @@
 ActiveAdmin.register Order do
+  menu :priority => 3
   actions :index, :show
 
   filter :total_price

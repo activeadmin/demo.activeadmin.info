@@ -1,5 +1,6 @@
 ActiveAdmin.register User, :as => "Customer" do
 
+  menu :priority => 4
   config.batch_actions = true
 
   filter :username
