@@ -7,21 +7,22 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 #
 
-# Create default admin user
-AdminUser.create! do |a|
-  a.email = 'admin@example.com'
-  a.password = a.password_confirmation = 'password'
-end
-
-# Create default user
-User.create! do |u|
-  u.username = 'user'
-  u.email = 'user@example.com'
-  u.password = u.password_confirmation = 'password'
-end
+## Create default admin user
+#AdminUser.create! do |a|
+#  a.email = 'admin@example.com'
+#  a.password = a.password_confirmation = 'password'
+#end
+#
+## Create default user
+#User.create! do |u|
+#  u.username = 'user'
+#  u.email = 'user@example.com'
+#  u.password = u.password_confirmation = 'password'
+#end
 
 # Load each product from the yaml file
 YAML.load_file(File.expand_path("../seeds/products.yml", __FILE__)).each do |product|
+  p product
   Product.create! product
 end
 

@@ -12,7 +12,7 @@ ActiveAdmin.register User, :as => "Customer" do
     column :username
     column :email
     column :created_at
-    default_actions
+    actions
   end
 
   show :title => :username do

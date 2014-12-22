@@ -1,3 +1,0 @@
-# The Active Admin Store
-
-This is a test application to show off the power of Active Admin.

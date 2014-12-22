@@ -38,4 +38,11 @@ ActiveAdmin.register Product do
   sidebar "Active Admin Demo" do
     render('/admin/sidebar_links', :model => 'products')
   end
+
+
+  controller do
+    def permitted_params
+      params.permit product: [:title, :description,:author,:price, :featured, :available_on,:image_file_name]
+    end
+  end
 end
