@@ -1,4 +1,5 @@
 ActiveAdmin.register Product do
+  permit_params :title, :description,:author,:price, :featured, :available_on,:image_file_name
 
   scope :all, :default => true
   scope :available do |products|
@@ -40,9 +41,4 @@ ActiveAdmin.register Product do
   end
 
 
-  controller do
-    def permitted_params
-      params.permit product: [:title, :description,:author,:price, :featured, :available_on,:image_file_name]
-    end
-  end
 end
