@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/gregbell/active_admin.git
-  revision: f51d96dddb5e5be182220037f2d70117b9350303
+  remote: git://github.com/activeadmin/activeadmin.git
+  revision: 74799b8652c6c09d632b5bd50b52027507aace3c
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -101,9 +101,6 @@ GEM
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
       responders (~> 1.0.0.rc)
-    jbuilder (2.2.6)
-      activesupport (>= 3.0.0, < 5)
-      multi_json (~> 1.2)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -139,6 +136,8 @@ GEM
     polyamorous (1.1.0)
       activerecord (>= 3.0)
     rack (1.5.2)
+    rack-cache (1.2)
+      rack (>= 0.4)
     rack-test (0.6.2)
       rack (>= 1.0)
     rack-throttle (0.4.0)
@@ -171,8 +170,6 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.1)
-    rdoc (4.2.0)
-      json (~> 1.4)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rspec-core (3.0.3)
@@ -198,9 +195,6 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
-    sdoc (0.4.1)
-      json (~> 1.7, >= 1.7.7)
-      rdoc (~> 4.0)
     shoulda (3.5.0)
       shoulda-context (~> 1.0, >= 1.0.1)
       shoulda-matchers (>= 1.4.1, < 3.0)
@@ -264,16 +258,15 @@ DEPENDENCIES
   heroku-deflater
   hoptoad_notifier (= 2.4.11)
   inherited_resources (~> 1.4.1)
-  jbuilder (~> 2.0)
   jquery-rails
   mechanize (= 2.7.3)
   pg
+  rack-cache
   rack-throttle
   rails (= 4.1.8)
   rails_12factor
   rspec-rails (~> 3.0.0)
   sass-rails (~> 4.0.3)
-  sdoc (~> 0.4.0)
   shoulda
   shoulda-matchers
   simplecov
