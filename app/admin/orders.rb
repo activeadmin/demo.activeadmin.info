@@ -28,8 +28,6 @@ ActiveAdmin.register Order do
         end
       end
     end
-
-    active_admin_comments
   end
 
   sidebar :customer_information, :only => :show do

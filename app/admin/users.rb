@@ -25,7 +25,6 @@ ActiveAdmin.register User, :as => "Customer" do
         column("Total")                   {|order| number_to_currency order.total_price }
       end
     end
-    active_admin_comments
   end
 
   sidebar "Customer Details", :only => :show do
