@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
+# https://github.com/rails/rails/issues/9619
+ActionController::Base.config.relative_url_root = ''
+
 require 'rack/throttle'
 
 module ActiveadminDepot

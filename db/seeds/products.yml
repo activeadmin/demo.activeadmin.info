@@ -1,170 +1,127 @@
---- 
-- :price: "23.75"
-  :author: "David Flanagan and Yukihiro Matsumoto "
-  :title: The Ruby Programming Language
+---
+- :title: The Ruby Programming Language
+  :author: 'David Flanagan and Yukihiro Matsumoto '
+  :price: '27.13'
   :image_file_name: the-ruby-programming-language.jpg
-  :featured: true
-  :available_on: 2011-02-16
-- :price: "28.20"
-  :author: "Dave Thomas, Chad Fowler,  and Andy Hunt "
-  :title: "Programming Ruby 1.9: The Pragmatic Programmers' Guide (Facets of Ruby)"
-  :image_file_name: programming-ruby-1-9-the-pragmatic-programmers-guide-facets-of-ruby-.jpg
-  :featured: true
-  :available_on: 2011-02-16
-- :price: "22.61"
-  :author: "Peter Cooper "
-  :title: "Beginning Ruby: From Novice to Professional"
-  :image_file_name: beginning-ruby-from-novice-to-professional.jpg
-  :available_on: 2011-02-16
-- :price: "20.50"
-  :author: "Paolo Perrotta "
-  :title: "Metaprogramming Ruby: Program Like the Ruby Pros"
-  :image_file_name: metaprogramming-ruby-program-like-the-ruby-pros.jpg
-  :available_on: 2011-02-16
-- :price: "27.99"
-  :author: "David A. Black "
-  :title: The Well-Grounded Rubyist
-  :image_file_name: the-well-grounded-rubyist.jpg
-  :available_on: 2011-02-16
-- :price: "31.17"
-  :author: "Lucas Carlson and Leonard Richardson "
-  :title: Ruby Cookbook (Cookbooks (O'Reilly))
-  :image_file_name: ruby-cookbook-cookbooks-o-reilly-.jpg
-  :available_on: 2011-02-16
-- :price: "13.92"
-  :author: "Chris Pine "
-  :title: Learn to Program, Second Edition (The Facets of Ruby Series)
-  :image_file_name: learn-to-program-second-edition-the-facets-of-ruby-series-.jpg
-  :available_on: 2011-02-16
-- :price: "22.85"
-  :author: "Michael James Fitzgerald "
-  :title: Learning Ruby
-  :image_file_name: learning-ruby.jpg
-  :available_on: 2011-02-16
-- :price: "23.07"
-  :author: "Bruce Tate "
-  :title: "Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages (Pragmatic Programmers)"
-  :image_file_name: seven-languages-in-seven-weeks-a-pragmatic-guide-to-learning-programming-languages-pragmatic-programmers-.jpg
-  :featured: true
-  :available_on: 2011-02-16
-- :price: "9.99"
-  :author: "Neil Smyth "
-  :title: Ruby Programming Essentials
-  :image_file_name: ruby-programming-essentials.jpg
-  :available_on: 2011-02-16
-- :price: "28.21"
-  :author: "Russ Olsen "
-  :title: Eloquent Ruby (Addison-Wesley Professional Ruby Series)
+  :available_on: 2013-12-02
+- :title: 'Programming Ruby 1.9 & 2.0: The Pragmatic Programmers'' Guide (The Facets
+    of Ruby)'
+  :author: 'Dave Thomas, Andy Hunt and Chad Fowler '
+  :price: '37.65'
+  :image_file_name: programming-ruby-1-9-2-0-the-pragmatic-programmers-guide-the-facets-of-ruby-.jpg
+  :available_on: 2013-12-02
+- :title: Eloquent Ruby (Addison-Wesley Professional Ruby Series)
+  :author: 'Russ Olsen '
+  :price: '32.13'
   :image_file_name: eloquent-ruby-addison-wesley-professional-ruby-series-.jpg
-  :available_on: 2011-02-16
-- :price: "23.75"
-  :author: "David Flanagan and Yukihiro Matsumoto "
-  :title: The Ruby Programming Language
+  :available_on: 2013-12-02
+- :title: 'Ruby Under a Microscope: An Illustrated Guide to Ruby Internals'
+  :author: 'Pat Shaughnessy '
+  :price: '28.96'
+  :image_file_name: ruby-under-a-microscope-an-illustrated-guide-to-ruby-internals.jpg
+  :available_on: 2013-12-02
+- :title: Computer Science Programming Basics in Ruby
+  :author: 'Ophir Frieder, Gideon Frieder and David Grossman '
+  :price: '22.49'
+  :image_file_name: computer-science-programming-basics-in-ruby.jpg
+  :available_on: 2013-12-02
+- :title: 'Practical Object-Oriented Design in Ruby: An Agile Primer (Addison-Wesley
+    Professional Ruby Series)'
+  :author: 'Sandi Metz '
+  :price: '29.96'
+  :image_file_name: practical-object-oriented-design-in-ruby-an-agile-primer-addison-wesley-professional-ruby-series-.jpg
+  :available_on: 2013-12-02
+- :title: 'Beginning Ruby: From Novice to Professional (Expert''s Voice in Open Source)'
+  :author: 'Peter Cooper '
+  :price: '26.05'
+  :image_file_name: beginning-ruby-from-novice-to-professional-expert-s-voice-in-open-source-.jpg
+  :available_on: 2013-12-02
+- :title: Learn to Program, Second Edition (The Facets of Ruby Series)
+  :author: 'Chris Pine '
+  :price: '17.88'
+  :image_file_name: learn-to-program-second-edition-the-facets-of-ruby-series-.jpg
+  :available_on: 2013-12-02
+- :title: The Ruby Programming Language
+  :author: 'David Flanagan and Yukihiro Matsumoto '
+  :price: '27.13'
   :image_file_name: the-ruby-programming-language.jpg
-  :available_on: 2011-02-16
-- :price: "28.20"
-  :author: "Dave Thomas, Chad Fowler,  and Andy Hunt "
-  :title: "Programming Ruby 1.9: The Pragmatic Programmers' Guide (Facets of Ruby)"
-  :image_file_name: programming-ruby-1-9-the-pragmatic-programmers-guide-facets-of-ruby-.jpg
-  :available_on: 2011-02-16
-- :price: "22.61"
-  :author: "Peter Cooper "
-  :title: "Beginning Ruby: From Novice to Professional"
-  :image_file_name: beginning-ruby-from-novice-to-professional.jpg
-  :available_on: 2011-02-16
-- :price: "20.50"
-  :author: "Paolo Perrotta "
-  :title: "Metaprogramming Ruby: Program Like the Ruby Pros"
-  :image_file_name: metaprogramming-ruby-program-like-the-ruby-pros.jpg
-  :available_on: 2011-02-16
-- :price: "27.99"
-  :author: "David A. Black "
-  :title: The Well-Grounded Rubyist
-  :image_file_name: the-well-grounded-rubyist.jpg
-  :featured: true
-  :available_on: 2011-02-16
-- :price: "31.17"
-  :author: "Lucas Carlson and Leonard Richardson "
-  :title: Ruby Cookbook (Cookbooks (O'Reilly))
-  :image_file_name: ruby-cookbook-cookbooks-o-reilly-.jpg
-  :available_on: 2011-02-16
-- :price: "13.92"
-  :author: "Chris Pine "
-  :title: Learn to Program, Second Edition (The Facets of Ruby Series)
-  :image_file_name: learn-to-program-second-edition-the-facets-of-ruby-series-.jpg
-  :available_on: 2011-02-16
-- :price: "22.85"
-  :author: "Michael James Fitzgerald "
-  :title: Learning Ruby
-  :image_file_name: learning-ruby.jpg
-  :available_on: 2011-02-16
-- :price: "23.07"
-  :author: "Bruce Tate "
-  :title: "Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages (Pragmatic Programmers)"
-  :image_file_name: seven-languages-in-seven-weeks-a-pragmatic-guide-to-learning-programming-languages-pragmatic-programmers-.jpg
-  :available_on: 2011-02-16
-- :price: "9.99"
-  :author: "Neil Smyth "
-  :title: Ruby Programming Essentials
-  :image_file_name: ruby-programming-essentials.jpg
-  :available_on: 2011-02-16
-- :price: "28.21"
-  :author: "Russ Olsen "
-  :title: Eloquent Ruby (Addison-Wesley Professional Ruby Series)
+  :available_on: 2013-12-02
+- :title: 'Programming Ruby 1.9 & 2.0: The Pragmatic Programmers'' Guide (The Facets
+    of Ruby)'
+  :author: 'Dave Thomas, Andy Hunt and Chad Fowler '
+  :price: '37.65'
+  :image_file_name: programming-ruby-1-9-2-0-the-pragmatic-programmers-guide-the-facets-of-ruby-.jpg
+  :available_on: 2013-12-02
+- :title: Eloquent Ruby (Addison-Wesley Professional Ruby Series)
+  :author: 'Russ Olsen '
+  :price: '32.13'
   :image_file_name: eloquent-ruby-addison-wesley-professional-ruby-series-.jpg
-  :available_on: 2011-02-16
-- :price: "23.75"
-  :author: "David Flanagan and Yukihiro Matsumoto "
-  :title: The Ruby Programming Language
+  :available_on: 2013-12-02
+- :title: 'Ruby Under a Microscope: An Illustrated Guide to Ruby Internals'
+  :author: 'Pat Shaughnessy '
+  :price: '28.96'
+  :image_file_name: ruby-under-a-microscope-an-illustrated-guide-to-ruby-internals.jpg
+  :available_on: 2013-12-02
+- :title: Computer Science Programming Basics in Ruby
+  :author: 'Ophir Frieder, Gideon Frieder and David Grossman '
+  :price: '22.49'
+  :image_file_name: computer-science-programming-basics-in-ruby.jpg
+  :available_on: 2013-12-02
+- :title: 'Practical Object-Oriented Design in Ruby: An Agile Primer (Addison-Wesley
+    Professional Ruby Series)'
+  :author: 'Sandi Metz '
+  :price: '29.96'
+  :image_file_name: practical-object-oriented-design-in-ruby-an-agile-primer-addison-wesley-professional-ruby-series-.jpg
+  :available_on: 2013-12-02
+- :title: 'Beginning Ruby: From Novice to Professional (Expert''s Voice in Open Source)'
+  :author: 'Peter Cooper '
+  :price: '26.05'
+  :image_file_name: beginning-ruby-from-novice-to-professional-expert-s-voice-in-open-source-.jpg
+  :available_on: 2013-12-02
+- :title: Learn to Program, Second Edition (The Facets of Ruby Series)
+  :author: 'Chris Pine '
+  :price: '17.88'
+  :image_file_name: learn-to-program-second-edition-the-facets-of-ruby-series-.jpg
+  :available_on: 2013-12-02
+- :title: The Ruby Programming Language
+  :author: 'David Flanagan and Yukihiro Matsumoto '
+  :price: '27.13'
   :image_file_name: the-ruby-programming-language.jpg
-  :available_on: 2011-02-16
-- :price: "28.20"
-  :author: "Dave Thomas, Chad Fowler,  and Andy Hunt "
-  :title: "Programming Ruby 1.9: The Pragmatic Programmers' Guide (Facets of Ruby)"
-  :image_file_name: programming-ruby-1-9-the-pragmatic-programmers-guide-facets-of-ruby-.jpg
-  :available_on: 2011-02-16
-- :price: "22.61"
-  :author: "Peter Cooper "
-  :title: "Beginning Ruby: From Novice to Professional"
-  :image_file_name: beginning-ruby-from-novice-to-professional.jpg
-  :available_on: 2011-02-16
-- :price: "20.50"
-  :author: "Paolo Perrotta "
-  :title: "Metaprogramming Ruby: Program Like the Ruby Pros"
-  :image_file_name: metaprogramming-ruby-program-like-the-ruby-pros.jpg
-  :available_on: 2011-02-16
-- :price: "27.99"
-  :author: "David A. Black "
-  :title: The Well-Grounded Rubyist
-  :image_file_name: the-well-grounded-rubyist.jpg
-  :available_on: 2011-02-16
-- :price: "31.17"
-  :author: "Lucas Carlson and Leonard Richardson "
-  :title: Ruby Cookbook (Cookbooks (O'Reilly))
-  :image_file_name: ruby-cookbook-cookbooks-o-reilly-.jpg
-  :available_on: 2011-02-16
-- :price: "13.92"
-  :author: "Chris Pine "
-  :title: Learn to Program, Second Edition (The Facets of Ruby Series)
-  :image_file_name: learn-to-program-second-edition-the-facets-of-ruby-series-.jpg
-  :available_on: 2011-02-16
-- :price: "22.85"
-  :author: "Michael James Fitzgerald "
-  :title: Learning Ruby
-  :image_file_name: learning-ruby.jpg
-  :available_on: 2011-02-16
-- :price: "23.07"
-  :author: "Bruce Tate "
-  :title: "Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages (Pragmatic Programmers)"
-  :image_file_name: seven-languages-in-seven-weeks-a-pragmatic-guide-to-learning-programming-languages-pragmatic-programmers-.jpg
-  :available_on: 2011-02-16
-- :price: "9.99"
-  :author: "Neil Smyth "
-  :title: Ruby Programming Essentials
-  :image_file_name: ruby-programming-essentials.jpg
-  :available_on: 2011-02-16
-- :price: "28.21"
-  :author: "Russ Olsen "
-  :title: Eloquent Ruby (Addison-Wesley Professional Ruby Series)
+  :available_on: 2013-12-02
+- :title: 'Programming Ruby 1.9 & 2.0: The Pragmatic Programmers'' Guide (The Facets
+    of Ruby)'
+  :author: 'Dave Thomas, Andy Hunt and Chad Fowler '
+  :price: '37.65'
+  :image_file_name: programming-ruby-1-9-2-0-the-pragmatic-programmers-guide-the-facets-of-ruby-.jpg
+  :available_on: 2013-12-02
+- :title: Eloquent Ruby (Addison-Wesley Professional Ruby Series)
+  :author: 'Russ Olsen '
+  :price: '32.13'
   :image_file_name: eloquent-ruby-addison-wesley-professional-ruby-series-.jpg
-  :available_on: 2011-02-16
+  :available_on: 2013-12-02
+- :title: 'Ruby Under a Microscope: An Illustrated Guide to Ruby Internals'
+  :author: 'Pat Shaughnessy '
+  :price: '28.96'
+  :image_file_name: ruby-under-a-microscope-an-illustrated-guide-to-ruby-internals.jpg
+  :available_on: 2013-12-02
+- :title: Computer Science Programming Basics in Ruby
+  :author: 'Ophir Frieder, Gideon Frieder and David Grossman '
+  :price: '22.49'
+  :image_file_name: computer-science-programming-basics-in-ruby.jpg
+  :available_on: 2013-12-02
+- :title: 'Practical Object-Oriented Design in Ruby: An Agile Primer (Addison-Wesley
+    Professional Ruby Series)'
+  :author: 'Sandi Metz '
+  :price: '29.96'
+  :image_file_name: practical-object-oriented-design-in-ruby-an-agile-primer-addison-wesley-professional-ruby-series-.jpg
+  :available_on: 2013-12-02
+- :title: 'Beginning Ruby: From Novice to Professional (Expert''s Voice in Open Source)'
+  :author: 'Peter Cooper '
+  :price: '26.05'
+  :image_file_name: beginning-ruby-from-novice-to-professional-expert-s-voice-in-open-source-.jpg
+  :available_on: 2013-12-02
+- :title: Learn to Program, Second Edition (The Facets of Ruby Series)
+  :author: 'Chris Pine '
+  :price: '17.88'
+  :image_file_name: learn-to-program-second-edition-the-facets-of-ruby-series-.jpg
+  :available_on: 2013-12-02
