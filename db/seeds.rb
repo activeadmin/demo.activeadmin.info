@@ -7,6 +7,12 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 #
 
+# Delete all the things!
+LineItem.delete_all
+Order.delete_all
+User.delete_all
+Product.delete_all
+
 # Load each product from the yaml file
 YAML.load_file(File.expand_path("../seeds/products.yml", __FILE__)).each do |product|
   Product.create! product
@@ -28,15 +34,16 @@ end
 # Create 300 Orders
 NB_ORDERS = 300
 
+user_ids = User.pluck(:id)
+product_ids = Product.pluck(:id)
+
 NB_ORDERS.times do
-  user_id = rand(NB_USERS - 1) + 1
-  user = User.find(user_id)
+  user = User.find(user_ids.sample)
   order = user.orders.create!
   nb_items = rand(9) + 1
 
   nb_items.times do
-    product_id = rand(NB_PRODUCTS - 1) + 1
-    product = Product.find(product_id)
+    product = Product.find(product_ids.sample)
     LineItem.create! do |l|
       l.order = order
       l.product = product
