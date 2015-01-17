@@ -1,4 +1,6 @@
 ActiveAdmin.register Product do
+  menu :priority => 2
+  permit_params :title, :description,:author,:price, :featured, :available_on,:image_file_name
 
   scope :all, :default => true
   scope :available do |products|
@@ -38,4 +40,6 @@ ActiveAdmin.register Product do
   sidebar "Active Admin Demo" do
     render('/admin/sidebar_links', :model => 'products')
   end
+
+
 end

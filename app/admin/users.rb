@@ -1,5 +1,6 @@
 ActiveAdmin.register User, :as => "Customer" do
 
+  menu :priority => 4
   config.batch_actions = true
 
   filter :username
@@ -12,7 +13,7 @@ ActiveAdmin.register User, :as => "Customer" do
     column :username
     column :email
     column :created_at
-    default_actions
+    actions
   end
 
   show :title => :username do
@@ -24,7 +25,6 @@ ActiveAdmin.register User, :as => "Customer" do
         column("Total")                   {|order| number_to_currency order.total_price }
       end
     end
-    active_admin_comments
   end
 
   sidebar "Customer Details", :only => :show do
