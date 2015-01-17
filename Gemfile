@@ -26,7 +26,7 @@ gem 'inherited_resources', '~> 1.4.1'
 gem "devise"
 
 gem "faker"
-#gem 'newrelic_rpm', '3.1.1'
+gem 'newrelic_rpm', '~> 3.9'
 gem 'hoptoad_notifier', '2.4.11'
 
 group :development do
