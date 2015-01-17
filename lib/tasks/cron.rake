@@ -1,2 +1,2 @@
 desc "CRON job for Heroku"
-task :cron => ['db:reset', 'db:setup']
+task :cron => ['db:schema:load', 'db:seed']
