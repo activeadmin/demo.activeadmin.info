@@ -36,7 +36,7 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         panel "ActiveAdmin Demo" do
           div do
-            render('/admin/sidebar_links', :model => 'dashboards')
+            render('/admin/sidebar_links', :model => 'dashboard')
           end
         end
       end
