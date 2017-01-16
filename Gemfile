@@ -49,7 +49,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails', '~> 3.4'
   gem 'spork', '~> 1.0rc'
 end
 
