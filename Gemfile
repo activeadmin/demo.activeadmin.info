@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.2.0'
+ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
+gem 'rails', '~> 4.2.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -22,7 +22,6 @@ gem 'turbolinks'
 gem 'spring',        group: :development
 
 gem 'activeadmin',  github: 'activeadmin'
-gem 'inherited_resources', '~> 1.4.1'
 gem "devise"
 
 gem "faker"
@@ -50,7 +49,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails', '~> 3.4'
   gem 'spork', '~> 1.0rc'
 end
 
