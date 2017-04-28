@@ -283,13 +283,11 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
-  coffee-rails (~> 4.0.0)
   devise
   factory_girl_rails
   faker
   heroku-deflater
   hoptoad_notifier (= 2.4.11)
-  jquery-rails
   mechanize (= 2.7.3)
   newrelic_rpm (~> 3.9)
   pg
@@ -298,7 +296,6 @@ DEPENDENCIES
   rails (~> 4.2.0)
   rails_12factor
   rspec-rails (~> 3.4)
-  sass-rails (~> 4.0.3)
   shoulda
   shoulda-matchers
   simplecov
