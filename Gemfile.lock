@@ -61,6 +61,9 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    airbrake (6.0.0)
+      airbrake-ruby (~> 2.0)
+    airbrake-ruby (2.1.0)
     arbre (1.1.1)
       activesupport (>= 3.0.0)
     arel (7.1.4)
@@ -108,9 +111,6 @@ GEM
       activesupport (>= 4.1, < 5.1)
     heroku-deflater (0.5.3)
       rack (>= 1.4.5)
-    hoptoad_notifier (2.4.11)
-      activesupport
-      builder
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.8.1)
@@ -293,11 +293,11 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  airbrake
   devise
   factory_girl_rails
   faker
   heroku-deflater
-  hoptoad_notifier (= 2.4.11)
   mechanize (= 2.7.3)
   newrelic_rpm (~> 3.9)
   pg

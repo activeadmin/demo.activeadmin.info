@@ -20,7 +20,7 @@ gem "devise"
 
 gem "faker"
 gem 'newrelic_rpm', '~> 3.9'
-gem 'hoptoad_notifier', '2.4.11'
+gem 'airbrake'
 
 group :development do
   gem 'mechanize','2.7.3'
