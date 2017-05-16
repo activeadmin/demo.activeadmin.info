@@ -1,7 +1,7 @@
 class CartController < ApplicationController
 
-  before_filter :login_required
-  before_filter :find_cart
+  before_action :login_required
+  before_action :find_cart
 
   def add
     @cart.save if @cart.new_record?
