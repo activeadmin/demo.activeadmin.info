@@ -26,7 +26,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.20'
   gem 'unicorn'
 
   # Enable gzip compression on heroku, but don't compress images.
