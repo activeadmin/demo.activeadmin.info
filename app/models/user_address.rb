@@ -11,4 +11,3 @@ class UserAddress < ActiveRecord::Base
   validates_presence_of :zipcode
   validates_presence_of :country
 end
-

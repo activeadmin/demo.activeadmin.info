@@ -18,4 +18,3 @@ class CreateUserAddresses < ActiveRecord::Migration
     drop_table :user_addresses
   end
 end
-

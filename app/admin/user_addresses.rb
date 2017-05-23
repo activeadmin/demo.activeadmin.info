@@ -1,6 +1,7 @@
 ActiveAdmin.register UserAddress do
-  belongs_to  :user
-  permit_params :fullname, :address_line1, :address_line2, :city, :state, :zipcode, :country
+  belongs_to :user
+  permit_params :fullname, :address_line1, :address_line2, :city,
+                :state, :zipcode, :country
 
   form do |f|
     f.inputs do
@@ -15,4 +16,3 @@ ActiveAdmin.register UserAddress do
     f.actions
   end
 end
-
