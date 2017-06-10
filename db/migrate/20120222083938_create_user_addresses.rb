@@ -1,4 +1,4 @@
-class CreateUserAddresses < ActiveRecord::Migration
+class CreateUserAddresses < ActiveRecord::Migration[5.1]
   def self.up
     create_table :user_addresses do |t|
       t.integer  :user_id
