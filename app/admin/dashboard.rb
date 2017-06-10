@@ -1,46 +1,43 @@
 ActiveAdmin.register_page "Dashboard" do
-  menu :priority => 1
-  content :title => proc{ I18n.t("active_admin.dashboard") } do
-
+  menu priority: 1
+  content title: proc { I18n.t("active_admin.dashboard") } do
     columns do
-
       column do
         panel "Recent Orders" do
-          table_for Order.complete.order('id desc').limit(10) do
-            column("State")   {|order| status_tag(order.state)                                    }
-            column("Customer"){|order| link_to(order.user.email, admin_customer_path(order.user)) }
-            column("Total")   {|order| number_to_currency order.total_price                       }
+          table_for Order.complete.order("id desc").limit(10) do
+            column("State") { |order| status_tag(order.state) }
+            column("Customer") { |order| link_to(order.user.email, admin_user_path(order.user)) }
+            column("Total")   { |order| number_to_currency order.total_price }
           end
         end
       end
 
       column do
         panel "Recent Customers" do
-          table_for User.order('id desc').limit(10).each do |customer|
-            column(:email)    {|customer| link_to(customer.email, admin_customer_path(customer)) }
+          table_for User.order("id desc").limit(10).each do |_user|
+            column(:email)    { |user| link_to(user.email, admin_user_path(user)) }
           end
         end
       end
-
     end # columns
 
     columns do
-
       column do
         div do
           br
-          text_node %{<iframe src="https://rpm.newrelic.com/public/charts/6VooNO2hKWB" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
+          text_node %{<iframe src="https://rpm.newrelic.com/public/charts/6VooNO2hKWB"
+                              width="500" height="300" scrolling="no" frameborder="no">
+                      </iframe>}.html_safe
         end
       end
 
       column do
         panel "ActiveAdmin Demo" do
           div do
-            render('/admin/sidebar_links', :model => 'dashboard')
+            render("/admin/sidebar_links", model: "dashboard")
           end
         end
       end
-
     end # columns
 
     # Define your dashboard sections here. Each block will be
@@ -76,6 +73,5 @@ ActiveAdmin.register_page "Dashboard" do
     #       render 'recent_posts' # => this will render /app/views/admin/dashboard/_recent_posts.html.erb
     #     end
     #   end
-
   end # content
 end
