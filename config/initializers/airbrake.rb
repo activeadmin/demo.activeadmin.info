@@ -10,7 +10,7 @@ Airbrake.configure do |c|
 
   c.environment = Rails.env
 
-  c.ignore_environments = %w(test)
+  c.ignore_environments = %w(test development)
 
   c.blacklist_keys = [/password/i, /authorization/i]
 end
