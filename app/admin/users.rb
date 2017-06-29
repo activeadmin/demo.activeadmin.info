@@ -6,6 +6,8 @@ ActiveAdmin.register User do
   filter :email
   filter :created_at
 
+  permit_params :username, :email, :password
+
   index do
     selectable_column
     id_column
@@ -50,6 +52,15 @@ ActiveAdmin.register User do
       end
     end
     active_admin_comments
+  end
+
+  form do |f|
+    f.inputs do
+      f.input :username
+      f.input :password, input_html: { autocomplete: "new-password" }
+      f.input :email
+    end
+    f.actions
   end
 
   sidebar "Customer Details", only: :show do
