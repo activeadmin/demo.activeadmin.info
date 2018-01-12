@@ -32,19 +32,17 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    activeadmin (1.0.0)
+    activeadmin (1.2.1)
       arbre (>= 1.1.1)
-      bourbon
       coffee-rails
       formtastic (~> 3.1)
       formtastic_i18n
       inherited_resources (~> 1.7)
-      jquery-rails
-      jquery-ui-rails
+      jquery-rails (>= 4.2.0)
       kaminari (>= 0.15, < 2.0)
       railties (>= 4.2, < 5.2)
       ransack (~> 1.3)
-      sass-rails
+      sass (~> 3.1)
       sprockets (< 4.1)
     activejob (5.1.1)
       activesupport (= 5.1.1)
@@ -68,13 +66,10 @@ GEM
       activesupport (>= 3.0.0)
     arel (8.0.0)
     bcrypt (3.1.11)
-    bourbon (3.2.4)
-      sass (~> 3.2)
-      thor
     builder (3.2.3)
-    coffee-rails (4.2.1)
+    coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.2.x)
+      railties (>= 4.0.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -109,6 +104,7 @@ GEM
       railties (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
+    ffi (1.9.18)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
@@ -123,29 +119,27 @@ GEM
       domain_name (~> 0.5)
     i18n (0.8.1)
     i18n_data (0.7.0)
-    inherited_resources (1.7.2)
-      actionpack (>= 3.2, < 5.2.x)
+    inherited_resources (1.8.0)
+      actionpack (>= 4.2, <= 5.2)
       has_scope (~> 0.6)
-      railties (>= 3.2, < 5.2.x)
+      railties (>= 4.2, <= 5.2)
       responders
-    jquery-rails (4.2.2)
+    jquery-rails (4.3.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (6.0.1)
-      railties (>= 3.2.16)
-    kaminari (1.0.1)
+    kaminari (1.1.1)
       activesupport (>= 4.1.0)
-      kaminari-actionview (= 1.0.1)
-      kaminari-activerecord (= 1.0.1)
-      kaminari-core (= 1.0.1)
-    kaminari-actionview (1.0.1)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
       actionview
-      kaminari-core (= 1.0.1)
-    kaminari-activerecord (1.0.1)
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
       activerecord
-      kaminari-core (= 1.0.1)
-    kaminari-core (1.0.1)
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     kgio (2.9.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -176,7 +170,7 @@ GEM
     ntlm-http (0.1.1)
     orm_adapter (0.5.0)
     pg (0.20.0)
-    polyamorous (1.3.1)
+    polyamorous (1.3.2)
       activerecord (>= 3.0)
     rack (2.0.3)
     rack-cache (1.2)
@@ -215,12 +209,15 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
     rake (12.0.0)
-    ransack (1.8.2)
+    ransack (1.8.4)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.3)
+    rb-fsevent (0.10.2)
+    rb-inotify (0.9.10)
+      ffi (>= 0.5.0, < 2)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
@@ -242,13 +239,11 @@ GEM
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
     safe_yaml (1.0.4)
-    sass (3.4.23)
-    sass-rails (5.0.6)
-      railties (>= 4.0.0, < 6)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
+    sass (3.5.5)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     shoulda-context (1.2.2)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
@@ -272,7 +267,6 @@ GEM
     sqlite3 (1.3.10)
     thor (0.19.4)
     thread_safe (0.3.6)
-    tilt (2.0.7)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
@@ -306,7 +300,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activeadmin
+  activeadmin (~> 1.2.1)
   airbrake
   country_select
   devise
@@ -332,3 +326,9 @@ DEPENDENCIES
   unicorn
   webmock (~> 1.11.0)
   webrat
+
+RUBY VERSION
+   ruby 2.4.2p198
+
+BUNDLED WITH
+   1.16.0.pre.3
