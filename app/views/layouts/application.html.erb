@@ -2,9 +2,12 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "The Active Admin Store" %></title>
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag :defaults %>
-    <%= csrf_meta_tag %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     <%= yield(:head) %>
   </head>
   <body>
@@ -26,7 +29,7 @@
           <%= link_to "Log in", login_path %>.
         <% end %>
       </div>
-      
+
       <h1><a href="/">The Active Admin Store</a></h1>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
