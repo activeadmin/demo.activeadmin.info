@@ -27,8 +27,9 @@ group :development do
   gem 'mechanize','2.7.3'
 end
 
+gem 'pg', '~> 0.20'
+
 group :production do
-  gem 'pg', '~> 0.20'
   gem 'unicorn'
 
   # Enable gzip compression on heroku, but don't compress images.
@@ -42,7 +43,6 @@ group :production do
 end
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.4'
   gem 'rubocop', '0.60.0'
