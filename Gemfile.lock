@@ -257,6 +257,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.4.0)
+    rubocop-rspec (1.30.0)
+      rubocop (>= 0.58.0)
     ruby-progressbar (1.10.0)
     safe_yaml (1.0.4)
     sass (3.5.7)
@@ -335,6 +337,7 @@ DEPENDENCIES
   rails_12factor
   rspec-rails (~> 3.4)
   rubocop (= 0.60.0)
+  rubocop-rspec (~> 1.30)
   shoulda-matchers
   simplecov
   spring

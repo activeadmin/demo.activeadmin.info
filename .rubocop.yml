@@ -1,5 +1,7 @@
 ---
 
+require: rubocop-rspec
+
 AllCops:
   DisabledByDefault: true
 
@@ -12,3 +14,6 @@ AllCops:
 
 Metrics:
   Enabled: false
+
+FactoryBot/AttributeDefinedStatically:
+  Enabled: true
