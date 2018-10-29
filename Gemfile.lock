@@ -258,7 +258,6 @@ GEM
     sixarm_ruby_unaccent (1.2.0)
     sort_alphabetical (1.1.0)
       unicode_utils (>= 1.2.2)
-    spork (1.0.0rc4)
     spring (2.0.2)
       activesupport (>= 4.2)
     sprockets (3.7.2)
@@ -320,7 +319,6 @@ DEPENDENCIES
   rspec-rails (~> 3.4)
   shoulda-matchers
   simplecov
-  spork (~> 1.0rc)
   spring
   sqlite3
   turbolinks

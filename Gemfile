@@ -45,7 +45,6 @@ group :development, :test do
   gem 'sqlite3'
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.4'
-  gem 'spork', '~> 1.0rc'
 end
 
 group :test do
