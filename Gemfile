@@ -49,7 +49,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'shoulda', github: 'thoughtbot/shoulda'
   gem "shoulda-matchers"
   gem "webmock", "~> 1.11.0"
   gem "webrat"
