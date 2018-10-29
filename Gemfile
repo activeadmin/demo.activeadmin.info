@@ -45,6 +45,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.4'
+  gem 'rubocop', '0.60.0'
 end
 
 group :test do

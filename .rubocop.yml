@@ -1,11 +1,14 @@
-Metrics/BlockLength:
-  Max: 35
+---
 
-Metrics/LineLength:
-  Max: 100
+AllCops:
+  DisabledByDefault: true
 
-Style/FrozenStringLiteralComment:
+  TargetRubyVersion: 2.5
+  TargetRailsVersion: 5.2
+
+  DisplayCopNames: true
+
+  StyleGuideCopsOnly: false
+
+Metrics:
   Enabled: false
-
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
