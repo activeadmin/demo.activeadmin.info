@@ -58,7 +58,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     airbrake (7.3.4)
       airbrake-ruby (~> 2.10)
-    airbrake-ruby (2.10.0)
+    airbrake-ruby (2.12.0)
     arbre (1.1.1)
       activesupport (>= 3.0.0)
     arel (9.0.0)
