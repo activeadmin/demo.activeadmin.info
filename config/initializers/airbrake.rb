@@ -19,3 +19,7 @@ end
 # don't send sensitive information to Airbrake in your body (such as passwords).
 # https://github.com/airbrake/airbrake#requestbodyfilter
 Airbrake.add_filter(Airbrake::Rack::RequestBodyFilter.new)
+
+Airbrake.add_filter do |notice|
+  notice.ignore! if notice.stash[:exception].is_a?(ActiveRecord::RecordNotFound)
+end
