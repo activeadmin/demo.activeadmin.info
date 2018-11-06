@@ -1,11 +1,19 @@
-Metrics/BlockLength:
-  Max: 35
+---
 
-Metrics/LineLength:
-  Max: 100
+require: rubocop-rspec
 
-Style/FrozenStringLiteralComment:
+AllCops:
+  DisabledByDefault: true
+
+  TargetRubyVersion: 2.5
+  TargetRailsVersion: 5.2
+
+  DisplayCopNames: true
+
+  StyleGuideCopsOnly: false
+
+Metrics:
   Enabled: false
 
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
+FactoryBot/AttributeDefinedStatically:
+  Enabled: true

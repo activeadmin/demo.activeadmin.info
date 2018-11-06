@@ -1,4 +1,6 @@
 language: ruby
 rvm:
-  - 2.3
+  - 2.5.3
+before_script:
+  - RAILS_ENV=test bin/rails db:create db:migrate
 cache: bundler
