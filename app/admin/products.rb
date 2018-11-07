@@ -15,6 +15,7 @@ ActiveAdmin.register Product do
 
   index :as => :grid do |product|
     div do
+      resource_selection_cell product
       a :href => admin_product_path(product) do
         image_tag("products/" + product.image_file_name)
       end
