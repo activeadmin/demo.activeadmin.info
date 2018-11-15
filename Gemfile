@@ -24,7 +24,7 @@ gem 'airbrake'
 gem 'country_select'
 
 group :development do
-  gem 'mechanize','2.7.3'
+  gem 'mechanize','2.7.6'
 end
 
 gem 'pg', '~> 0.20'
