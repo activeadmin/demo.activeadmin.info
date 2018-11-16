@@ -190,7 +190,7 @@ GEM
       rack (>= 0.4)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
-    rack-throttle (0.5.0)
+    rack-throttle (0.7.0)
       bundler (>= 1.0.0)
       rack (>= 1.0.0)
     rails (5.2.1)
