@@ -19,7 +19,6 @@ gem "devise"
 
 gem "faker"
 gem 'newrelic_rpm', '~> 5.5'
-gem 'airbrake'
 
 gem 'country_select'
 
@@ -30,6 +29,7 @@ end
 gem 'pg', '~> 1.1'
 
 group :production do
+  gem 'airbrake'
   gem 'unicorn'
 
   # Enable gzip compression on heroku, but don't compress images.
