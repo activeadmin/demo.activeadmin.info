@@ -18,7 +18,7 @@ gem 'activeadmin', '~> 1.3.0'
 gem "devise"
 
 gem "faker"
-gem 'newrelic_rpm', '~> 3.9'
+gem 'newrelic_rpm', '~> 5.5'
 gem 'airbrake'
 
 gem 'country_select'
