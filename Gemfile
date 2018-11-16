@@ -27,7 +27,7 @@ group :development do
   gem 'mechanize','2.7.6'
 end
 
-gem 'pg', '~> 0.20'
+gem 'pg', '~> 1.1'
 
 group :production do
   gem 'unicorn'
