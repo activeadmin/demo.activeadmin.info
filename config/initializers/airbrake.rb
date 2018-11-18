@@ -1,3 +1,5 @@
+return unless Rails.env.production?
+
 # Configuration details:
 # https://github.com/airbrake/airbrake-ruby#configuration
 Airbrake.configure do |c|

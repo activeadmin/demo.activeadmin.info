@@ -306,7 +306,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin-rb (~> 1.5.0)
-  airbrake (~> 7.0)
+  airbrake
   country_select
   devise
   factory_bot_rails
