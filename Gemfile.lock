@@ -174,7 +174,7 @@ GEM
     net-http-digest_auth (1.4.1)
     net-http-persistent (3.0.0)
       connection_pool (~> 2.2)
-    newrelic_rpm (5.7.0.350)
+    newrelic_rpm (6.0.0.351)
     nio4r (2.3.1)
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
@@ -332,7 +332,7 @@ DEPENDENCIES
   faker
   heroku-deflater
   mechanize (= 2.7.6)
-  newrelic_rpm (~> 5.5)
+  newrelic_rpm (~> 6.0)
   pg (~> 1.1)
   rack-cache
   rack-throttle
