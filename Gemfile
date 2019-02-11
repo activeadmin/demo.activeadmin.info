@@ -18,7 +18,7 @@ gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
 gem "devise"
 
 gem "faker"
-gem 'newrelic_rpm', '~> 5.5'
+gem 'newrelic_rpm', '~> 6.0'
 
 gem 'country_select'
 
