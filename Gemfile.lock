@@ -187,7 +187,7 @@ GEM
     powerpack (0.1.2)
     public_suffix (3.0.3)
     rack (2.0.6)
-    rack-cache (1.8.0)
+    rack-cache (1.9.0)
       rack (>= 0.4)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
