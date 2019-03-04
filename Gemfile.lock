@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 9ea8e2606556508f705ede1c6226ffed59c6c43e
+  revision: 1c45e8c3ae48d9b6cbd51a63fd047930f2f1b9ab
   specs:
     activeadmin (2.0.0.alpha)
       arbre (~> 1.1, >= 1.1.1)
@@ -120,7 +120,7 @@ GEM
       rack (>= 1.4.5)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (1.5.3)
+    i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     i18n_data (0.8.0)
     inherited_resources (1.9.0)
