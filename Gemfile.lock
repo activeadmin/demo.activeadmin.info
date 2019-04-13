@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 9303e131839a1b1f56b66a3d224081d8dc9cd33a
+  revision: 4cb92d319f9f93974fe533439d3631c5a0ec97e7
   specs:
-    activeadmin (2.0.0.rc1)
-      arbre (~> 1.2)
+    activeadmin (2.0.0.rc2)
+      arbre (~> 1.2, >= 1.2.1)
       formtastic (~> 3.1)
       formtastic_i18n (~> 0.4)
       inherited_resources (~> 1.7)
@@ -65,7 +65,7 @@ GEM
       airbrake-ruby (~> 4.2)
     airbrake-ruby (4.2.3)
       rbtree3 (~> 0.5)
-    arbre (1.2.0)
+    arbre (1.2.1)
       activesupport (>= 3.0.0)
     arel (9.0.0)
     ast (2.4.0)
