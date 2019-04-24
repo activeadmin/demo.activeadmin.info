@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 4cb92d319f9f93974fe533439d3631c5a0ec97e7
+  revision: 77470db36b513a3c6f4c75ea0ad12a03a0cc3aae
   specs:
     activeadmin (2.0.0.rc2)
       arbre (~> 1.2, >= 1.2.1)
@@ -176,7 +176,7 @@ GEM
       connection_pool (~> 2.2)
     newrelic_rpm (6.2.0.354)
     nio4r (2.3.1)
-    nokogiri (1.10.2)
+    nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     ntlm-http (0.1.1)
     orm_adapter (0.5.0)
