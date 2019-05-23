@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 19e096a14357203a24fa7a1313daf8c8f08b7971
+  revision: f91fc6ee8d62bf13ba47c1b2b513bad006117d72
   specs:
     activeadmin (2.0.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -106,7 +106,7 @@ GEM
       railties (>= 4.2.0)
     faker (1.9.3)
       i18n (>= 0.7)
-    ffi (1.10.0)
+    ffi (1.11.1)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
