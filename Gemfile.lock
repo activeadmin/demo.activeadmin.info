@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: d78a88cd6b8743d7684f7a79ee557292b0bb4f10
+  revision: 8a7aff072e2ca3ef658e607304543819f8f34e25
   specs:
     activeadmin (2.1.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -9,7 +9,7 @@ GIT
       inherited_resources (~> 1.7)
       jquery-rails (~> 4.2)
       kaminari (~> 1.0, >= 1.0.1)
-      railties (>= 5.0, < 6.0)
+      railties (>= 5.0, < 6.1)
       ransack (~> 2.1, >= 2.1.1)
       sassc-rails (~> 2.1)
       sprockets (>= 3.0, < 4.1)
