@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: cbce3550d41e745fbf3c9160b34b5848712f48cc
+  revision: 455013d314d09644a778093aacd37c731c01e4da
   specs:
     activeadmin (2.2.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -228,7 +228,7 @@ GEM
       thor (>= 0.19.0, < 2.0)
     rainbow (3.0.0)
     raindrops (0.19.0)
-    rake (12.3.2)
+    rake (12.3.3)
     ransack (2.1.1)
       actionpack (>= 5.0)
       activerecord (>= 5.0)
