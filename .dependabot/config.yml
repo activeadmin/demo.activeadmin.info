@@ -12,3 +12,7 @@ update_configs:
       - match:
           dependency_name: activeadmin
           update_type: all
+
+      - match:
+          dependency_type: development
+          update_type: all
