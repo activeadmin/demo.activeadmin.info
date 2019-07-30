@@ -2,7 +2,7 @@ addons:
   - postgresql: 9.6
 language: ruby
 rvm:
-  - 2.5.3
+  - 2.6.3
 before_script:
   - RAILS_ENV=test bin/rails db:create db:migrate
 cache: bundler
