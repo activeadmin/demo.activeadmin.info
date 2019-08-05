@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 2f67e1326340f1a0535d828396bbe7360e4f9460
+  revision: d0cbaddfd629c3bf532d3ca4d47f2f3860215705
   specs:
     activeadmin (2.2.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -209,7 +209,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.4)
+    rails-html-sanitizer (1.1.0)
       loofah (~> 2.2, >= 2.2.2)
     railties (5.2.3)
       actionpack (= 5.2.3)
