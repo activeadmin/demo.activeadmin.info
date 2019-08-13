@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: d0cbaddfd629c3bf532d3ca4d47f2f3860215705
+  revision: f0e88ca009e9ed6394477f50e85dd428a1519641
   specs:
     activeadmin (2.2.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -123,11 +123,11 @@ GEM
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     i18n_data (0.8.0)
-    inherited_resources (1.10.0)
-      actionpack (>= 5.0, < 6.0)
+    inherited_resources (1.11.0)
+      actionpack (>= 5.0, < 6.1)
       has_scope (~> 0.6)
-      railties (>= 5.0, < 6.0)
-      responders (~> 2.0)
+      railties (>= 5.0, < 6.1)
+      responders (>= 2, < 4)
     jaro_winkler (1.5.3)
     jquery-rails (4.3.5)
       rails-dom-testing (>= 1, < 3)
@@ -209,7 +209,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.1.0)
+    rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
     railties (5.2.3)
       actionpack (= 5.2.3)
@@ -226,9 +226,9 @@ GEM
       activesupport (>= 5.0)
       i18n
     rbtree3 (0.5.0)
-    responders (2.4.1)
-      actionpack (>= 4.2.0, < 6.0)
-      railties (>= 4.2.0, < 6.0)
+    responders (3.0.0)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.2)
