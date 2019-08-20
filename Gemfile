@@ -19,7 +19,7 @@ gem "devise"
 
 gem "faker"
 gem 'newrelic_rpm', '~> 3.9'
-gem 'airbrake'
+gem 'airbrake', '~> 7.0'
 
 gem 'country_select'
 
