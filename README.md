@@ -8,7 +8,7 @@ http://demo.activeadmin.info
 
 ## Local development setup
 
-Dependencies: Ruby 2.5+ and PostgreSQL
+Dependencies: Ruby 2.6+ and PostgreSQL
 
 * Clone project using Git
 * Run `bundle install`
