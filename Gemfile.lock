@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 9a97cdab68ef803f817e555b97f20091ff747fef
+  revision: ece008dd015282503e3ec2b0f455f9a4bc056453
   specs:
     activeadmin (2.3.1)
       arbre (~> 1.2, >= 1.2.1)
@@ -275,7 +275,7 @@ GEM
       rubocop (>= 0.60.0)
     ruby-progressbar (1.10.1)
     safe_yaml (1.0.5)
-    sassc (2.2.0)
+    sassc (2.2.1)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
       railties (>= 4.0.0)
