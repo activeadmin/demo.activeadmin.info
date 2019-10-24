@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: f64464c4a6b20a599b5e10a983c7a90c34cb2c8c
+  revision: 5bab881ae688a9bdba2b3f06bca482f0acba8784
   specs:
     activeadmin (2.4.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -155,7 +155,7 @@ GEM
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
     kgio (2.11.2)
-    loofah (2.3.0)
+    loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
