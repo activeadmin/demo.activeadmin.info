@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 2b0329596dddabfee6620bd759a3fc64812190c6
+  revision: da42460c1c3cc18c5f6580ccd39d905cad6c6c4e
   specs:
     activeadmin (2.4.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -178,7 +178,7 @@ GEM
     mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.12.2)
+    minitest (5.13.0)
     net-http-digest_auth (1.4.1)
     net-http-persistent (3.0.0)
       connection_pool (~> 2.2)
