@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: da42460c1c3cc18c5f6580ccd39d905cad6c6c4e
+  revision: e0c0c48419fdd99fd066ecb8d3e0cd3a42fd5963
   specs:
     activeadmin (2.4.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -184,7 +184,7 @@ GEM
       connection_pool (~> 2.2)
     newrelic_rpm (6.7.0.359)
     nio4r (2.4.0)
-    nokogiri (1.10.4)
+    nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
     ntlm-http (0.1.1)
     orm_adapter (0.5.0)
@@ -324,7 +324,7 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
-    zeitwerk (2.2.0)
+    zeitwerk (2.2.1)
 
 PLATFORMS
   ruby
