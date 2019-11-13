@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 0358000931a8ec15318b2e412245d3af1136bf0b
+  revision: 0747a6e249df7e30e748c5b8b2b1ed0770f569e5
   specs:
     activeadmin (2.4.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -114,7 +114,7 @@ GEM
       railties (>= 4.2.0)
     faker (2.6.0)
       i18n (>= 1.6, < 1.8)
-    ffi (1.11.1)
+    ffi (1.11.2)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
@@ -231,7 +231,7 @@ GEM
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
     raindrops (0.19.0)
-    rake (13.0.0)
+    rake (13.0.1)
     ransack (2.3.0)
       actionpack (>= 5.0)
       activerecord (>= 5.0)
