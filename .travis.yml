@@ -1,5 +1,8 @@
 addons:
   - postgresql: 9.6
+branches:
+  only:
+    - master
 language: ruby
 rvm:
   - 2.6.3
