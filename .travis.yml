@@ -1,8 +1,11 @@
 addons:
   - postgresql: 9.6
+branches:
+  only:
+    - master
 language: ruby
 rvm:
-  - 2.6.3
+  - 2.6.5
 before_script:
   - RAILS_ENV=test bin/rails db:create db:migrate
 cache: bundler
