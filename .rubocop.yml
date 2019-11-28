@@ -10,6 +10,9 @@ AllCops:
   TargetRubyVersion: 2.6
   TargetRailsVersion: 5.2
 
+  Exclude:
+    - vendor/bundle/**/*
+
   DisplayCopNames: true
 
   StyleGuideCopsOnly: false
