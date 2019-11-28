@@ -1,6 +1,8 @@
 ---
 
-require: rubocop-rspec
+require:
+  - rubocop-rspec
+  - rubocop-rails
 
 AllCops:
   DisabledByDefault: true
