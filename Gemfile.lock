@@ -74,7 +74,7 @@ GEM
       zeitwerk (~> 2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    airbrake (9.5.4)
+    airbrake (9.5.5)
       airbrake-ruby (~> 4.8)
     airbrake-ruby (4.8.0)
       rbtree3 (~> 0.5)
