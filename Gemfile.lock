@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: dd0a16ff8d1e636b211af815f8282250ca1a5355
+  revision: 86e5aa3d781da70d644f25cf267194b16e95254d
   specs:
     activeadmin (2.5.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -324,7 +324,7 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
-    zeitwerk (2.2.1)
+    zeitwerk (2.2.2)
 
 PLATFORMS
   ruby
