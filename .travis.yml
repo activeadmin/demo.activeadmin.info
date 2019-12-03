@@ -8,6 +8,9 @@ rvm:
   - 2.6.5
 before_script:
   - RAILS_ENV=test bin/rails db:create db:migrate
+script:
+  - bundle exec rubocop
+  - bundle exec rake
 cache: bundler
 services:
   - postgresql
