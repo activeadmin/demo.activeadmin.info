@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: ce2d957ce4334973e399882e5ebd3f8da6de9530
+  revision: c8addb929f5b7370da1778be75e6d1c024be06f8
   specs:
     activeadmin (2.5.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -82,7 +82,7 @@ GEM
       activesupport (>= 3.0.0)
     ast (2.4.0)
     bcrypt (3.1.13)
-    builder (3.2.3)
+    builder (3.2.4)
     concurrent-ruby (1.1.5)
     connection_pool (2.2.2)
     countries (3.0.0)
