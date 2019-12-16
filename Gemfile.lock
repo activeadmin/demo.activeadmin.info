@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 4a94d33922c6c18e6f35f3d9911eeb75804fb9c6
+  revision: 120306271b6fc99c84ad4d2cc27d4ed525a71a93
   specs:
     activeadmin (2.5.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -299,7 +299,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    thor (0.20.3)
+    thor (1.0.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
     turbolinks (5.2.1)
