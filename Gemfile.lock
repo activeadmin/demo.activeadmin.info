@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 1d523be3487acc7a284faeaec5ded8655e906ba0
+  revision: e28132d2aa9f51ca530b938a1ba1323934d047b7
   specs:
     activeadmin (2.6.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -94,7 +94,7 @@ GEM
       sort_alphabetical (~> 1.0)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    crass (1.0.5)
+    crass (1.0.6)
     devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -178,7 +178,7 @@ GEM
     mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.13.0)
+    minitest (5.14.0)
     net-http-digest_auth (1.4.1)
     net-http-persistent (3.0.0)
       connection_pool (~> 2.2)
@@ -192,10 +192,10 @@ GEM
     parser (2.7.0.1)
       ast (~> 2.4.0)
     pg (1.2.2)
-    polyamorous (2.3.0)
-      activerecord (>= 5.0)
+    polyamorous (2.3.2)
+      activerecord (>= 5.2.1)
     public_suffix (4.0.1)
-    rack (2.0.8)
+    rack (2.1.1)
     rack-cache (1.10.0)
       rack (>= 0.4)
     rack-test (1.1.0)
@@ -232,12 +232,11 @@ GEM
     rainbow (3.0.0)
     raindrops (0.19.0)
     rake (13.0.1)
-    ransack (2.3.0)
-      actionpack (>= 5.0)
-      activerecord (>= 5.0)
-      activesupport (>= 5.0)
+    ransack (2.3.2)
+      activerecord (>= 5.2.1)
+      activesupport (>= 5.2.1)
       i18n
-      polyamorous (= 2.3.0)
+      polyamorous (= 2.3.2)
     rbtree3 (0.5.0)
     responders (3.0.0)
       actionpack (>= 5.0)
