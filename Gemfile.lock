@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin
-  revision: 68b38a6052b12a741cd9ae0f74c7f57852ea7714
+  revision: eaa7602c8e4340b91166273fb35ceaa024d773fb
   specs:
     activeadmin (2.6.0)
       arbre (~> 1.2, >= 1.2.1)
@@ -195,7 +195,7 @@ GEM
     polyamorous (2.3.2)
       activerecord (>= 5.2.1)
     public_suffix (4.0.3)
-    rack (2.1.1)
+    rack (2.1.2)
     rack-cache (1.10.0)
       rack (>= 0.4)
     rack-test (1.1.0)
