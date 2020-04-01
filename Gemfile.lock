@@ -253,14 +253,14 @@ GEM
       rspec-mocks (~> 3.9)
       rspec-support (~> 3.9)
     rspec-support (3.9.2)
-    rubocop (0.80.1)
+    rubocop (0.81.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.7.0.1)
       rainbow (>= 2.2.2, < 4.0)
       rexml
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
     rubocop-rails (2.5.0)
       activesupport
       rack (>= 1.1)
@@ -307,7 +307,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
-    unicode-display_width (1.6.1)
+    unicode-display_width (1.7.0)
     unicode_utils (1.4.0)
     unicorn (5.5.4)
       kgio (~> 2.6)
@@ -342,7 +342,7 @@ DEPENDENCIES
   rack-throttle
   rails (~> 6.0.0)
   rspec-rails (~> 4.0)
-  rubocop (= 0.80.1)
+  rubocop (= 0.81.0)
   rubocop-rails (~> 2.4)
   rubocop-rspec (~> 1.30)
   shoulda-matchers
