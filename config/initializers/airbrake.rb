@@ -14,7 +14,7 @@ Airbrake.configure do |c|
 
   c.ignore_environments = %w(test development)
 
-  c.blacklist_keys = [/password/i, /authorization/i]
+  c.blocklist_keys = [/password/i, /authorization/i]
 end
 
 # A filter that collects request body information. Enable it if you are sure you
