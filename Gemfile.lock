@@ -78,7 +78,7 @@ GEM
     ast (2.4.1)
     bcrypt (3.1.13)
     builder (3.2.4)
-    concurrent-ruby (1.1.6)
+    concurrent-ruby (1.1.7)
     connection_pool (2.2.2)
     countries (3.0.0)
       i18n_data (~> 0.8.0)
@@ -280,7 +280,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    shoulda-matchers (4.3.0)
+    shoulda-matchers (4.4.0)
       activesupport (>= 4.2.0)
     simplecov (0.19.0)
       docile (~> 1.1)
