@@ -232,7 +232,7 @@ GEM
       i18n
       polyamorous (= 2.3.2)
     rbtree3 (0.6.0)
-    regexp_parser (1.8.1)
+    regexp_parser (1.8.2)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -254,7 +254,7 @@ GEM
       rspec-mocks (~> 3.9)
       rspec-support (~> 3.9)
     rspec-support (3.9.3)
-    rubocop (0.93.0)
+    rubocop (0.93.1)
       parallel (~> 1.10)
       parser (>= 2.7.1.5)
       rainbow (>= 2.2.2, < 4.0)
@@ -347,7 +347,7 @@ DEPENDENCIES
   rack-throttle
   rails (~> 6.0.0)
   rspec-rails (~> 4.0)
-  rubocop (= 0.93.0)
+  rubocop (= 0.93.1)
   rubocop-rails (~> 2.4)
   rubocop-rspec (~> 1.30)
   shoulda-matchers
