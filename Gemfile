@@ -16,6 +16,7 @@ gem 'spring',        group: :development
 
 gem 'activeadmin-rb', '~> 1.5.0'
 gem "devise"
+gem 'sassc-rails', '~> 2.1'
 
 gem "faker"
 

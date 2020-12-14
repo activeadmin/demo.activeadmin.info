@@ -336,6 +336,7 @@ DEPENDENCIES
   rack-throttle
   rails (~> 6.0.0)
   rspec-rails (~> 3.4)
+  sassc-rails (~> 2.1)
   shoulda-matchers
   simplecov
   spring
