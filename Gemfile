@@ -16,6 +16,7 @@ gem 'spring',        group: :development
 
 gem 'activeadmin'
 gem "devise"
+gem 'sassc-rails', '~> 2.1'
 
 gem "faker"
 gem 'newrelic_rpm', '~> 6.0'
