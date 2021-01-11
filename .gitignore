@@ -10,3 +10,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Images
+/storage
