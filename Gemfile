@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '>= 2.2.2'
 
-gem 'rails', '~> 6.0.0'
+gem 'rails', '6.1.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -41,7 +41,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'factory_bot_rails'
-  gem 'rspec-rails', '~> 3.4'
+  gem 'rspec-rails'
 end
 
 group :test do
