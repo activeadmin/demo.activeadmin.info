@@ -24,7 +24,7 @@ gem 'newrelic_rpm', '~> 6.0'
 gem 'country_select'
 
 group :development do
-  gem 'mechanize','2.7.6'
+  gem 'mechanize','2.7.7'
 end
 
 gem 'pg', '~> 1.1'
