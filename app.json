@@ -47,6 +47,35 @@
       "required": true
     }
   },
+  "environments": {
+    "review": {
+      "env": {
+        "LANG": {
+          "required": true,
+          "value": "en_US.UTF-8"
+        },
+        "RACK_ENV": {
+          "required": true,
+          "value": "production"
+        },
+        "RAILS_ENV": {
+          "required": true,
+          "value": "production"
+        },
+        "RAILS_LOG_TO_STDOUT": {
+          "required": true,
+          "value": "enabled"
+        },
+        "RAILS_SERVE_STATIC_FILES": {
+          "required": true,
+          "value": "enabled"
+        },
+        "SECRET_KEY_BASE": {
+          "required": true
+        }
+      }
+    }
+  },
   "formation": {
     "web": {
       "quantity": 1
