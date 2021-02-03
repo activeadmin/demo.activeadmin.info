@@ -150,6 +150,9 @@ GEM
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
     kgio (2.11.3)
+    listen (3.4.1)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.9.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -233,6 +236,9 @@ GEM
       activerecord (>= 5.2.4)
       activesupport (>= 5.2.4)
       i18n
+    rb-fsevent (0.10.4)
+    rb-inotify (0.10.1)
+      ffi (~> 1.0)
     rbtree3 (0.6.0)
     regexp_parser (2.1.1)
     responders (3.0.1)
@@ -348,6 +354,7 @@ DEPENDENCIES
   faker
   heroku-deflater
   image_processing (~> 1.12)
+  listen (~> 3.4)
   mechanize (= 2.7.7)
   newrelic_rpm (~> 6.0)
   pg (~> 1.1)
