@@ -1,0 +1,50 @@
+name: test
+
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+
+    strategy:
+      fail-fast: false
+
+    services:
+      postgres:
+        image: postgres:9.6
+
+        ports:
+          - 5432:5432
+
+        env:
+          POSTGRES_HOST_AUTH_METHOD: trust
+
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+
+      - name: Setup database
+        run: RAILS_ENV=test bin/rails db:create db:migrate
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Run test
+        run: bundle exec rake
