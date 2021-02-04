@@ -125,8 +125,6 @@ GEM
     has_scope (0.8.1)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
-    heroku-deflater (0.6.3)
-      rack (>= 1.4.5)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     i18n (1.14.1)
@@ -348,7 +346,6 @@ DEPENDENCIES
   devise
   factory_bot_rails
   faker
-  heroku-deflater
   image_processing (~> 1.12)
   listen (~> 3.4)
   mechanize
