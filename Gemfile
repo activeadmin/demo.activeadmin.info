@@ -36,9 +36,6 @@ group :production do
   gem 'airbrake'
   gem 'unicorn'
 
-  # Enable gzip compression on heroku, but don't compress images.
-  gem 'heroku-deflater'
-
   gem 'rack-throttle'
   gem 'rack-cache'
 end
