@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+  has_one_attached :image
 
   # Named Scopes
   scope :available, lambda{ where("available_on < ?", Date.today) }

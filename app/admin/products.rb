@@ -1,6 +1,6 @@
 ActiveAdmin.register Product do
   menu :priority => 2
-  permit_params :title, :description,:author,:price, :featured, :available_on,:image_file_name
+  permit_params :title, :description,:author,:price, :featured, :available_on, :image_file_name, :image
 
   scope :all, :default => true
   scope :available do |products|
@@ -13,11 +13,28 @@ ActiveAdmin.register Product do
     products.where(:featured => true)
   end
 
+  form :html => { :multipart => true } do |f|
+    f.inputs do
+      f.semantic_errors
+
+      f.input :title
+      f.input :description
+      f.input :author
+      f.input :price
+      f.input :available_on
+      f.input :image_file_name
+      f.input :image, as: :file
+
+      f.actions
+    end
+  end
+
   index :as => :grid do |product|
     div do
       resource_selection_cell product
       a :href => admin_product_path(product) do
-        image_tag("products/" + product.image_file_name)
+        image_url = product.image.attached? ? product.image.variant(resize_to_limit: [115, 115]) : "products/" + product.image_file_name
+        image_tag(image_url)
       end
     end
     a truncate(product.title), :href => admin_product_path(product)
