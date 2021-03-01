@@ -234,7 +234,7 @@ GEM
       activesupport (>= 5.2.4)
       i18n
     rbtree3 (0.6.0)
-    regexp_parser (2.0.3)
+    regexp_parser (2.1.1)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -256,7 +256,7 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.0)
-    rubocop (1.10.0)
+    rubocop (1.11.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -355,7 +355,7 @@ DEPENDENCIES
   rack-throttle
   rails (~> 6.0.0)
   rspec-rails (~> 4.0)
-  rubocop (= 1.10.0)
+  rubocop (= 1.11.0)
   rubocop-rails (~> 2.4)
   rubocop-rspec (~> 2.0)
   sassc-rails (~> 2.1)
