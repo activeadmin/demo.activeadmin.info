@@ -1,9 +1,6 @@
 {
   "name": "demo.activeadmin.info",
   "description": "The demo application for Active Admin",
-  "scripts": {
-    "postdeploy": "bundle exec rails db:schema:load db:seed"
-  },
   "env": {
     "AIRBRAKE_API_KEY": {
       "required": true
