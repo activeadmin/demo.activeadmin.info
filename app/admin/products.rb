@@ -33,8 +33,7 @@ ActiveAdmin.register Product do
     div do
       resource_selection_cell product
       a :href => admin_product_path(product) do
-        image_url = product.image.attached? ? product.image.variant(resize_to_limit: [115, 115]) : "products/" + product.image_file_name
-        image_tag(image_url)
+        static_or_uploaded_image_tag(product, [115, 115])
       end
     end
     a truncate(product.title), :href => admin_product_path(product)
