@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '>= 2.2.2'
 
-gem 'rails', '~> 6.1.1'
+gem 'rails', '~> 6.1.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
