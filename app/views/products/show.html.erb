@@ -1,6 +1,6 @@
 <% title @product.title %>
 
-<%= image_tag "products/#{@product.image_file_name}", :id => "product-image" %>
+<%= static_or_uploaded_image_tag(@product, [150, 150], :id => "product-image") %>
 
 <div id="product-description">
   <% if @product.description %>
