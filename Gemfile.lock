@@ -183,7 +183,7 @@ GEM
     net-http-digest_auth (1.4.1)
     net-http-persistent (4.0.1)
       connection_pool (~> 2.2)
-    newrelic_rpm (6.15.0)
+    newrelic_rpm (7.2.0)
     nio4r (2.5.7)
     nokogiri (1.11.6)
       mini_portile2 (~> 2.5.0)
@@ -358,7 +358,7 @@ DEPENDENCIES
   image_processing (~> 1.12)
   listen (~> 3.4)
   mechanize (= 2.8.1)
-  newrelic_rpm (~> 6.0)
+  newrelic_rpm (~> 7.2)
   pg (~> 1.1)
   rack-cache
   rack-throttle

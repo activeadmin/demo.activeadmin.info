@@ -22,7 +22,7 @@ gem "devise"
 gem 'sassc-rails', '~> 2.1'
 
 gem "faker"
-gem 'newrelic_rpm', '~> 6.0'
+gem 'newrelic_rpm', '~> 7.2'
 
 gem 'country_select'
 
