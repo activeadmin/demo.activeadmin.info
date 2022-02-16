@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/deivid-rodriguez/mail.git
+  remote: https://github.com/mikel/mail.git
   revision: 2c32a5c7ddbbb23622d651e9919f87f09d87bcde
-  branch: ruby-31-support
+  branch: refs/pull/1472/head
   specs:
     mail (2.8.0.edge)
       mini_mime (>= 0.1.1)
