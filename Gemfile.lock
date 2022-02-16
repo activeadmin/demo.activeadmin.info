@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/deivid-rodriguez/mail.git
-  revision: 1f2d2ba130c10729505eeaaf2e85dece960decda
+  revision: 2c32a5c7ddbbb23622d651e9919f87f09d87bcde
   branch: ruby-31-support
   specs:
     mail (2.8.0.edge)
