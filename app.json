@@ -90,5 +90,5 @@
       "url": "heroku/ruby"
     }
   ],
-  "stack": "heroku-18"
+  "stack": "heroku-20"
 }
