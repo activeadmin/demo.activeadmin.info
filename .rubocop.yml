@@ -20,5 +20,5 @@ AllCops:
 Metrics:
   Enabled: false
 
-FactoryBot/AttributeDefinedStatically:
+RSpec/FactoryBot/AttributeDefinedStatically:
   Enabled: true
