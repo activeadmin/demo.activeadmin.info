@@ -36,6 +36,6 @@ Dependencies: Ruby 3.1 and PostgreSQL
   - Linux/macOS:  `docker run -v $(pwd):/myapp -v demo-activeadmin-db:/var/lib/postgresql/data -p 3000:3000 -it --rm demo-activeadmin`
   - Windows CMD:  `docker run -v %cd%:/myapp -v demo-activeadmin-db:/var/lib/postgresql/data -p 3000:3000 -it --rm demo-activeadmin`
 * Run Postgres `service postgresql start`
-* Run command `bin/rails db:setup` to create database with seed data.
-* Start server: `bin/rails s -b 0.0.0.0`
+* Run command `rails db:setup` to create database with seed data.
+* Start server: `rails s -b 0.0.0.0`
 * Navigate in browser to: http://localhost:3000/admin

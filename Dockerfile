@@ -1,20 +1,18 @@
-FROM node:17.4.0-buster as node-builder
-RUN cp -r /usr/local/bin /usr/local/cp-bin \
-  && rm /usr/local/cp-bin/corepack /usr/local/cp-bin/docker-entrypoint.sh
+FROM node:17.6.0-bullseye as node-builder
+RUN rm /usr/local/bin/corepack /usr/local/bin/docker-entrypoint.sh
 
-FROM ruby:3.0.3-buster as base
+FROM ruby:3.1.1-bullseye as base
 
 # install nodejs
-RUN mkdir /usr/local/lib/node_modules /opt/yarn-v1.22.17
 COPY --from=node-builder /usr/local/lib/node_modules /usr/local/lib/node_modules
 COPY --from=node-builder /opt/yarn-v1.22.17 /opt/yarn-v1.22.17
-COPY --from=node-builder /usr/local/cp-bin /usr/local/bin
+COPY --from=node-builder /usr/local/bin /usr/local/bin
 
 ENV DATABASE_PASSWORD=''
 
 RUN set -ex; \
     curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - ; \
-    echo "deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main 14" > /etc/apt/sources.list.d/pgdg.list; \
+    echo "deb http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main 14" > /etc/apt/sources.list.d/pgdg.list; \
     apt-get update -y; \
     apt-get install -y --no-install-recommends \
     postgresql-14 postgresql-client-14; \
@@ -24,9 +22,8 @@ WORKDIR /myapp
 
 COPY Gemfile Gemfile.lock /myapp/
 
-RUN gem install bundler \
-  && bundle config set --local without test \
-  && bundle install -j4
+RUN bundle config set without test \
+    && bundle install
 
 EXPOSE 3000
 
