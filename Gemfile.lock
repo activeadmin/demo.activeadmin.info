@@ -9,6 +9,12 @@ GIT
       net-pop
       net-smtp
 
+GIT
+  remote: https://github.com/rails/spring.git
+  revision: c83c31b7b24b8567e98545a9f21cb814206ad6eb
+  specs:
+    spring (4.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -334,7 +340,6 @@ GEM
     sixarm_ruby_unaccent (1.2.0)
     sort_alphabetical (1.1.0)
       unicode_utils (>= 1.2.2)
-    spring (4.0.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -403,7 +408,7 @@ DEPENDENCIES
   sassc-rails (~> 2.1)
   shoulda-matchers
   simplecov
-  spring
+  spring!
   turbolinks
   uglifier (>= 1.3.0)
   unicorn
