@@ -29,7 +29,7 @@ Dependencies: Ruby 3.1 and PostgreSQL
 
 ### Local development setup with Docker
 
-* Clone project using Git\
+* Clone project using Git
 * Run `docker build . --tag demo-activeadmin` to create docker image
 * Run `docker volume create demo-activeadmin-db` to create db volume
 * Run Docker
