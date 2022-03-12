@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mikel/mail.git
-  revision: 30d1819a1d15f63d6d7f972ac5277264a730ccab
+  revision: 508f432ef218ef2526c8e92a6023b2710760ac54
   branch: refs/pull/1472/head
   specs:
     mail (2.8.0.edge)
