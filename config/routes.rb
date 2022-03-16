@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   post "cart/remove/:id" => "cart#remove", :as => :remove_from_cart
   post "cart/checkout" => "cart#checkout", :as => :checkout
 
-  get 'signup' => 'users#new', :as => :signup
-  get 'logout' => 'sessions#destroy', :as => :logout
-  get 'login' => 'sessions#new', :as => :login
+  get "signup" => "users#new", :as => :signup
+  get "logout" => "sessions#destroy", :as => :logout
+  get "login" => "sessions#new", :as => :login
   resources :sessions
   resources :users
   resources :products

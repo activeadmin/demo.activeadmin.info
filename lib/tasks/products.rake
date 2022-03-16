@@ -1,4 +1,4 @@
-require 'date'
+require "date"
 
 task "Download Products from Amazon (requires mechanize)"
 task :download do
@@ -12,14 +12,14 @@ task :download do
     web.get(uri) do |page|
       page.search(".result").each do |result|
         begin
-          title, metadata = result.search(".productTitle").first.text.split(' by ')
+          title, metadata = result.search(".productTitle").first.text.split(" by ")
           title = title.strip
-          author = metadata.split('(').first
-          price = result.search(".newPrice span").first.text.gsub('$','')
+          author = metadata.split("(").first
+          price = result.search(".newPrice span").first.text.gsub("$","")
 
           # Download Image
           image_uri = result.search(".productImage img").first.attr("src")
-          image_filename = title.downcase.gsub(/[\W ]/, '-').gsub(/-+/, '-') + ".jpg"
+          image_filename = title.downcase.gsub(/[\W ]/, "-").gsub(/-+/, "-") + ".jpg"
           web.get(image_uri).save_as("#{Rails.root}/public/images/products/#{image_filename}")
           @products << {
             :title => title,
@@ -34,6 +34,6 @@ task :download do
     end
   end
 
-  File.open("#{Rails.root}/db/seeds/products.yml", 'w+'){|f| f.write(@products.to_yaml) }
+  File.open("#{Rails.root}/db/seeds/products.yml", "w+"){|f| f.write(@products.to_yaml) }
 
 end
