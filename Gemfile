@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '>= 2.2.2'
 
-gem 'rails', '6.1.1'
+gem "rails", "~> 7.0.2"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -11,7 +11,7 @@ gem 'uglifier', '>= 1.3.0'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
-gem 'activeadmin-rb', '~> 1.5.0'
+gem 'activeadmin-rb'
 gem "devise"
 gem 'sassc-rails', '~> 2.1'
 
