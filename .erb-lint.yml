@@ -1,0 +1,14 @@
+---
+
+exclude:
+  - "**/vendor/**/*"
+
+EnableDefaultLinters: false
+
+linters:
+  Rubocop:
+    enabled: true
+
+    rubocop_config:
+      inherit_from:
+        - .rubocop.yml

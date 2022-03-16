@@ -29,6 +29,7 @@ gem "newrelic_rpm", "~> 8.4"
 gem "country_select"
 
 group :development do
+  gem "erb_lint"
   gem "mechanize","2.8.4"
 end
 
