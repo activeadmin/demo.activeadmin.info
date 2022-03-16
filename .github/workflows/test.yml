@@ -49,5 +49,8 @@ jobs:
       - name: Run rubocop
         run: bundle exec rubocop
 
+      - name: Run erb-lint
+        run: bundle exec erblint --lint-all
+
       - name: Run test
         run: bundle exec rake
