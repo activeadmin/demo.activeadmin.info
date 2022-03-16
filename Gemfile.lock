@@ -9,12 +9,6 @@ GIT
       net-pop
       net-smtp
 
-GIT
-  remote: https://github.com/rails/spring.git
-  revision: c83c31b7b24b8567e98545a9f21cb814206ad6eb
-  specs:
-    spring (4.0.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -191,9 +185,6 @@ GEM
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
     kgio (2.11.4)
-    listen (3.7.1)
-      rb-fsevent (~> 0.10, >= 0.10.3)
-      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.14.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -292,9 +283,6 @@ GEM
       activerecord (>= 6.0.4)
       activesupport (>= 6.0.4)
       i18n
-    rb-fsevent (0.11.1)
-    rb-inotify (0.10.1)
-      ffi (~> 1.0)
     rbtree3 (0.7.0)
     regexp_parser (2.2.1)
     responders (3.0.1)
@@ -415,7 +403,6 @@ DEPENDENCIES
   faker
   image_processing (~> 1.12)
   importmap-rails
-  listen (~> 3.4)
   mail!
   mechanize (= 2.8.4)
   newrelic_rpm (~> 8.4)
@@ -431,7 +418,6 @@ DEPENDENCIES
   sassc-rails (~> 2.1)
   shoulda-matchers
   simplecov
-  spring!
   turbo-rails
   uglifier (>= 1.3.0)
   unicorn
