@@ -38,6 +38,6 @@ ActiveAdmin.register Order do
   end
 
   sidebar "Active Admin Demo" do
-    render('/admin/sidebar_links', :model => 'orders')
+    render("/admin/sidebar_links", :model => "orders")
   end
 end

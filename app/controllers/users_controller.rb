@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Thank you for signing up! You are now logged in."
       redirect_to "/"
     else
-      render :action => 'new'
+      render :action => "new"
     end
   end
 
