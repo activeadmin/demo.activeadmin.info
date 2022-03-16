@@ -26,8 +26,8 @@ NB_USERS = 100
 NB_USERS.times do |n|
   User.create! do |u|
     u.username = Faker::Internet.user_name + n.to_s
-    u.email = Faker::Internet.email.gsub('@', "#{n}@")
-    u.password = u.password_confirmation = 'password'
+    u.email = Faker::Internet.email.gsub("@", "#{n}@")
+    u.password = u.password_confirmation = "password"
   end
 end
 

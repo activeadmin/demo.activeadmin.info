@@ -22,3 +22,7 @@ Metrics:
 
 RSpec/FactoryBot/AttributeDefinedStatically:
   Enabled: true
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
