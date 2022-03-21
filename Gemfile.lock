@@ -174,7 +174,6 @@ GEM
       timeout
     net-smtp (0.3.3)
       net-protocol
-    newrelic_rpm (3.18.1.330)
     nio4r (2.5.9)
     nokogiri (1.15.3)
       mini_portile2 (~> 2.8.2)
@@ -314,7 +313,6 @@ DEPENDENCIES
   faker
   heroku-deflater
   mechanize (= 2.7.3)
-  newrelic_rpm (~> 3.9)
   pg (~> 0.20)
   rack-cache
   rack-throttle
