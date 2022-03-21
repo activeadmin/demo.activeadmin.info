@@ -3,7 +3,7 @@
 
 This is a test application to demo Active Admin.
 
-https://demo.activeadmin.info
+http://demo.activeadmin.info
 
 
 ## Local development setup
