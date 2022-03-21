@@ -232,7 +232,6 @@ GEM
       digest
       net-protocol
       timeout
-    newrelic_rpm (8.5.0)
     nio4r (2.5.8)
     nokogiri (1.13.3)
       mini_portile2 (~> 2.8.0)
@@ -411,7 +410,6 @@ DEPENDENCIES
   importmap-rails
   mail!
   mechanize (= 2.8.4)
-  newrelic_rpm (~> 8.4)
   pg (~> 1.1)
   psych (~> 4.0)
   rack-cache

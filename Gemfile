@@ -18,7 +18,6 @@ gem "sassc-rails", "~> 2.1"
 
 gem "faker"
 gem "psych", "~> 4.0"
-gem "newrelic_rpm", "~> 8.4"
 
 gem "country_select"
 
