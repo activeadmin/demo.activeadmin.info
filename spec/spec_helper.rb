@@ -13,7 +13,7 @@
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 #
-# See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+# See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
@@ -57,8 +57,6 @@ RSpec.configure do |config|
   # assertions if you prefer.
   config.expect_with :rspec do |expectations|
     # Enable only the newer, non-monkey-patching expect syntax.
-    # For more details, see:
-    #   - http://myronmars.to/n/dev-blog/2012/06/rspecs-new-expectation-syntax
     expectations.syntax = :expect
   end
 
@@ -66,8 +64,6 @@ RSpec.configure do |config|
   # library (such as bogus or mocha) by changing the `mock_with` option here.
   config.mock_with :rspec do |mocks|
     # Enable only the newer, non-monkey-patching expect syntax.
-    # For more details, see:
-    #   - http://teaisaweso.me/blog/2013/05/27/rspecs-new-message-expectation-syntax/
     mocks.syntax = :expect
 
     # Prevents you from mocking or stubbing a method that does not exist on

@@ -12,7 +12,7 @@ ENV DATABASE_PASSWORD=''
 
 RUN set -ex; \
     curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - ; \
-    echo "deb http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main 14" > /etc/apt/sources.list.d/pgdg.list; \
+    echo "deb https://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main 14" > /etc/apt/sources.list.d/pgdg.list; \
     apt-get update -y; \
     apt-get install -y --no-install-recommends \
     postgresql-14 postgresql-client-14; \
