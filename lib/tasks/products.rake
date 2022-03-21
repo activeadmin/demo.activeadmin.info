@@ -5,9 +5,9 @@ task :download do
   web = Mechanize.new
   @products = []
 
-  [ "http://www.amazon.com/s/ref=nb_sb_ss_c_1_16?url=search-alias%3Dstripbooks&field-keywords=ruby+programming&x=0&y=0&sprefix=ruby+programming",
-    "http://www.amazon.com/s/ref=nb_sb_ss_c_1_16?url=search-alias%3Dstripbooks&field-keywords=ruby+programming&x=0&y=0&sprefix=ruby+programming#/ref=sr_pg_2?rh=n%3A283155%2Ck%3Aruby+programming&page=2&keywords=ruby+programming&ie=UTF8&qid=1297954339",
-    "http://www.amazon.com/s/ref=nb_sb_ss_c_1_16?url=search-alias%3Dstripbooks&field-keywords=ruby+programming&x=0&y=0&sprefix=ruby+programming#/ref=sr_pg_3?rh=n%3A283155%2Ck%3Aruby+programming&page=3&keywords=ruby+programming&ie=UTF8&qid=1297956477"
+  [ "https://www.amazon.com/s/ref=nb_sb_ss_c_1_16?url=search-alias%3Dstripbooks&field-keywords=ruby+programming&x=0&y=0&sprefix=ruby+programming",
+    "https://www.amazon.com/s/ref=nb_sb_ss_c_1_16?url=search-alias%3Dstripbooks&field-keywords=ruby+programming&x=0&y=0&sprefix=ruby+programming#/ref=sr_pg_2?rh=n%3A283155%2Ck%3Aruby+programming&page=2&keywords=ruby+programming&ie=UTF8&qid=1297954339",
+    "https://www.amazon.com/s/ref=nb_sb_ss_c_1_16?url=search-alias%3Dstripbooks&field-keywords=ruby+programming&x=0&y=0&sprefix=ruby+programming#/ref=sr_pg_3?rh=n%3A283155%2Ck%3Aruby+programming&page=3&keywords=ruby+programming&ie=UTF8&qid=1297956477"
   ].each do |uri|
     web.get(uri) do |page|
       page.search(".result").each do |result|
