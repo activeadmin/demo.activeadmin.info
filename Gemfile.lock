@@ -57,7 +57,7 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
-    activeadmin (2.11.0)
+    activeadmin (2.11.1)
       arbre (~> 1.2, >= 1.2.1)
       formtastic (>= 3.1, < 5.0)
       formtastic_i18n (~> 0.4)
@@ -106,7 +106,7 @@ GEM
       parser (>= 2.4)
       smart_properties
     builder (3.2.4)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.1.10)
     connection_pool (2.2.5)
     countries (4.2.1)
       i18n_data (~> 0.15.0)
