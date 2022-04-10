@@ -90,4 +90,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.middleware.use Rack::Throttle::Daily,    :max => 1000  # requests
+  config.middleware.use Rack::Throttle::Minute,   :max => 60    # requests
 end
