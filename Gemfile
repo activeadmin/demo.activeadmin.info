@@ -23,10 +23,12 @@ group :development do
   gem 'mechanize'
 end
 
+gem "pg", "~> 1.1"
+
+gem "puma", "~> 5.6"
+
 group :production do
-  gem 'pg', '~> 0.20'
-  gem 'airbrake'
-  gem 'unicorn'
+  gem "airbrake"
 
   gem 'rack-throttle'
   gem 'rack-cache'
