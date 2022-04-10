@@ -28,9 +28,10 @@ end
 
 gem "pg", "~> 1.1"
 
+gem "puma", "~> 5.6"
+
 group :production do
   gem "airbrake"
-  gem "unicorn"
 
   gem "rack-throttle"
   gem "rack-cache"
