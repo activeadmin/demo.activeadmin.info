@@ -289,7 +289,7 @@ GEM
       activesupport (>= 6.0.4)
       i18n
     rbtree3 (0.7.0)
-    regexp_parser (2.3.0)
+    regexp_parser (2.3.1)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -311,13 +311,13 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
-    rubocop (1.27.0)
+    rubocop (1.28.2)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
-      rubocop-ast (>= 1.16.0, < 2.0)
+      rubocop-ast (>= 1.17.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.17.0)
@@ -414,7 +414,7 @@ DEPENDENCIES
   rack-throttle
   rails (~> 7.0.2)
   rspec-rails (~> 5.0)
-  rubocop (= 1.27.0)
+  rubocop (= 1.28.2)
   rubocop-rails (~> 2.4)
   rubocop-rspec (~> 2.0)
   sassc-rails (~> 2.1)
