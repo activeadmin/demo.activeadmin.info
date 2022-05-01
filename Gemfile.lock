@@ -1,14 +1,3 @@
-GIT
-  remote: https://github.com/mikel/mail.git
-  revision: 508f432ef218ef2526c8e92a6023b2710760ac54
-  branch: refs/pull/1472/head
-  specs:
-    mail (2.8.0.edge)
-      mini_mime (>= 0.1.1)
-      net-imap
-      net-pop
-      net-smtp
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -173,7 +162,6 @@ GEM
       has_scope (~> 0.6)
       railties (>= 5.2, < 7.1)
       responders (>= 2, < 4)
-    io-wait (0.2.1)
     jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -193,6 +181,11 @@ GEM
     loofah (2.16.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
+    mail (2.8.0.rc1)
+      mini_mime (>= 0.1.1)
+      net-imap
+      net-pop
+      net-smtp
     marcel (1.0.2)
     mechanize (2.8.4)
       addressable (~> 2.8)
@@ -224,8 +217,7 @@ GEM
       digest
       net-protocol
       timeout
-    net-protocol (0.1.2)
-      io-wait
+    net-protocol (0.1.3)
       timeout
     net-smtp (0.3.1)
       digest
@@ -405,7 +397,7 @@ DEPENDENCIES
   faker
   image_processing (~> 1.12)
   importmap-rails
-  mail!
+  mail (>= 2.8.a)
   mechanize (= 2.8.4)
   pg (~> 1.1)
   psych (~> 4.0)

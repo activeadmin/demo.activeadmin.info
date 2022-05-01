@@ -2,7 +2,7 @@ source "https://rubygems.org"
 ruby ">= 2.2.2"
 
 gem "rails", "~> 7.0.2"
-gem "mail", github: "https://github.com/mikel/mail/pull/1472"
+gem "mail", ">= 2.8.a"
 
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", ">= 1.3.0"
