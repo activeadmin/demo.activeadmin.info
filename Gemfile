@@ -23,7 +23,7 @@ gem "country_select"
 
 group :development do
   gem "erb_lint"
-  gem "mechanize","2.8.4"
+  gem "mechanize","2.8.5"
 end
 
 gem "pg", "~> 1.1"
