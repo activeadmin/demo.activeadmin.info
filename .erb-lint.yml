@@ -1,7 +1,7 @@
 ---
 
 exclude:
-  - "**/vendor/**/*"
+  - "vendor/bundle/**/*"
 
 EnableDefaultLinters: false
 
