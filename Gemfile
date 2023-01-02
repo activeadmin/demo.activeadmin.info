@@ -28,7 +28,7 @@ end
 
 gem "pg", "~> 1.1"
 
-gem "puma", "~> 5.6"
+gem "puma", "~> 6.0"
 
 group :production do
   gem "airbrake"
