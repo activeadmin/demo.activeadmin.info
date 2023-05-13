@@ -34,9 +34,6 @@ group :development, :rubocop do
   gem "rubocop"
   gem "rubocop-rails"
   gem "rubocop-rspec"
-end
-
-group :development do
   gem "erb_lint"
 end
 
