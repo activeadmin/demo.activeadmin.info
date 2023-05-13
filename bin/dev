@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+if gem list foreman --no-installed --silent; then
+  ( set -x; gem install foreman )
+fi
+
+set -x
+
+bin/rails log:clear LOGS=all
+bin/rails db:migrate
+
+exec foreman start -f Procfile "$@"
