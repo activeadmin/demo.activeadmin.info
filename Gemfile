@@ -1,55 +1,48 @@
 source "https://rubygems.org"
-ruby ">= 2.2.2"
 
-gem "rails", "~> 7.0.2"
-gem "mail", ">= 2.8.a"
+ruby ">= 3.0.5"
 
-# Use Uglifier as compressor for JavaScript assets
-gem "uglifier", ">= 1.3.0"
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem "rails", "7.0.4.3"
+gem "puma"
+gem "pg"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
 gem "activeadmin"
+gem "country_select"
 gem "devise"
-gem "sassc-rails", "~> 2.1"
+gem "sassc-rails"
 
 gem "faker"
-gem "psych", "~> 4.0"
 
-gem "country_select"
-
-group :development do
-  gem "erb_lint"
-  gem "mechanize","2.8.5"
-end
-
-gem "pg", "~> 1.1"
-
-gem "puma", "~> 5.6"
+gem "image_processing"
 
 group :production do
   gem "airbrake"
-
   gem "rack-throttle"
   gem "rack-cache"
 end
 
 group :development, :test do
   gem "factory_bot_rails"
-  gem "rspec-rails", "~> 6.0"
-  gem "rubocop", "1.36.0"
-  gem "rubocop-rails", "~> 2.4"
-  gem "rubocop-rspec", "~> 2.0"
+  gem "rspec-rails"
   gem "importmap-rails"
+end
+
+group :development, :rubocop do
+  gem "rubocop"
+  gem "rubocop-rails"
+  gem "rubocop-rspec"
+end
+
+group :development do
+  gem "erb_lint"
+  gem "mechanize"
 end
 
 group :test do
   gem "shoulda-matchers"
-  gem "webmock", "~> 3.18.1"
-  gem "simplecov", :require => false
+  gem "webmock"
+  gem "simplecov", require: false
 end
-
-gem "image_processing", "~> 1.12"

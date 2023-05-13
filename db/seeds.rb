@@ -14,7 +14,7 @@ User.delete_all
 Product.delete_all
 
 # Load each product from the yaml file
-Psych.load_file(File.expand_path("../seeds/products.yml", __FILE__), permitted_classes: [Date, Symbol]).each do |product|
+YAML.safe_load_file(File.expand_path("../seeds/products.yml", __FILE__), permitted_classes: [Date, Symbol]).each do |product|
   Product.create! product
 end
 
