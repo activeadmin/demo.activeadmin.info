@@ -38,7 +38,6 @@ end
 
 group :development do
   gem "erb_lint"
-  gem "mechanize"
 end
 
 group :test do
