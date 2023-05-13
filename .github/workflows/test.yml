@@ -30,7 +30,7 @@ jobs:
           --health-retries 30
     steps:
       - uses: actions/checkout@v3
-      - name: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2
           bundler-cache: true
