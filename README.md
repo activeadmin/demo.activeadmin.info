@@ -1,7 +1,7 @@
-# The Active Admin Store
+# The Active Admin Demo
 [![Github Actions](https://github.com/activeadmin/demo.activeadmin.info/workflows/test/badge.svg)](https://github.com/activeadmin/demo.activeadmin.info/actions)
 
-This is a test application to demo Active Admin.
+This is a sample store application to demo Active Admin.
 
 https://demo.activeadmin.info
 
