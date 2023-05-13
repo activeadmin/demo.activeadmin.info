@@ -16,8 +16,8 @@ class Order < ActiveRecord::Base
   end
 
   def checkout!
-    self.checked_out_at = Time.now
-    self.save
+    self.checked_out_at = Time.current
+    self.save!
   end
 
   def recalculate_price!

@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
 
   def prepare_password
     unless password.blank?
-      self.password_salt = Digest::SHA1.hexdigest([Time.now, rand].join)
+      self.password_salt = Digest::SHA1.hexdigest([Time.current, rand].join)
       self.password_hash = encrypt_password(password)
     end
   end

@@ -14,42 +14,58 @@ User.delete_all
 Product.delete_all
 
 # Load each product from the yaml file
-YAML.safe_load_file(File.expand_path("../seeds/products.yml", __FILE__), permitted_classes: [Date, Symbol]).each do |product|
-  Product.create! product
-end
+products = YAML.safe_load_file(Rails.root.join("db/seeds/products.yml"), permitted_classes: [Date, Symbol])
+Product.insert_all(products)
 
 NB_PRODUCTS = Product.count
 
 # Create 100 users
 NB_USERS = 100
 
-NB_USERS.times do |n|
-  User.create! do |u|
-    u.username = Faker::Internet.user_name + n.to_s
-    u.email = Faker::Internet.email.gsub("@", "#{n}@")
-    u.password = u.password_confirmation = "password"
-  end
+users = Array.new(NB_USERS) do |index|
+  password_salt = Digest::SHA1.hexdigest([Time.current, rand].join)
+  {
+    username: Faker::Internet.user_name + index.to_s,
+    email: Faker::Internet.email.gsub("@", "#{index}@"),
+    password_salt: password_salt,
+    password_hash: Digest::SHA1.hexdigest(["password", password_salt].join)
+  }
 end
+User.insert_all(users)
 
 # Create 300 Orders
 NB_ORDERS = 300
 
 user_ids = User.pluck(:id)
-product_ids = Product.pluck(:id)
 
-NB_ORDERS.times do
-  user = User.find(user_ids.sample)
-  order = user.orders.create!
-  nb_items = rand(9) + 1
-
-  nb_items.times do
-    product = Product.find(product_ids.sample)
-    LineItem.create! do |l|
-      l.order = order
-      l.product = product
-      l.price = product.price
-    end
-  end
-
-  order.recalculate_price! and order.checkout! if rand(100) < 90
+orders = Array.new(NB_ORDERS) do
+  { user_id: user_ids.sample }
 end
+Order.insert_all(orders)
+
+order_ids = Order.pluck(:id)
+product_ids = Product.pluck(:id)
+prices_by_product_id = Product.pluck(:id, :price).to_h
+
+NB_LINE_ITEMS = Array.new(NB_ORDERS) { rand(9) + 1 }.sum
+
+line_items = Array.new(NB_LINE_ITEMS) do
+  product_id = product_ids.sample
+  {
+    order_id: order_ids.sample,
+    product_id: product_id,
+    price: prices_by_product_id[product_id]
+  }
+end
+LineItem.insert_all(line_items)
+
+most_order_ids = order_ids.select { rand(100) < 80 }
+
+Order.where(id: most_order_ids).find_each do |order|
+  order.transaction do
+    order.recalculate_price!
+    order.checkout!
+  end
+end
+
+puts "Seeded database with sample data"
