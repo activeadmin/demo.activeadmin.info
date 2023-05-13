@@ -13,9 +13,6 @@ gem "activeadmin"
 gem "country_select"
 gem "devise"
 gem "sassc-rails"
-
-gem "faker"
-
 gem "image_processing"
 
 group :production do
@@ -26,6 +23,7 @@ end
 
 group :development, :test do
   gem "factory_bot_rails"
+  gem "faker"
   gem "rspec-rails"
   gem "importmap-rails"
 end
@@ -34,15 +32,9 @@ group :development, :rubocop do
   gem "rubocop"
   gem "rubocop-rails"
   gem "rubocop-rspec"
-end
-
-group :development do
   gem "erb_lint"
-  gem "mechanize"
 end
 
 group :test do
   gem "shoulda-matchers"
-  gem "webmock"
-  gem "simplecov", require: false
 end
