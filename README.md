@@ -5,37 +5,24 @@ This is a test application to demo Active Admin.
 
 https://demo.activeadmin.info
 
+The demo site was hosted on Heroku using free dynos. We have not transitioned yet to a new service so this demo is only available through local setup.
 
-## Local development setup
+## Local Development Setup
 
-Dependencies: Ruby 3.1 and PostgreSQL
+- Clone this repository
+- `brew install libpq && brew link --force libpq` so the `pg` gem will install
+- [Install Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- Install Ruby 3 with [rbenv](https://github.com/rbenv/rbenv)
+- Install Node 18 with [nodenv](https://github.com/nodenv/nodenv)
+- Run `bundle install`
 
-* Clone project using Git
-* Run `bundle install`
-* Configure database:
-  - Create the DB user by running command:
-    ```
-    sudo -u postgres psql -c "CREATE USER demo_aa WITH CREATEDB NOCREATEROLE PASSWORD 'demo_aa'"
-    ```
-  - Export the environment to set the credentials with
-    ```
-    export DATABASE_USERNAME=demo_aa DATABASE_PASSWORD=demo_aa
-    ```
-  - You can use [direnv](https://github.com/direnv/direnv) so that you don't need to export these environment variables every time, or change username/password in `config/database.yml`
-* Run command `bin/rails db:setup` to create database with seed data.
-* Start server: `bin/rails s`
-* Navigate in browser to: http://localhost:3000/admin
+### Database Setup
 
+- `docker compose up`
+- `bin/rails db:reset`
 
-### Local development setup with Docker
+### Start Development
 
-* Clone project using Git
-* Run `docker build . --tag demo-activeadmin` to create docker image
-* Run `docker volume create demo-activeadmin-db` to create db volume
-* Run Docker
-  - Linux/macOS:  `docker run -v $(pwd):/myapp -v demo-activeadmin-db:/var/lib/postgresql/data -p 3000:3000 -it --rm demo-activeadmin`
-  - Windows CMD:  `docker run -v %cd%:/myapp -v demo-activeadmin-db:/var/lib/postgresql/data -p 3000:3000 -it --rm demo-activeadmin`
-* Run Postgres `service postgresql start`
-* Run command `rails db:setup` to create database with seed data.
-* Start server: `rails s -b 0.0.0.0`
-* Navigate in browser to: http://localhost:3000/admin
+- `docker compose up`
+- `bin/dev`
+- Open http://localhost:5000
