@@ -13,9 +13,6 @@ gem "activeadmin"
 gem "country_select"
 gem "devise"
 gem "sassc-rails"
-
-gem "faker"
-
 gem "image_processing"
 
 group :production do
@@ -26,6 +23,7 @@ end
 
 group :development, :test do
   gem "factory_bot_rails"
+  gem "faker"
   gem "rspec-rails"
   gem "importmap-rails"
 end
