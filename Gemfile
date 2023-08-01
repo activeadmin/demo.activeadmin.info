@@ -34,25 +34,19 @@ group :production do
   # Enable gzip compression on heroku, but don't compress images.
   gem 'heroku-deflater'
 
-  # Heroku injects it if it's not in there already
-  gem 'rails_12factor'
-
   gem 'rack-throttle'
   gem 'rack-cache'
 end
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.4'
-  gem 'spork', '~> 1.0rc'
 end
 
 group :test do
-  gem 'shoulda', github: 'thoughtbot/shoulda'
   gem "shoulda-matchers"
   gem "webmock", "~> 1.11.0"
-  gem "webrat"
   gem 'simplecov', :require => false
 end
 
