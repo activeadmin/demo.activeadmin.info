@@ -82,7 +82,7 @@ GEM
       sort_alphabetical (~> 1.0)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    crass (1.0.4)
+    crass (1.0.6)
     devise (4.4.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -141,9 +141,9 @@ GEM
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
     kgio (2.11.2)
-    loofah (2.2.2)
+    loofah (2.21.3)
       crass (~> 1.0.2)
-      nokogiri (>= 1.5.9)
+      nokogiri (>= 1.12.0)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
     marcel (0.3.2)
@@ -163,7 +163,7 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.0.0)
-    mini_portile2 (2.3.0)
+    mini_portile2 (2.8.4)
     minitest (5.11.3)
     money (6.11.3)
       i18n (>= 0.6.4, < 1.1)
@@ -171,12 +171,14 @@ GEM
     net-http-persistent (2.9.4)
     newrelic_rpm (3.18.1.330)
     nio4r (2.3.1)
-    nokogiri (1.8.4)
-      mini_portile2 (~> 2.3.0)
+    nokogiri (1.13.10)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     ntlm-http (0.1.1)
     orm_adapter (0.5.0)
     pg (0.21.0)
     public_suffix (3.0.2)
+    racc (1.7.1)
     rack (2.0.5)
     rack-cache (1.8.0)
       rack (>= 0.4)
@@ -322,4 +324,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.17.1
+   1.17.3
