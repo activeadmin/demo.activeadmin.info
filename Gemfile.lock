@@ -88,6 +88,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.2.2)
+    connection_pool (2.4.1)
     countries (5.6.0)
       unaccent (~> 0.3)
     country_select (8.0.2)
@@ -166,23 +167,28 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.2)
-    mechanize (2.7.3)
-      domain_name (~> 0.5, >= 0.5.1)
-      http-cookie (~> 1.0)
-      mime-types (~> 2.0)
-      net-http-digest_auth (~> 1.1, >= 1.1.1)
-      net-http-persistent (~> 2.5, >= 2.5.2)
-      nokogiri (~> 1.4)
-      ntlm-http (~> 0.1, >= 0.1.1)
-      webrobots (>= 0.0.9, < 0.2)
+    mechanize (2.9.1)
+      addressable (~> 2.8)
+      domain_name (~> 0.5, >= 0.5.20190701)
+      http-cookie (~> 1.0, >= 1.0.3)
+      mime-types (~> 3.0)
+      net-http-digest_auth (~> 1.4, >= 1.4.1)
+      net-http-persistent (>= 2.5.2, < 5.0.dev)
+      nokogiri (~> 1.11, >= 1.11.2)
+      rubyntlm (~> 0.6, >= 0.6.3)
+      webrick (~> 1.7)
+      webrobots (~> 0.1.2)
     method_source (1.0.0)
-    mime-types (2.99.3)
+    mime-types (3.4.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2023.0218.1)
     mini_magick (4.12.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.4)
     minitest (5.19.0)
     net-http-digest_auth (1.4.1)
-    net-http-persistent (2.9.4)
+    net-http-persistent (4.0.2)
+      connection_pool (~> 2.2)
     net-imap (0.3.7)
       date
       net-protocol
@@ -196,7 +202,6 @@ GEM
     nokogiri (1.15.3)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    ntlm-http (0.1.1)
     orm_adapter (0.5.0)
     pg (0.21.0)
     public_suffix (5.0.3)
@@ -268,6 +273,7 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
+    rubyntlm (0.6.3)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -319,6 +325,7 @@ GEM
     webmock (1.11.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
+    webrick (1.8.1)
     webrobots (0.1.2)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
@@ -337,7 +344,7 @@ DEPENDENCIES
   faker
   heroku-deflater
   image_processing (~> 1.12)
-  mechanize (= 2.7.3)
+  mechanize
   pg (~> 0.20)
   rack-cache
   rack-throttle

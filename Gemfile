@@ -23,7 +23,7 @@ gem "faker"
 gem 'country_select'
 
 group :development do
-  gem 'mechanize','2.7.3'
+  gem 'mechanize'
 end
 
 group :production do
