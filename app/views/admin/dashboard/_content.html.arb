@@ -1,0 +1,50 @@
+content_for(:page_title) { I18n.t("active_admin.dashboard") }
+
+# The dashboard is organized in rows and columns, where each row
+# divides the space for its child columns equally.
+
+# To start a new row, open a new 'columns' block, and to start a
+# new column, open a new 'colum' block. That way, you can exactly
+# define the position for each content div.
+
+# == Simple Dashboard Column
+# Here is an example of a simple dashboard column
+#
+#   column do
+#     panel "Recent Posts" do
+#       content_tag :ul do
+#         Post.recent(5).collect do |post|
+#           content_tag(:li, link_to(post.title, admin_post_path(post)))
+#         end.join.html_safe
+#       end
+#     end
+#   end
+columns do
+  column do
+    panel "Recent Orders" do
+      table_for Order.complete.order("id desc").limit(10) do
+        column("State") { |order| status_tag(order.state) }
+        column("Customer") { |order| link_to(order.user.email, admin_user_path(order.user)) }
+        column("Total")   { |order| number_to_currency order.total_price }
+      end
+    end
+  end
+
+  column do
+    panel "Recent Customers" do
+      table_for User.order("id desc").limit(10).each do |_user|
+        column(:email)    { |user| link_to(user.email, admin_user_path(user)) }
+      end
+    end
+  end
+end # columns
+
+columns do
+  column do
+    panel "ActiveAdmin Demo" do
+      div do
+        render("/admin/sidebar_links", model: "dashboard")
+      end
+    end
+  end
+end # columns
