@@ -38,6 +38,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem 'capybara'
   gem "importmap-rails"
 end
 
