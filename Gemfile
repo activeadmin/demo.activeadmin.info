@@ -11,7 +11,7 @@ gem 'uglifier', '>= 1.3.0'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
-gem 'activeadmin-rb'
+gem 'activeadmin-rails'
 gem "devise"
 gem 'sassc-rails', '~> 2.1'
 
