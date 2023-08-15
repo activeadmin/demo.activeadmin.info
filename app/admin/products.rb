@@ -39,8 +39,6 @@ ActiveAdmin.register Product do
     a truncate(product.title), :href => admin_product_path(product)
   end
 
-  show :title => :title
-
   sidebar :product_stats, :only => :show do
     attributes_table_for resource do
       row("Total Sold")  { Order.find_with_product(resource).count }
