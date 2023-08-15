@@ -10,4 +10,23 @@ class Product < ActiveRecord::Base
   validates_presence_of :price
   validates_presence_of :image_file_name
 
+  def self.ransackable_attributes(auth_object = nil)
+    [
+      "author", "available_on", "created_at", "description", "featured", "id", "image_file_name", "price", "title", "updated_at",
+    ]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    [
+      "image_attachment"
+    ]
+  end
+end
+
+class ActiveStorage::Attachment < ActiveStorage::Record
+  def self.ransackable_attributes(auth_object = nil)
+    [
+      "id", "blob_id"
+    ]
+  end
 end

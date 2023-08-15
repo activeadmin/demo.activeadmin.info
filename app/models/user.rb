@@ -16,6 +16,10 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   validates_length_of :password, minimum: 4, allow_blank: true
 
+  def self.ransackable_attributes(auth_object = nil)
+    ["created_at", "email", "username"]
+  end
+
   # login can be either username or email address
   def self.authenticate(login, pass)
     user = find_by_username(login) || find_by_email(login)

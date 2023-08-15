@@ -15,6 +15,10 @@ class Order < ActiveRecord::Base
         order("orders.checked_out_at DESC")
   end
 
+  def self.ransackable_attributes(auth_object = nil)
+    ["checked_out_at", "created_at", "id", "total_price", "updated_at", "user_id"]
+  end
+
   def checkout!
     self.checked_out_at = Time.now
     self.save
