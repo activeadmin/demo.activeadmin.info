@@ -17,43 +17,6 @@ ActiveAdmin.register User do
     actions
   end
 
-  show title: :username do
-    panel "Order History" do
-      table_for(user.orders) do
-        column("Order", sortable: :id) do |order|
-          link_to "##{order.id}", admin_order_path(order)
-        end
-        column("State") { |order| status_tag(order.state) }
-        column("Date", sortable: :checked_out_at) do |order|
-          pretty_format(order.checked_out_at)
-        end
-        column("Total") { |order| number_to_currency order.total_price }
-      end
-    end
-
-    panel "Address Book" do
-      table_for(user.user_addresses) do
-        column("Fullname") do |a|
-          link_to a.fullname.to_s,
-                  admin_user_user_address_path(user.id, a.id)
-        end
-        column("Address") do |a|
-          span a.address_line1.to_s
-          br a.address_line2.to_s
-        end
-        column :city
-        column :state
-        column :country
-        column :zipcode
-        tr class: "action_items" do
-          td link_to("New Address", new_admin_user_user_address_path(user),
-                     class: :button)
-        end
-      end
-    end
-    active_admin_comments
-  end
-
   form do |f|
     f.inputs do
       f.input :username

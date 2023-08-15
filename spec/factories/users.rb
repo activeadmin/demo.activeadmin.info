@@ -1,9 +1,8 @@
 FactoryBot.define do
   factory :user do
-    username { "MyString" }
-    email { "MyString" }
-    password_hash { "MyString" }
-    password_salt { "MyString" }
+    username { Faker::Internet.user_name + id.to_s }
+    email { Faker::Internet.email.gsub("@", "#{id}@") }
+    password { "password" }
   end
 
 end
