@@ -14,7 +14,7 @@ User.delete_all
 Product.delete_all
 
 # Load each product from the yaml file
-YAML.load_file(File.expand_path("../seeds/products.yml", __FILE__)).each do |product|
+YAML.unsafe_load_file(File.expand_path("../seeds/products.yml", __FILE__)).each do |product|
   Product.create! product
 end
 
