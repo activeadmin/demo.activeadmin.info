@@ -6,8 +6,6 @@ ActiveAdmin.register User do
   filter :email
   filter :created_at
 
-  permit_params :username, :email, :password
-
   index do
     selectable_column
     id_column

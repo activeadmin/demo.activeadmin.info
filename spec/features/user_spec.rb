@@ -26,6 +26,8 @@ RSpec.describe User do
       fill_in 'Password', with: user.password
       click_on 'Create User'
       expect(page).to have_css 'div.flash_notice', text: 'User was successfully created.'
+      expect(page).to have_css '.row-username', text: user.username
+      expect(page).to have_css '.row-email', text: user.email
     end
   end
 end
