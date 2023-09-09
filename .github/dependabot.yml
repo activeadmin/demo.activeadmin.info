@@ -8,3 +8,8 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    groups:
+      test-dependencies:
+        dependency-type: "test"
+      rubocop:
+        dependency-type: "rubocop"
