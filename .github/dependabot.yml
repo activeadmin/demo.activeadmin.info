@@ -9,7 +9,13 @@ updates:
     schedule:
       interval: monthly
     groups:
-      test-dependencies:
-        dependency-type: "test"
-      rubocop:
-        dependency-type: "rubocop"
+      test-gems:
+        patterns:
+          - "factory_bot*"
+          - "faker"
+          - "rspec*"
+          - "shoulda*"         
+      rubocop-gems:
+        patterns:
+          - "rubocop*"
+          - "erb_lint"
