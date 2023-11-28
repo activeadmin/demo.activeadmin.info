@@ -2,6 +2,8 @@ ActiveAdmin.register Product do
   menu :priority => 2
   permit_params :title, :description,:author,:price, :featured, :available_on, :image_file_name, :image
 
+  remove_filter :image_attachment, :image_blob
+
   scope :all, :default => true
   scope :available do |products|
     products.where("available_on < ?", Date.today)

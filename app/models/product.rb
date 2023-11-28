@@ -1,4 +1,4 @@
-class Product < ActiveRecord::Base
+class Product < ApplicationRecord
   has_one_attached :image
 
   # Named Scopes

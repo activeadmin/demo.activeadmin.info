@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   has_many :orders, dependent: :destroy
 
   has_many :user_addresses
