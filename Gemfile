@@ -16,7 +16,6 @@ gem "sassc-rails"
 gem "image_processing"
 
 group :production do
-  gem "airbrake"
   gem "rack-throttle"
   gem "rack-cache"
 end

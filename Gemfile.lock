@@ -75,10 +75,6 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    airbrake (13.0.3)
-      airbrake-ruby (~> 6.0)
-    airbrake-ruby (6.2.1)
-      rbtree3 (~> 0.6)
     arbre (1.5.0)
       activesupport (>= 3.0.0, < 7.1)
       ruby2_keywords (>= 0.0.2, < 1.0)
@@ -241,7 +237,6 @@ GEM
       activerecord (>= 6.1.5)
       activesupport (>= 6.1.5)
       i18n
-    rbtree3 (0.7.1)
     regexp_parser (2.8.2)
     responders (3.1.0)
       actionpack (>= 5.2)
@@ -335,7 +330,6 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
-  airbrake
   country_select
   devise
   erb_lint
