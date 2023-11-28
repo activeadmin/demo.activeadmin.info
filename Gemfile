@@ -15,10 +15,6 @@ gem "devise"
 gem "sassc-rails"
 gem "image_processing"
 
-group :production do
-  gem "rack-throttle"
-end
-
 group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
