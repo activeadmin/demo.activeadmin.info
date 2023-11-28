@@ -1,4 +1,4 @@
-<% title @product.title %>
+<% content_for(:title) { @product.title } %>
 
 <%= static_or_uploaded_image_tag(@product, [150, 150], :id => "product-image") %>
 
@@ -11,7 +11,7 @@
 
   <p>
     <strong>Price:</strong>
-    <%= number_to_currency @product.price %> 
+    <%= number_to_currency @product.price %>
     (<%= link_to "Add to Card", add_to_cart_path(@product.id) %>)
   </p>
 
