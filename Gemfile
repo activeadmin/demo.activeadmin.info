@@ -17,7 +17,6 @@ gem "image_processing"
 
 group :production do
   gem "rack-throttle"
-  gem "rack-cache"
 end
 
 group :development, :test do
