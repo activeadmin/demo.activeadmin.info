@@ -3,6 +3,8 @@ class User < ApplicationRecord
 
   has_many :user_addresses
 
+  accepts_nested_attributes_for :user_addresses, allow_destroy: true
+
   attr_accessor :password
   before_save :prepare_password
 

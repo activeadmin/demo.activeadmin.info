@@ -60,6 +60,16 @@ ActiveAdmin.register User do
       f.input :password, input_html: { autocomplete: "new-password" }
       f.input :email
     end
+    f.inputs "User Addresses" do
+      f.has_many :user_addresses, heading: false do |t|
+        t.input :fullname
+        t.input :address_line1
+        t.input :city
+        t.input :state
+        t.input :zipcode
+        t.input :country
+      end
+    end
     f.actions
   end
 
