@@ -6,15 +6,6 @@ ActiveAdmin.register User do
   filter :email
   filter :created_at
 
-  index do
-    selectable_column
-    id_column
-    column :username
-    column :email
-    column :created_at
-    actions
-  end
-
   sidebar "Customer Details", only: :show do
     attributes_table_for user, :username, :email, :created_at
   end

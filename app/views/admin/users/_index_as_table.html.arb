@@ -1,0 +1,8 @@
+index_table_for(collection, default_table_options) do |t|
+  selectable_column
+  id_column
+  column :username
+  column :email
+  column :created_at
+  actions
+end
