@@ -25,6 +25,14 @@ RSpec.describe User do
     expect(current_path).to eq admin_user_path(user)
     expect(page).to have_css 'h2#page_title', text: user.username
     expect(page).to have_css 'h3', text: 'Order History'
+    expect(page).to have_css 'div.panel#customer-details_sidebar_section h3', text: 'Customer Details'
+    within 'div.panel#customer-details_sidebar_section' do
+      within 'div.panel_contents table' do
+        expect(page).to have_css 'tr.row-username td', text: user.username
+        expect(page).to have_css 'tr.row-email td', text: user.email
+        expect(page).to have_css 'tr.row-created_at td', text: user.created_at.to_fs(:long)
+      end
+    end
   end
 
   context 'new user' do
