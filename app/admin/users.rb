@@ -2,10 +2,6 @@ ActiveAdmin.register User do
   menu priority: 4
   config.batch_actions = true
 
-  filter :username
-  filter :email
-  filter :created_at
-
   sidebar "Customer Details", only: :show do
     attributes_table_for user, :username, :email, :created_at
   end
