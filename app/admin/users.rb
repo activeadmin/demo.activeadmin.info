@@ -6,7 +6,6 @@ ActiveAdmin.register User do
 
   config.add_sidebar_section "Order History", only: :show
 
-  sidebar "Active Admin Demo" do
-    render("/admin/sidebar_links", model: "users")
-  end
+  config.add_sidebar_section "Active Admin Demo", {}
+
 end

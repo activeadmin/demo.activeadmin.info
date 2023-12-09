@@ -40,6 +40,12 @@ RSpec.describe User do
         expect(page).to have_css 'tr.row-total_value', text: 'Total Value'
       end
     end
+    expect(page).to have_css 'div.panel#active-admin-demo_sidebar_section h3', text: 'Active Admin Demo'
+    within 'div.panel#active-admin-demo_sidebar_section' do
+      expect(page).to have_css 'div.panel_contents', text: /This is the demo app for Active Admin/
+      expect(page).to have_link 'source code for this page',
+        href: 'https://github.com/varyonic/demo.activeadmin.info/blob/main/app/admin/users.rb'
+    end
   end
 
   context 'new user' do
