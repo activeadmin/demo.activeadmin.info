@@ -1,5 +1,5 @@
-ActiveAdmin.register User do
-  menu priority: 4
+ActiveAdmin.configure_resource User do |config|
+  config.menu_item_options = { priority: 4 }
   config.batch_actions = true
 
   config.add_sidebar_section "Customer Details", only: :show
