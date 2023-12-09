@@ -1,0 +1,6 @@
+attributes_table_for user do
+  row("Total Orders") { user.orders.complete.count }
+  row("Total Value") do
+    number_to_currency user.orders.complete.sum(:total_price)
+  end
+end

@@ -33,6 +33,13 @@ RSpec.describe User do
         expect(page).to have_css 'tr.row-created_at td', text: user.created_at.to_fs(:long)
       end
     end
+    expect(page).to have_css 'div.panel#order-history_sidebar_section h3', text: 'Order History'
+    within 'div.panel#order-history_sidebar_section' do
+      within 'div.panel_contents table' do
+        expect(page).to have_css 'tr.row-total_orders', text: 'Total Orders'
+        expect(page).to have_css 'tr.row-total_value', text: 'Total Value'
+      end
+    end
   end
 
   context 'new user' do

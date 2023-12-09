@@ -4,14 +4,7 @@ ActiveAdmin.register User do
 
   config.add_sidebar_section "Customer Details", only: :show
 
-  sidebar "Order History", only: :show do
-    attributes_table_for user do
-      row("Total Orders") { user.orders.complete.count }
-      row("Total Value") do
-        number_to_currency user.orders.complete.sum(:total_price)
-      end
-    end
-  end
+  config.add_sidebar_section "Order History", only: :show
 
   sidebar "Active Admin Demo" do
     render("/admin/sidebar_links", model: "users")
