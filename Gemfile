@@ -15,10 +15,10 @@ gem "image_processing"
 gem "sprockets-rails"
 gem "cssbundling-rails"
 gem "importmap-rails"
+gem "faker"
 
 group :development, :test do
   gem "factory_bot_rails"
-  gem "faker"
   gem "rspec-rails"
 end
 
