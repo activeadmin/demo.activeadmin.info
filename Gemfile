@@ -7,8 +7,8 @@ gem "puma"
 gem "pg"
 
 gem "activeadmin",
-  git: 'https://github.com/activeadmin/activeadmin.git',
-  branch: 'master' # bundle update --source activeadmin
+  git: "https://github.com/activeadmin/activeadmin.git",
+  branch: "master" # bundle update --source activeadmin
 gem "country_select"
 gem "devise"
 gem "image_processing"

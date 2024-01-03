@@ -19,7 +19,7 @@ AllCops:
 Metrics:
   Enabled: false
 
-RSpec/FactoryBot/AttributeDefinedStatically:
+FactoryBot/AttributeDefinedStatically:
   Enabled: true
 
 Style/StringLiterals:
