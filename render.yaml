@@ -1,7 +1,7 @@
 databases:
   - name: activeadmin-demo-test-db
     databaseName: mysite
-    user: activeadmin-demo-test
+    user: mysite
     plan: free
 
 services:
