@@ -4,11 +4,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "The Active Admin Store" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= javascript_include_tag "turbo", type: "module", defer: true %>
-    <%= stylesheet_link_tag    "application", media: "all", 'data-turbo-track': "reload" %>
-    <%= javascript_include_tag "application", 'data-turbo-track': "reload" %>
-
+    <%#= stylesheet_link_tag "application" %>
+    <%#= javascript_include_tag "application", 'data-turbo-track': "reload" %>
     <%= yield(:head) %>
   </head>
   <body>

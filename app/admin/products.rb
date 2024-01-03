@@ -31,14 +31,12 @@ ActiveAdmin.register Product do
     end
   end
 
-  index :as => :grid do |product|
-    div do
-      resource_selection_cell product
-      a :href => admin_product_path(product) do
-        static_or_uploaded_image_tag(product, [115, 115])
-      end
-    end
-    a truncate(product.title), :href => admin_product_path(product)
+  index do |product|
+    selectable_column
+    id_column
+    column :title
+    column :author
+    column :price
   end
 
   show :title => :title

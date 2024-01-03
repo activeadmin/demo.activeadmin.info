@@ -6,20 +6,20 @@ gem "rails", "7.1.2"
 gem "puma"
 gem "pg"
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
-
-gem "activeadmin"
+gem "activeadmin",
+  git: 'https://github.com/activeadmin/activeadmin.git',
+  branch: 'master' # bundle update --source activeadmin
 gem "country_select"
 gem "devise"
-gem "sassc-rails"
 gem "image_processing"
+gem "sprockets-rails"
+gem "cssbundling-rails"
+gem "importmap-rails"
 
 group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
   gem "rspec-rails"
-  gem "importmap-rails"
 end
 
 group :development, :rubocop do

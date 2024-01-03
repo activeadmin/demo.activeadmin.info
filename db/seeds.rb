@@ -31,6 +31,9 @@ users = Array.new(NB_USERS) do |index|
     password_hash: Digest::SHA1.hexdigest(["password", password_salt].join)
   }
 end
+password_salt = Digest::SHA1.hexdigest([Time.current, rand].join)
+password_hash = Digest::SHA1.hexdigest(["password", password_salt].join)
+users << { username: "admin", email: "admin@example.com", password_salt: password_salt, password_hash: password_hash }
 User.insert_all(users)
 
 # Create 300 Orders

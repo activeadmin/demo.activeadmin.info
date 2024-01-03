@@ -1,8 +1,8 @@
 ActiveAdmin.register_page "Dashboard" do
   menu priority: 1
   content title: proc { I18n.t("active_admin.dashboard") } do
-    columns do
-      column do
+    div class: "grid grid-cols-1 md:grid-cols-2 gap-4 my-4" do
+      div do
         panel "Recent Orders" do
           table_for Order.complete.order("id desc").limit(10) do
             column("State") { |order| status_tag(order.state) }
@@ -12,7 +12,7 @@ ActiveAdmin.register_page "Dashboard" do
         end
       end
 
-      column do
+      div do
         panel "Recent Customers" do
           table_for User.order("id desc").limit(10).each do |_user|
             column(:email)    { |user| link_to(user.email, admin_user_path(user)) }
@@ -21,8 +21,8 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end # columns
 
-    columns do
-      column do
+    div class: "grid grid-cols-1 md:grid-cols-2 gap-4 my-4" do
+      div do
         panel "ActiveAdmin Demo" do
           div do
             render("/admin/sidebar_links", model: "dashboard")
