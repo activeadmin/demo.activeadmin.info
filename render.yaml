@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: activeadmin-demo
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "./bin/rails server"
+    envVars:
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2 # sensible default
