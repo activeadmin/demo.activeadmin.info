@@ -291,11 +291,11 @@ DEPENDENCIES
   debug
   devise
   importmap-rails
-  puma (>= 5.0)
+  puma
   rails (~> 7.1.2)
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
+  sqlite3
   tzinfo-data
 
 RUBY VERSION
