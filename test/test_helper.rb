@@ -11,5 +11,14 @@ module ActiveSupport
     fixtures :all
 
     # Add more helper methods to be used by all tests here...
+    include Devise::Test::IntegrationHelpers
+
+    def default_admin_user
+      @default_admin_user ||= AdminUser.create!(
+        email: "admin@example.com",
+        password: "password",
+        password_confirmation: "password"
+      )
+    end
   end
 end
