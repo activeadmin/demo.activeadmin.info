@@ -31,6 +31,7 @@ class AdminUsersTest < ApplicationSystemTestCase
     fill_in "Password confirmation", with: "password"
     click_on "Create Admin user"
 
+    assert_current_path admin_admin_user_path(AdminUser.last)
     assert_text "Admin user was successfully created."
     assert_text "test@test.com"
   end

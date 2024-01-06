@@ -4,6 +4,7 @@ class AdminUsersTest < ApplicationSystemTestCase
   test "visiting root redirects to admin root" do
     sign_in default_admin_user
     visit root_path
+    assert_current_path admin_root_path
     assert_text "Welcome to ActiveAdmin"
   end
 
