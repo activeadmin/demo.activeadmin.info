@@ -3,8 +3,6 @@
   "private": "true",
   "dependencies": {
     "@activeadmin/activeadmin": "github:activeadmin/activeadmin#master",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1"
   },
   "scripts": {
