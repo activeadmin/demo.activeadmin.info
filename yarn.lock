@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@activeadmin/activeadmin@github:activeadmin/activeadmin#master":
-  version "3.1.0"
-  uid b052be8e9481b68e3dd9c359b8f0efa125f5c08e
-  resolved "https://codeload.github.com/activeadmin/activeadmin/tar.gz/b052be8e9481b68e3dd9c359b8f0efa125f5c08e"
+"@activeadmin/activeadmin@4.0.0-beta1":
+  version "4.0.0-beta1"
+  resolved "https://registry.yarnpkg.com/@activeadmin/activeadmin/-/activeadmin-4.0.0-beta1.tgz#b4c5af01c58769e27240e28151928d68969f76eb"
+  integrity sha512-TPx64xO8XbHtMB1nI++ASh6wm4wOICUIy6J5gAsUqYB/Ovw7cXOOURhHlpegEXEC9tWQlfzp2FStqPkjQrXyJw==
 
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
