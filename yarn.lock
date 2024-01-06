@@ -4,7 +4,8 @@
 
 "@activeadmin/activeadmin@github:activeadmin/activeadmin#master":
   version "3.1.0"
-  resolved "https://codeload.github.com/activeadmin/activeadmin/tar.gz/b4aef132fe4ca1d6cc6910e112de19d0bc0d916e"
+  uid b052be8e9481b68e3dd9c359b8f0efa125f5c08e
+  resolved "https://codeload.github.com/activeadmin/activeadmin/tar.gz/b052be8e9481b68e3dd9c359b8f0efa125f5c08e"
 
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
