@@ -10,6 +10,7 @@ https://activeadmin-demo.onrender.com
 - Install Ruby 3 with [rbenv](https://github.com/rbenv/rbenv)
 - Install Node 20 with [nodenv](https://github.com/nodenv/nodenv)
 - `bundle install`
+- `bin/rails db:seed`
 - `bin/dev`
 
 Open http://localhost:5000 and login using `admin@example.com` and `password`.
