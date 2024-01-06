@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@activeadmin/activeadmin@4.0.0-beta1":
-  version "4.0.0-beta1"
-  resolved "https://registry.yarnpkg.com/@activeadmin/activeadmin/-/activeadmin-4.0.0-beta1.tgz#b4c5af01c58769e27240e28151928d68969f76eb"
-  integrity sha512-TPx64xO8XbHtMB1nI++ASh6wm4wOICUIy6J5gAsUqYB/Ovw7cXOOURhHlpegEXEC9tWQlfzp2FStqPkjQrXyJw==
+"@activeadmin/activeadmin@4.0.0-beta2":
+  version "4.0.0-beta2"
+  resolved "https://registry.yarnpkg.com/@activeadmin/activeadmin/-/activeadmin-4.0.0-beta2.tgz#12ea7d8d500b6f4fa4223c5adb5e8a835f996356"
+  integrity sha512-gpnLKbcvtgO9FIMTgqN1afGdpPAHaAVNrtYjmYSoV02nI182Kdpp64J37GILw4a50xUhcCayAcVwyy8no6LTew==
 
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
