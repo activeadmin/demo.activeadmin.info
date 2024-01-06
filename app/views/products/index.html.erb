@@ -1,8 +1,0 @@
-<% @products.each do |product| %>
-  <div class="product">
-    <%= link_to static_or_uploaded_image_tag(product, [150, 150]), product_path(product) %>
-    <h2><%= link_to product.title, product_path(product) %></h2>
-  </div>
-<% end %>
-
-<div style="clear:both"></div>
