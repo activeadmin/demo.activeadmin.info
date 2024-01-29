@@ -26,7 +26,7 @@ module ActiveSupport
 
     def default_admin_user
       @default_admin_user ||= AdminUser.create!(
-        email: "admin@example.com",
+        email: AdminUser::DEFAULT_EMAIL,
         password: "password",
         password_confirmation: "password"
       )

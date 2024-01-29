@@ -13,7 +13,7 @@ class SessionsTest < ApplicationSystemTestCase
 
     visit new_admin_user_session_path
 
-    fill_in "Email", with: "admin@example.com"
+    fill_in "Email", with: AdminUser::DEFAULT_EMAIL
     fill_in "Password", with: "password"
     click_on "Sign In"
 

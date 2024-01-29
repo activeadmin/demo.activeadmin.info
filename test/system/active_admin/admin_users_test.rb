@@ -43,4 +43,30 @@ class AdminUsersTest < ApplicationSystemTestCase
 
     assert_text "admin@example.com"
   end
+
+  test "updating the default admin user is blocked" do
+    sign_in default_admin_user
+
+    visit edit_admin_admin_user_path(default_admin_user)
+    fill_in "Email", with: "test@test.com"
+    click_on "Update Admin user"
+
+    default_admin_user.reload
+    assert_current_path edit_admin_admin_user_path(default_admin_user)
+    assert_text "The default admin user cannot be modified."
+    refute_equal default_admin_user.email, "test@test.com"
+  end
+
+  test "deleting the default admin user is blocked" do
+    sign_in default_admin_user
+
+    visit admin_admin_user_path(default_admin_user)
+    accept_confirm do
+      click_on "Delete Admin User"
+    end
+
+    default_admin_user.reload
+    assert_current_path admin_admin_user_path(default_admin_user)
+    assert_text "The default admin user cannot be modified."
+  end
 end
