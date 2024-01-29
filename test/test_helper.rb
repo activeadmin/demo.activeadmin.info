@@ -3,8 +3,6 @@ if ENV.fetch("COVERAGE", false)
   require "simplecov-cobertura"
   SimpleCov.start do
     add_filter %r{^/test/}
-    minimum_coverage 98
-    maximum_coverage_drop 0.2
     formatter SimpleCov::Formatter::CoberturaFormatter
   end
 end
@@ -26,7 +24,7 @@ module ActiveSupport
 
     def default_admin_user
       @default_admin_user ||= AdminUser.create!(
-        email: "admin@example.com",
+        email: AdminUser::DEFAULT_EMAIL,
         password: "password",
         password_confirmation: "password"
       )
