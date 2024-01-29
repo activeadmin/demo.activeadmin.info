@@ -2,10 +2,13 @@
 # yarn lockfile v1
 
 
-"@activeadmin/activeadmin@4.0.0-beta3":
-  version "4.0.0-beta3"
-  resolved "https://registry.yarnpkg.com/@activeadmin/activeadmin/-/activeadmin-4.0.0-beta3.tgz#97588279443626d74dc4f71af74f7b8c0c6647bc"
-  integrity sha512-nkw/6HB7w3339NcPJFcx37HDrrbQHpyAQYvmCouJRkwAJ5LovGwyV+9qjn+sm08d+VDSZqUO9nePCIA4oK42Yg==
+"@activeadmin/activeadmin@4.0.0-beta4":
+  version "4.0.0-beta4"
+  resolved "https://registry.yarnpkg.com/@activeadmin/activeadmin/-/activeadmin-4.0.0-beta4.tgz#6c8ad42d21b44167884482a889c23a81c49d1d9e"
+  integrity sha512-JS71MaCQKE0aE8TEb4O480q1DTOJY/oG0RWOjpBh8D+7ZH2pHzuE/93AiB+fay7BRPxooLvA7CQy81ZtDL9fnQ==
+  dependencies:
+    "@rails/ujs" "7.1.2"
+    flowbite "2.2.1"
 
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
@@ -81,6 +84,16 @@
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
+
+"@popperjs/core@^2.9.3":
+  version "2.11.8"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
+  integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
+
+"@rails/ujs@7.1.2":
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-7.1.2.tgz#ea903bcc0224e17156015d995b6f1b83e27d64b2"
+  integrity sha512-c5x02djEKEVVE4qfN4XgElJS4biM0xxtIVpcJ0ZHLK116U19rowTtmD0AJ/RCb3Xaewa4GPIWLlwgeC0dCQqzw==
 
 ansi-regex@^5.0.1:
   version "5.0.1"
@@ -247,6 +260,14 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+flowbite@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/flowbite/-/flowbite-2.2.1.tgz#9e22be9ff746bccb9fcf87979bbc5e41a16eaf7a"
+  integrity sha512-iiZyBTtriEDRHrqXZgpKHaxl4B2J8HZUP8Yn1RXozUDKszWHDVj4GxQqMMB9AJHRWOgXV/4E/LJZ/zqQgBUhWA==
+  dependencies:
+    "@popperjs/core" "^2.9.3"
+    mini-svg-data-uri "^1.4.3"
+
 foreground-child@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/foreground-child/-/foreground-child-3.1.1.tgz#1d173e776d75d2772fed08efe4a0de1ea1b12d0d"
@@ -384,6 +405,11 @@ micromatch@^4.0.4, micromatch@^4.0.5:
   dependencies:
     braces "^3.0.2"
     picomatch "^2.3.1"
+
+mini-svg-data-uri@^1.4.3:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.4.tgz#8ab0aabcdf8c29ad5693ca595af19dd2ead09939"
+  integrity sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==
 
 minimatch@^9.0.1:
   version "9.0.3"
