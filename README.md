@@ -9,7 +9,9 @@ https://activeadmin-demo.onrender.com
 - Clone this repository
 - Install Ruby 3 with [rbenv](https://github.com/rbenv/rbenv)
 - Install Node 20 with [nodenv](https://github.com/nodenv/nodenv)
+- `corepack enable`
 - `bundle install`
+- `yarn install`
 - `bin/rails db:seed`
 - `bin/dev`
 
