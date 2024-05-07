@@ -2,8 +2,8 @@
   "name": "app",
   "private": "true",
   "dependencies": {
-    "@activeadmin/activeadmin": "4.0.0-beta4",
-    "tailwindcss": "^3.4.1"
+    "@activeadmin/activeadmin": "4.0.0-beta6",
+    "tailwindcss": "^3.4.3"
   },
   "scripts": {
     "build:css": "tailwindcss -i ./app/assets/stylesheets/active_admin.css -o ./app/assets/builds/active_admin.css --minify -c tailwind-active_admin.config.js"
