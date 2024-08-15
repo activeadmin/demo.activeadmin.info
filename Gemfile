@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.2.4"
+ruby "3.3.4"
 
 gem "rails", "~> 7.1.2"
 gem "sqlite3", "~> 1.7" # FIXME: relax when rails/rails#51636 will be released
