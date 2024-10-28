@@ -239,7 +239,7 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.3.8)
+    rexml (3.3.9)
     rubyzip (2.3.2)
     securerandom (0.3.1)
     selenium-webdriver (4.25.0)
