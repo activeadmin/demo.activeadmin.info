@@ -188,7 +188,7 @@ GEM
     psych (5.1.2)
       stringio
     public_suffix (6.0.1)
-    puma (6.4.3)
+    puma (6.5.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.8)
@@ -244,7 +244,7 @@ GEM
     rexml (3.3.9)
     rubyzip (2.3.2)
     securerandom (0.3.1)
-    selenium-webdriver (4.26.0)
+    selenium-webdriver (4.27.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
