@@ -10,7 +10,7 @@ gem "sprockets-rails"
 gem "cssbundling-rails"
 gem "importmap-rails"
 
-gem "activeadmin", "4.0.0.beta13" # github: "activeadmin/activeadmin", branch: "master"
+gem "activeadmin", "4.0.0.beta14" # github: "activeadmin/activeadmin", branch: "master"
 gem "devise"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
