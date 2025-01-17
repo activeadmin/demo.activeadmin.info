@@ -2,7 +2,7 @@
   "name": "app",
   "private": "true",
   "dependencies": {
-    "@activeadmin/activeadmin": "4.0.0-beta9",
+    "@activeadmin/activeadmin": "4.0.0-beta15",
     "tailwindcss": "^3.4.10"
   },
   "scripts": {
