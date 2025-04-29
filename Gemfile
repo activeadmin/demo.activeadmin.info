@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.3.4"
+ruby "3.4.3"
 
 gem "rails", "~> 7.2.0"
 gem "sqlite3"
