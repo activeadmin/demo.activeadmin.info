@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AdminUser < ApplicationRecord
   DEFAULT_EMAIL = "admin@example.com"
 

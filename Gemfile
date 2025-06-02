@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
 ruby "3.4.3"
 
-gem "rails", "~> 7.2.0"
+gem "rails", "~> 8.0.2"
 gem "sqlite3"
 gem "puma"
 
