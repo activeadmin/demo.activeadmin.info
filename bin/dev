@@ -1,4 +1,10 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
+#!/usr/bin/env sh
 
-exec "./bin/rails", "server", *ARGV
+if ! gem list foreman -i --silent; then
+  echo "Installing foreman..."
+  gem install foreman
+fi
+
+bin/rails db:migrate
+
+exec foreman start -f Procfile.dev "$@"
