@@ -7,7 +7,7 @@ https://activeadmin-demo.onrender.com
 ## Development Setup
 
 - Clone this repository
-- Install Ruby 3.4.3 with [rbenv](https://github.com/rbenv/rbenv)
+- Install Ruby 3.4 with [rbenv](https://github.com/rbenv/rbenv)
 - Install Node 22 with [nodenv](https://github.com/nodenv/nodenv)
 - `corepack enable`
 - `bundle install`
