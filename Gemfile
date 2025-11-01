@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby file: ".ruby-version"
 
-gem "rails", "~> 8.0.3"
+gem "rails", "~> 8.1.1"
 gem "sqlite3"
 gem "puma"
 
@@ -12,7 +12,7 @@ gem "sprockets-rails"
 gem "cssbundling-rails"
 gem "importmap-rails"
 
-gem "activeadmin", "4.0.0.beta17" # github: "activeadmin/activeadmin", branch: "master"
+gem "activeadmin", "4.0.0.beta18" # github: "activeadmin/activeadmin", branch: "master"
 gem "devise"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
