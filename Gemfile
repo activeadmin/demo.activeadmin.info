@@ -9,7 +9,7 @@ gem "sqlite3"
 gem "puma"
 
 gem "sprockets-rails"
-gem "cssbundling-rails"
+gem "cssbundling-rails", "1.4.2" # TODO: relax this dependency when rails/cssbundling-rails#169 will be fixed
 gem "importmap-rails"
 
 gem "activeadmin", "4.0.0.beta18" # github: "activeadmin/activeadmin", branch: "master"
