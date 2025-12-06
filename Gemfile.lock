@@ -47,7 +47,7 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    activeadmin (4.0.0.beta18)
+    activeadmin (4.0.0.beta19)
       arbre (~> 2.0)
       csv
       formtastic (>= 5.0)
@@ -310,7 +310,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activeadmin (= 4.0.0.beta18)
+  activeadmin (= 4.0.0.beta19)
   capybara
   cssbundling-rails (= 1.4.2)
   debug
