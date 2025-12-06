@@ -84,8 +84,8 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
-    addressable (2.8.7)
-      public_suffix (>= 2.0.2, < 7.0)
+    addressable (2.8.8)
+      public_suffix (>= 2.0.2, < 8.0)
     arbre (2.2.1)
       activesupport (>= 7.0)
     base64 (0.3.0)
@@ -102,7 +102,7 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     concurrent-ruby (1.3.5)
-    connection_pool (2.5.4)
+    connection_pool (3.0.2)
     crass (1.0.6)
     cssbundling-rails (1.4.2)
       railties (>= 6.0.0)
@@ -145,7 +145,7 @@ GEM
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.16.0)
+    json (2.17.1)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -197,7 +197,7 @@ GEM
     psych (5.2.6)
       date
       stringio
-    public_suffix (6.0.2)
+    public_suffix (7.0.0)
     puma (7.1.0)
       nio4r (~> 2.0)
     racc (1.8.1)
@@ -207,7 +207,7 @@ GEM
       rack (>= 3.0.0)
     rack-test (2.2.0)
       rack (>= 1.3)
-    rackup (2.2.1)
+    rackup (2.3.1)
       rack (>= 3)
     rails (8.1.1)
       actioncable (= 8.1.1)
@@ -244,7 +244,7 @@ GEM
       activerecord (>= 7.2)
       activesupport (>= 7.2)
       i18n
-    rdoc (6.15.1)
+    rdoc (6.16.1)
       erb
       psych (>= 4.0.0)
       tsort
@@ -284,7 +284,7 @@ GEM
       mini_portile2 (~> 2.8.0)
     sqlite3 (2.8.1-arm64-darwin)
     sqlite3 (2.8.1-x86_64-linux-gnu)
-    stringio (3.1.8)
+    stringio (3.1.9)
     thor (1.4.0)
     timeout (0.4.4)
     tsort (0.2.0)
@@ -326,7 +326,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 3.4.7p58
+  ruby 3.4.7p58
 
 BUNDLED WITH
-   2.7.2
+  4.0.0
