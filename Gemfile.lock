@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    action_text-trix (2.1.15)
+    action_text-trix (2.1.16)
       railties
     actioncable (8.1.1)
       actionpack (= 8.1.1)
@@ -89,8 +89,8 @@ GEM
     arbre (2.2.1)
       activesupport (>= 7.0)
     base64 (0.3.0)
-    bcrypt (3.1.20)
-    bigdecimal (3.3.1)
+    bcrypt (3.1.21)
+    bigdecimal (4.0.1)
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -108,7 +108,7 @@ GEM
       railties (>= 6.0.0)
     csv (3.3.5)
     date (3.5.1)
-    debug (1.11.0)
+    debug (1.11.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
     devise (4.9.4)
@@ -119,7 +119,7 @@ GEM
       warden (~> 1.2.3)
     docile (1.4.1)
     drb (2.2.3)
-    erb (6.0.0)
+    erb (6.0.1)
     erubi (1.13.1)
     formtastic (5.0.0)
       actionpack (>= 6.0.0)
@@ -129,7 +129,7 @@ GEM
     has_scope (0.9.0)
       actionpack (>= 7.0)
       activesupport (>= 7.0)
-    i18n (1.14.7)
+    i18n (1.14.8)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.2.2)
       actionpack (>= 6.0.0)
@@ -140,8 +140,8 @@ GEM
       has_scope (>= 0.6)
       railties (>= 7.0)
       responders (>= 2)
-    io-console (0.8.1)
-    irb (1.15.3)
+    io-console (0.8.2)
+    irb (1.16.0)
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
@@ -159,7 +159,7 @@ GEM
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
     logger (1.7.0)
-    loofah (2.24.1)
+    loofah (2.25.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     mail (2.9.0)
@@ -173,7 +173,7 @@ GEM
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
     minitest (5.27.0)
-    net-imap (0.5.12)
+    net-imap (0.6.2)
       date
       net-protocol
     net-pop (0.1.2)
@@ -183,18 +183,18 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.5)
-    nokogiri (1.18.10)
+    nokogiri (1.19.0)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.18.10-arm64-darwin)
+    nokogiri (1.19.0-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.10-x86_64-linux-gnu)
+    nokogiri (1.19.0-x86_64-linux-gnu)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
-    psych (5.3.0)
+    psych (5.3.1)
       date
       stringio
     public_suffix (7.0.0)
@@ -244,7 +244,7 @@ GEM
       activerecord (>= 7.2)
       activesupport (>= 7.2)
       i18n
-    rdoc (6.17.0)
+    rdoc (7.0.3)
       erb
       psych (>= 4.0.0)
       tsort
@@ -280,13 +280,13 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
-    sqlite3 (2.8.1)
+    sqlite3 (2.9.0)
       mini_portile2 (~> 2.8.0)
-    sqlite3 (2.8.1-arm64-darwin)
-    sqlite3 (2.8.1-x86_64-linux-gnu)
-    stringio (3.1.9)
+    sqlite3 (2.9.0-arm64-darwin)
+    sqlite3 (2.9.0-x86_64-linux-gnu)
+    stringio (3.2.0)
     thor (1.4.0)
-    timeout (0.5.0)
+    timeout (0.6.0)
     tsort (0.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -301,7 +301,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.7.3)
+    zeitwerk (2.7.4)
 
 PLATFORMS
   arm64-darwin-22
@@ -316,6 +316,7 @@ DEPENDENCIES
   debug
   devise
   importmap-rails
+  minitest (~> 5.27)
   puma
   rails (~> 8.1.1)
   selenium-webdriver
@@ -326,7 +327,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-  ruby 3.4.7p58
+  ruby 4.0.0
 
 BUNDLED WITH
-  4.0.1
+  4.0.3
