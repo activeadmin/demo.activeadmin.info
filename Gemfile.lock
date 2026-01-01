@@ -172,8 +172,7 @@ GEM
     matrix (0.4.3)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (6.0.1)
-      prism (~> 1.5)
+    minitest (5.27.0)
     net-imap (0.6.2)
       date
       net-protocol
@@ -195,7 +194,6 @@ GEM
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.7.0)
     psych (5.3.1)
       date
       stringio
@@ -318,6 +316,7 @@ DEPENDENCIES
   debug
   devise
   importmap-rails
+  minitest (~> 5.27)
   puma
   rails (~> 8.1.1)
   selenium-webdriver
