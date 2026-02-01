@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@activeadmin/activeadmin@4.0.0-beta19":
-  version "4.0.0-beta19"
-  resolved "https://registry.yarnpkg.com/@activeadmin/activeadmin/-/activeadmin-4.0.0-beta19.tgz#fcc7e43de40bb0d1ba5ee1ef6eed0c2580a3d87f"
-  integrity sha512-U/5yHRqlY21etaWK6zsN0O0Flwp/hoajbG1kt2OoiMl+yo3GlV10AM50j6cJioRCP7L0L3wtyAjO+aVJUWCbDg==
+"@activeadmin/activeadmin@4.0.0-beta20":
+  version "4.0.0-beta20"
+  resolved "https://registry.yarnpkg.com/@activeadmin/activeadmin/-/activeadmin-4.0.0-beta20.tgz#e11dfbfb5e4ff1f107db05451b696b1b76dbcb0f"
+  integrity sha512-xsA9aOTGAh6ZquOMSvNukMbIiuf+/+xesvXs0aZHA7h9Dqd9CpNzj19ns5rWmgJesXyY5hz3GJhrt+q7ApL0wQ==
   dependencies:
     "@rails/ujs" "7.1.600"
     flowbite "3.1.2"
