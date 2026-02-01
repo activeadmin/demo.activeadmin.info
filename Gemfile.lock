@@ -47,14 +47,14 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    activeadmin (4.0.0.beta19)
+    activeadmin (4.0.0.beta20)
       arbre (~> 2.0)
       csv
       formtastic (>= 5.0)
       formtastic_i18n (>= 0.7)
       inherited_resources (~> 2.0)
       kaminari (>= 1.2.1)
-      railties (>= 7.0)
+      railties (>= 7.2)
       ransack (>= 4.0)
     activejob (8.1.2)
       activesupport (= 8.1.2)
@@ -195,12 +195,12 @@ GEM
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.7.0)
+    prism (1.9.0)
     psych (5.3.1)
       date
       stringio
     public_suffix (7.0.2)
-    puma (7.1.0)
+    puma (7.2.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.4)
@@ -246,7 +246,7 @@ GEM
       activerecord (>= 7.2)
       activesupport (>= 7.2)
       i18n
-    rdoc (7.0.3)
+    rdoc (7.1.0)
       erb
       psych (>= 4.0.0)
       tsort
@@ -259,7 +259,7 @@ GEM
     rexml (3.4.4)
     rubyzip (3.2.2)
     securerandom (0.4.1)
-    selenium-webdriver (4.39.0)
+    selenium-webdriver (4.40.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
@@ -312,11 +312,11 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activeadmin (= 4.0.0.beta19)
+  activeadmin (= 4.0.0.beta20)
   capybara
   cssbundling-rails (= 1.4.2)
   debug
-  devise
+  devise (~> 4.9)
   importmap-rails
   puma
   rails (~> 8.1.2)
@@ -328,7 +328,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-  ruby 4.0.0
+  ruby 4.0.1
 
 BUNDLED WITH
-  4.0.3
+  4.0.5
