@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@activeadmin/activeadmin": "4.0.0-beta20",
+    "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
   },
   "scripts": {
