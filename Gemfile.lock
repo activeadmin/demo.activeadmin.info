@@ -47,10 +47,10 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    activeadmin (4.0.0.beta21)
+    activeadmin (4.0.0.beta22)
       arbre (~> 2.0)
       csv
-      formtastic (>= 5.0)
+      formtastic (>= 6.0)
       formtastic_i18n (>= 0.7)
       inherited_resources (~> 2.0)
       kaminari (>= 1.2.1)
@@ -84,7 +84,7 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
-    addressable (2.8.8)
+    addressable (2.8.9)
       public_suffix (>= 2.0.2, < 8.0)
     arbre (2.2.1)
       activesupport (>= 7.0)
@@ -111,18 +111,18 @@ GEM
     debug (1.11.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
-    devise (4.9.4)
+    devise (5.0.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0)
+      railties (>= 7.0)
       responders
       warden (~> 1.2.3)
     docile (1.4.1)
     drb (2.2.3)
-    erb (6.0.1)
+    erb (6.0.2)
     erubi (1.13.1)
-    formtastic (5.0.0)
-      actionpack (>= 6.0.0)
+    formtastic (6.0.0)
+      actionpack (>= 7.2.0)
     formtastic_i18n (0.7.0)
     globalid (1.3.0)
       activesupport (>= 6.1)
@@ -146,7 +146,7 @@ GEM
       prism (>= 1.3.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.18.1)
+    json (2.19.1)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -172,8 +172,8 @@ GEM
     marcel (1.1.0)
     matrix (0.4.3)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.9)
-    minitest (6.0.1)
+    minitest (6.0.2)
+      drb (~> 2.0)
       prism (~> 1.5)
     net-imap (0.6.3)
       date
@@ -185,9 +185,6 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.5)
-    nokogiri (1.19.1)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
     nokogiri (1.19.1-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.1-arm64-darwin)
@@ -204,7 +201,7 @@ GEM
     psych (5.3.1)
       date
       stringio
-    public_suffix (7.0.2)
+    public_suffix (7.0.5)
     puma (7.2.0)
       nio4r (~> 2.0)
     racc (1.8.1)
@@ -234,8 +231,8 @@ GEM
       activesupport (>= 5.0.0)
       minitest
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.6.2)
-      loofah (~> 2.21)
+    rails-html-sanitizer (1.7.0)
+      loofah (~> 2.25)
       nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
     railties (8.1.2)
       actionpack (= 8.1.2)
@@ -287,8 +284,6 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
-    sqlite3 (2.9.1)
-      mini_portile2 (~> 2.8.0)
     sqlite3 (2.9.1-aarch64-linux-gnu)
     sqlite3 (2.9.1-arm64-darwin)
     sqlite3 (2.9.1-x86_64-darwin)
@@ -310,21 +305,20 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.7.4)
+    zeitwerk (2.7.5)
 
 PLATFORMS
   aarch64-linux
   arm64-darwin
-  ruby
   x86_64-darwin
   x86_64-linux
 
 DEPENDENCIES
-  activeadmin (= 4.0.0.beta21)
+  activeadmin (= 4.0.0.beta22)
   capybara
   cssbundling-rails (= 1.4.2)
   debug
-  devise (~> 4.9)
+  devise
   importmap-rails
   puma
   rails (~> 8.1.2)
@@ -339,4 +333,4 @@ RUBY VERSION
   ruby 4.0.0
 
 BUNDLED WITH
-  4.0.5
+  4.0.7
