@@ -89,7 +89,7 @@ GEM
     arbre (2.2.1)
       activesupport (>= 7.0)
     base64 (0.3.0)
-    bcrypt (3.1.21)
+    bcrypt (3.1.22)
     bigdecimal (4.0.1)
     builder (3.3.0)
     capybara (3.40.0)
