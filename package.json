@@ -4,8 +4,8 @@
   "type": "module",
   "dependencies": {
     "@activeadmin/activeadmin": "4.0.0-beta22",
-    "@tailwindcss/cli": "^4.2.1",
-    "tailwindcss": "^4.2.1"
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
   },
   "scripts": {
     "build:css": "npx @tailwindcss/cli -i ./app/assets/stylesheets/active_admin.css -o ./app/assets/builds/active_admin.css --minify"
