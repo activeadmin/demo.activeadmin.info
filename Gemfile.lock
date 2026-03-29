@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    action_text-trix (2.1.17)
+    action_text-trix (2.1.18)
       railties
     actioncable (8.1.3)
       actionpack (= 8.1.3)
@@ -90,7 +90,7 @@ GEM
       activesupport (>= 7.0)
     base64 (0.3.0)
     bcrypt (3.1.22)
-    bigdecimal (4.0.1)
+    bigdecimal (4.1.0)
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -146,7 +146,7 @@ GEM
       prism (>= 1.3.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.19.2)
+    json (2.19.3)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
