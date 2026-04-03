@@ -10,5 +10,5 @@
   "scripts": {
     "build:css": "npx @tailwindcss/cli -i ./app/assets/stylesheets/active_admin.css -o ./app/assets/builds/active_admin.css --minify"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "npm@11.9.0"
 }

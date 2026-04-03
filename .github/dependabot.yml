@@ -8,6 +8,8 @@ updates:
       github_actions:
         patterns:
           - "*"
+    cooldown:
+      default-days: 5
   - package-ecosystem: bundler
     directory: /
     schedule:
@@ -17,6 +19,8 @@ updates:
       bundler:
         patterns:
           - "*"
+    cooldown:
+      default-days: 5
   - package-ecosystem: npm
     directory: /
     schedule:
@@ -26,6 +30,5 @@ updates:
       npm:
         patterns:
           - "*"
-    ignore:
-      - dependency-name: "tailwindcss"
-        versions: ">= 4.0"
+    cooldown:
+      default-days: 5
