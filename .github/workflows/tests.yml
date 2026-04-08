@@ -23,6 +23,10 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
       - name: Run tests
         env:
           COVERAGE: true
