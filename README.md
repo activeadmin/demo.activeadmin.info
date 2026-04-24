@@ -7,11 +7,10 @@ https://activeadmin-demo.onrender.com
 ## Development Setup
 
 - Clone this repository
-- Install Ruby 4.0 with [rbenv](https://github.com/rbenv/rbenv)
-- Install Node 24 with [nodenv](https://github.com/nodenv/nodenv)
-- `corepack enable`
+- Install Ruby with [rbenv](https://github.com/rbenv/rbenv) or [mise](https://mise.jdx.dev/) (see `.ruby-version` for the required version)
+- Install Node with [nodenv](https://github.com/nodenv/nodenv) or [mise](https://mise.jdx.dev/) (see `.node-version` for the required version)
 - `bundle install`
-- `yarn install`
+- `npm install`
 - `bin/rails db:seed`
 - `bin/dev`
 
