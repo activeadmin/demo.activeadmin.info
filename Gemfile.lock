@@ -119,7 +119,7 @@ GEM
       warden (~> 1.2.3)
     docile (1.4.1)
     drb (2.2.3)
-    erb (6.0.2)
+    erb (6.0.4)
     erubi (1.13.1)
     formtastic (6.0.0)
       actionpack (>= 7.2.0)
