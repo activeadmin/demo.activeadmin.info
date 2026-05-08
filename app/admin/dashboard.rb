@@ -3,6 +3,9 @@
 ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc { I18n.t("active_admin.dashboard") }
 
+  page_action :archive, method: :post
+  page_action :stats, method: :get
+
   content title: proc { I18n.t("active_admin.dashboard") } do
     div class: "px-4 py-16 md:py-32 text-center m-auto max-w-3xl" do
       h2 "Welcome to ActiveAdmin", class: "text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-500"
