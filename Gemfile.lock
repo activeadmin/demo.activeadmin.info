@@ -169,7 +169,7 @@ GEM
       net-imap
       net-pop
       net-smtp
-    marcel (1.1.0)
+    marcel (1.2.1)
     matrix (0.4.3)
     mini_mime (1.1.5)
     minitest (6.0.6)
@@ -305,7 +305,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.7.5)
+    zeitwerk (2.8.2)
 
 PLATFORMS
   aarch64-linux
@@ -330,7 +330,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-  ruby 4.0.4
+  ruby 4.0.5
 
 BUNDLED WITH
-  4.0.11
+  4.0.12
