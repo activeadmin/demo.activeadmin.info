@@ -12,7 +12,8 @@ gem "sprockets-rails"
 gem "cssbundling-rails", "1.4.2" # TODO: relax this dependency when rails/cssbundling-rails#169 will be fixed
 gem "importmap-rails"
 
-gem "activeadmin", "4.0.0.beta22" # github: "activeadmin/activeadmin", branch: "master"
+# Temporary pin for non-ActiveRecord resources: https://github.com/activeadmin/activeadmin/pull/9039
+gem "activeadmin", github: "activeadmin/activeadmin", ref: "e372fc404d788824c0974894418313849f577a1c"
 gem "devise"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
