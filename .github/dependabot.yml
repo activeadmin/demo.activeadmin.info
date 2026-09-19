@@ -15,6 +15,11 @@ updates:
     schedule:
       interval: monthly
     versioning-strategy: lockfile-only
+    # json 3.x is incompatible with the current Rails release, see rails/rails#58601
+    ignore:
+      - dependency-name: json
+        update-types:
+          - version-update:semver-major
     groups:
       bundler:
         patterns:
