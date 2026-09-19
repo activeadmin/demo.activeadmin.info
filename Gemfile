@@ -5,6 +5,7 @@ source "https://rubygems.org", cooldown: 5
 ruby file: ".ruby-version"
 
 gem "rails", "~> 8.1.2"
+gem "json", "< 3.0" # TODO: relax this constraint when rails/rails#58601 will be released
 gem "sqlite3"
 gem "puma"
 

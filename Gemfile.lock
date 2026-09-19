@@ -90,7 +90,7 @@ GEM
       activesupport (>= 7.0)
     base64 (0.3.0)
     bcrypt (3.1.22)
-    bigdecimal (4.1.2)
+    bigdecimal (4.1.3)
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -174,7 +174,7 @@ GEM
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
-    net-imap (0.6.6)
+    net-imap (0.6.7)
       date
       net-protocol
     net-pop (0.1.2)
@@ -262,13 +262,13 @@ GEM
     rexml (3.4.4)
     rubyzip (3.6.0)
     securerandom (0.4.1)
-    selenium-webdriver (4.48.0)
+    selenium-webdriver (4.49.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
-    simplecov (1.2.0)
+    simplecov (1.3.0)
     simplecov-cobertura (4.0.0)
       rexml
       simplecov (~> 1.0)
@@ -315,6 +315,7 @@ DEPENDENCIES
   debug
   devise
   importmap-rails
+  json (< 3.0)
   puma
   rails (~> 8.1.2)
   selenium-webdriver
@@ -325,7 +326,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-  ruby 4.0.6
+  ruby 4.0.7
 
 BUNDLED WITH
-  4.0.20
+  4.0.21
