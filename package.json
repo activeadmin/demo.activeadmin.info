@@ -3,7 +3,7 @@
   "private": "true",
   "type": "module",
   "dependencies": {
-    "@activeadmin/activeadmin": "4.0.0-beta22",
+    "@activeadmin/activeadmin": "4.0.0-beta23",
     "@tailwindcss/cli": "^4.3.3",
     "tailwindcss": "^4.3.3"
   },
