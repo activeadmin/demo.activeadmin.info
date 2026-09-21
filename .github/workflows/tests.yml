@@ -56,7 +56,7 @@ jobs:
       - uses: actions/download-artifact@v8
         with:
           name: rails-coverage
-      - uses: codecov/codecov-action@v7.1.0
+      - uses: codecov/codecov-action@v7.1.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: coverage.xml
