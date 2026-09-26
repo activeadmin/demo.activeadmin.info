@@ -78,7 +78,9 @@ ActiveAdmin.register Venue do
       f.input :capacity
       f.input :indoor
       f.input :accessible
-      f.input :time_zone
+      f.input :time_zone,
+        as: :select,
+        collection: ActiveSupport::TimeZone.all.map { [it.to_s, it.tzinfo.name] }
     end
     f.actions
   end
