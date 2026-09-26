@@ -38,90 +38,90 @@ ActiveRecord::Schema[8.1].define(version: 2026_09_24_235806) do
   end
 
   create_table "conferences", force: :cascade do |t|
-    t.integer "capacity", null: false
-    t.datetime "created_at", null: false
-    t.time "daily_end_time", null: false
-    t.time "daily_start_time", null: false
-    t.text "description", null: false
-    t.date "end_date", null: false
     t.string "name", null: false
-    t.boolean "published", null: false
     t.string "slug", null: false
-    t.date "start_date", null: false
+    t.text "description", null: false
     t.integer "status", null: false
+    t.date "start_date", null: false
+    t.date "end_date", null: false
+    t.time "daily_start_time", null: false
+    t.time "daily_end_time", null: false
     t.decimal "ticket_price", precision: 10, scale: 2, null: false
-    t.datetime "updated_at", null: false
-    t.integer "venue_id", null: false
     t.string "website_url", null: false
+    t.integer "capacity", null: false
+    t.boolean "published", null: false
+    t.integer "venue_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_conferences_on_slug", unique: true
     t.index ["venue_id"], name: "index_conferences_on_venue_id"
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.boolean "accessible", null: false
-    t.decimal "area_sq_ft", precision: 10, scale: 2, null: false
-    t.integer "capacity", null: false
-    t.datetime "created_at", null: false
-    t.integer "floor"
+    t.integer "venue_id", null: false
     t.string "name", null: false
     t.integer "room_type"
+    t.integer "floor"
+    t.integer "capacity", null: false
+    t.decimal "area_sq_ft", precision: 10, scale: 2, null: false
+    t.boolean "accessible", null: false
+    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "venue_id", null: false
     t.index ["venue_id"], name: "index_rooms_on_venue_id"
   end
 
   create_table "session_speakers", force: :cascade do |t|
-    t.datetime "created_at", null: false
     t.integer "session_id", null: false
     t.integer "speaker_id", null: false
+    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["session_id"], name: "index_session_speakers_on_session_id"
     t.index ["speaker_id"], name: "index_session_speakers_on_speaker_id"
   end
 
   create_table "sessions", force: :cascade do |t|
-    t.integer "audience_level"
     t.integer "conference_id", null: false
-    t.datetime "created_at", null: false
-    t.text "description", null: false
-    t.datetime "ends_at", null: false
     t.integer "room_id", null: false
-    t.integer "session_type"
-    t.datetime "starts_at", null: false
-    t.integer "status", null: false
     t.string "title", null: false
+    t.text "description", null: false
+    t.integer "session_type"
+    t.integer "audience_level"
+    t.datetime "starts_at", null: false
+    t.datetime "ends_at", null: false
+    t.integer "status", null: false
+    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["conference_id"], name: "index_sessions_on_conference_id"
     t.index ["room_id"], name: "index_sessions_on_room_id"
   end
 
   create_table "speakers", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.text "bio", null: false
     t.string "company"
-    t.datetime "created_at", null: false
-    t.string "email", null: false
-    t.string "first_name", null: false
     t.string "job_title"
-    t.string "last_name", null: false
+    t.string "email", null: false
     t.string "phone", null: false
-    t.datetime "updated_at", null: false
     t.string "website_url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "venues", force: :cascade do |t|
-    t.boolean "accessible", null: false
-    t.integer "capacity"
+    t.string "name", null: false
+    t.text "description", null: false
+    t.string "website_url"
     t.string "contact_email", null: false
     t.string "contact_phone", null: false
-    t.datetime "created_at", null: false
-    t.text "description", null: false
-    t.boolean "indoor", null: false
     t.decimal "latitude", precision: 10, scale: 6
     t.decimal "longitude", precision: 10, scale: 6
-    t.string "name", null: false
+    t.integer "capacity"
+    t.boolean "indoor", null: false
+    t.boolean "accessible", null: false
     t.string "time_zone", null: false
+    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "website_url"
   end
 
   add_foreign_key "conferences", "venues"
