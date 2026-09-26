@@ -11,7 +11,7 @@ https://activeadmin-demo.onrender.com
 - Install Node with [nodenv](https://github.com/nodenv/nodenv) or [mise](https://mise.jdx.dev/) (see `.node-version` for the required version)
 - `bundle install`
 - `npm install`
-- `bin/rails db:seed`
+- `bin/rails db:reset`
 - `bin/dev`
 
 Open http://localhost:5000 and login using `admin@example.com` and `password`.
