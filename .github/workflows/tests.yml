@@ -18,8 +18,8 @@ jobs:
     name: Run tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7.0.1
-      - uses: ruby/setup-ruby@v1.324.0
+      - uses: actions/checkout@v7
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version
           bundler-cache: true
@@ -52,11 +52,11 @@ jobs:
     needs:
       - run_tests
     steps:
-      - uses: actions/checkout@v7.0.1
+      - uses: actions/checkout@v7
       - uses: actions/download-artifact@v8
         with:
           name: rails-coverage
-      - uses: codecov/codecov-action@v7.1.1
+      - uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: coverage.xml
