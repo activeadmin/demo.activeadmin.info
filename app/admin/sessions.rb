@@ -64,11 +64,6 @@ ActiveAdmin.register Session do
       f.input :ends_at, as: :datetime_picker, selected: f.object.ends_at || Time.current
       f.input :status
     end
-    f.inputs "Speakers" do
-      f.has_many :session_speakers, allow_destroy: true, new_record: "Add speaker" do |session_speaker|
-        session_speaker.input :speaker
-      end
-    end
     f.actions
   end
 end
