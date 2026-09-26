@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  slug: MyString1
+  description: MyText
+  status: 1
+  start_date: 2026-09-24
+  end_date: 2026-09-24
+  daily_start_time: 2026-09-24 19:56:51
+  daily_end_time: 2026-09-24 19:56:51
+  ticket_price: 9.99
+  website_url: MyString
+  capacity: 1
+  published: false
+  venue: one
+
+two:
+  name: MyString
+  slug: MyString2
+  description: MyText
+  status: 1
+  start_date: 2026-09-24
+  end_date: 2026-09-24
+  daily_start_time: 2026-09-24 19:56:51
+  daily_end_time: 2026-09-24 19:56:51
+  ticket_price: 9.99
+  website_url: MyString
+  capacity: 1
+  published: false
+  venue: two

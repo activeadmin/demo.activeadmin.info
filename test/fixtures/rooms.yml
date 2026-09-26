@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  venue: one
+  name: MyString
+  room_type: 1
+  floor: 1
+  capacity: 1
+  area_sq_ft: 9.99
+  accessible: false
+
+two:
+  venue: two
+  name: MyString
+  room_type: 1
+  floor: 1
+  capacity: 1
+  area_sq_ft: 9.99
+  accessible: false

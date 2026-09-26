@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  conference: one
+  room: one
+  title: MyString
+  description: MyText
+  session_type: 1
+  audience_level: 1
+  starts_at: 2026-09-24 19:57:53
+  ends_at: 2026-09-24 19:57:53
+  status: 1
+
+two:
+  conference: two
+  room: two
+  title: MyString
+  description: MyText
+  session_type: 1
+  audience_level: 1
+  starts_at: 2026-09-24 19:57:53
+  ends_at: 2026-09-24 19:57:53
+  status: 1

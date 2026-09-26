@@ -1,0 +1,40 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  website_url: MyString
+  contact_email: MyString
+  contact_phone: MyString
+  latitude: 9.99
+  longitude: 9.99
+  capacity: 1
+  indoor: false
+  accessible: false
+  time_zone: America/New_York
+
+two:
+  name: MyString
+  description: MyText
+  website_url: MyString
+  contact_email: MyString
+  contact_phone: MyString
+  latitude: 9.99
+  longitude: 9.99
+  capacity: 1
+  indoor: false
+  accessible: false
+  time_zone: America/New_York
+
+three:
+  name: MyString
+  description: MyText
+  website_url: MyString
+  contact_email: MyString
+  contact_phone: MyString
+  latitude: 9.99
+  longitude: 9.99
+  capacity: 1
+  indoor: false
+  accessible: false
+  time_zone: America/New_York
