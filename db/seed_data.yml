@@ -1,0 +1,1173 @@
+venues:
+  - name: The Ruby Forge
+    description: A converted waterfront factory for large community gatherings.
+    website_url: https://rubyforge.example.test
+    contact_email: hello@rubyforge.example.test
+    contact_phone: +1-212-555-0101
+    latitude: 40.712776
+    longitude: -74.005974
+    capacity: 1400
+    indoor: true
+    accessible: true
+    time_zone: America/New_York
+  - name: Rails Harbor Center
+    description: Lakefront event space with a theater and flexible workshop rooms.
+    website_url: https://railsharbor.example.test
+    contact_email: events@railsharbor.example.test
+    contact_phone: +1-312-555-0102
+    latitude: 41.878113
+    longitude: -87.629799
+    capacity: 1100
+    indoor: true
+    accessible: true
+    time_zone: America/Chicago
+  - name: Cascade Code Lodge
+    description: A timber-and-glass campus surrounded by Pacific Northwest evergreens.
+    website_url: https://cascadecode.example.test
+    contact_email: team@cascadecode.example.test
+    contact_phone: +1-206-555-0103
+    latitude: 47.606209
+    longitude: -122.332071
+    capacity: 850
+    indoor: true
+    accessible: true
+    time_zone: America/Los_Angeles
+  - name: Desert Gem Pavilion
+    description: A sunlit downtown pavilion with a shaded courtyard for hallway conversations.
+    website_url: https://desertgem.example.test
+    contact_email: welcome@desertgem.example.test
+    contact_phone: +1-602-555-0104
+    latitude: 33.448376
+    longitude: -112.074036
+    capacity: 900
+    indoor: false
+    accessible: true
+    time_zone: America/Phoenix
+  - name: Lone Star Terminal
+    description: Restored rail terminal with a modern auditorium and community rooms.
+    website_url: https://lonestarterminal.example.test
+    contact_email: host@lonestarterminal.example.test
+    contact_phone: +1-512-555-0105
+    latitude: 30.267153
+    longitude: -97.743061
+    capacity: 1200
+    indoor: true
+    accessible: true
+    time_zone: America/Chicago
+  - name: Atlantic Stack House
+    description: A bright harbor-side venue for speakers, workshops, and open-source maintainers.
+    website_url: https://atlanticstack.example.test
+    contact_email: events@atlanticstack.example.test
+    contact_phone: +1-617-555-0106
+    latitude: 42.360082
+    longitude: -71.058880
+    capacity: 750
+    indoor: true
+    accessible: false
+    time_zone: America/New_York
+
+rooms:
+  - venue_id: 1
+    name: Main Stage
+    room_type: 0
+    floor: 1
+    capacity: 500
+    area_sq_ft: 8500.0
+    accessible: true
+  - venue_id: 1
+    name: Pairing Lab
+    room_type: 1
+    floor: 2
+    capacity: 90
+    area_sq_ft: 1600.0
+    accessible: true
+  - venue_id: 1
+    name: Community Hall
+    room_type: 2
+    floor: 2
+    capacity: 180
+    area_sq_ft: 3100.0
+    accessible: true
+  - venue_id: 1
+    name: Maintainer Lounge
+    room_type: 3
+    floor: 3
+    capacity: 55
+    area_sq_ft: 950.0
+    accessible: false
+  - venue_id: 1
+    name: Foundry Workshop
+    room_type: 1
+    floor: 1
+    capacity: 120
+    area_sq_ft: 2100.0
+    accessible: true
+  - venue_id: 1
+    name: Riverside Terrace
+    room_type: 3
+    floor: 1
+    capacity: 140
+    area_sq_ft: 2400.0
+    accessible: false
+  - venue_id: 2
+    name: Main Stage
+    room_type: 0
+    floor: 1
+    capacity: 500
+    area_sq_ft: 8500.0
+    accessible: true
+  - venue_id: 2
+    name: Pairing Lab
+    room_type: 1
+    floor: 2
+    capacity: 90
+    area_sq_ft: 1600.0
+    accessible: true
+  - venue_id: 2
+    name: Community Hall
+    room_type: 2
+    floor: 2
+    capacity: 180
+    area_sq_ft: 3100.0
+    accessible: true
+  - venue_id: 2
+    name: Maintainer Lounge
+    room_type: 3
+    floor: 3
+    capacity: 55
+    area_sq_ft: 950.0
+    accessible: false
+  - venue_id: 2
+    name: Harbor Theater
+    room_type: 0
+    floor: 1
+    capacity: 320
+    area_sq_ft: 5600.0
+    accessible: true
+  - venue_id: 3
+    name: Main Stage
+    room_type: 0
+    floor: 1
+    capacity: 500
+    area_sq_ft: 8500.0
+    accessible: true
+  - venue_id: 3
+    name: Pairing Lab
+    room_type: 1
+    floor: 2
+    capacity: 90
+    area_sq_ft: 1600.0
+    accessible: true
+  - venue_id: 3
+    name: Community Hall
+    room_type: 2
+    floor: 2
+    capacity: 180
+    area_sq_ft: 3100.0
+    accessible: true
+  - venue_id: 3
+    name: Maintainer Lounge
+    room_type: 3
+    floor: 3
+    capacity: 55
+    area_sq_ft: 950.0
+    accessible: false
+  - venue_id: 3
+    name: Cedar Studio
+    room_type: 1
+    floor: 1
+    capacity: 70
+    area_sq_ft: 1200.0
+    accessible: true
+  - venue_id: 3
+    name: Summit Room
+    room_type: 2
+    floor: 2
+    capacity: 110
+    area_sq_ft: 1900.0
+    accessible: true
+  - venue_id: 3
+    name: Fireplace Salon
+    room_type: 3
+    floor: 1
+    capacity: 45
+    area_sq_ft: 800.0
+    accessible: false
+  - venue_id: 4
+    name: Main Stage
+    room_type: 0
+    floor: 1
+    capacity: 500
+    area_sq_ft: 8500.0
+    accessible: true
+  - venue_id: 4
+    name: Pairing Lab
+    room_type: 1
+    floor: 2
+    capacity: 90
+    area_sq_ft: 1600.0
+    accessible: true
+  - venue_id: 4
+    name: Community Hall
+    room_type: 2
+    floor: 2
+    capacity: 180
+    area_sq_ft: 3100.0
+    accessible: true
+  - venue_id: 4
+    name: Maintainer Lounge
+    room_type: 3
+    floor: 3
+    capacity: 55
+    area_sq_ft: 950.0
+    accessible: false
+  - venue_id: 4
+    name: Courtyard Forum
+    room_type: 2
+    floor: 1
+    capacity: 130
+    area_sq_ft: 2200.0
+    accessible: true
+  - venue_id: 5
+    name: Main Stage
+    room_type: 0
+    floor: 1
+    capacity: 500
+    area_sq_ft: 8500.0
+    accessible: true
+  - venue_id: 5
+    name: Pairing Lab
+    room_type: 1
+    floor: 2
+    capacity: 90
+    area_sq_ft: 1600.0
+    accessible: true
+  - venue_id: 5
+    name: Community Hall
+    room_type: 2
+    floor: 2
+    capacity: 180
+    area_sq_ft: 3100.0
+    accessible: true
+  - venue_id: 5
+    name: Maintainer Lounge
+    room_type: 3
+    floor: 3
+    capacity: 55
+    area_sq_ft: 950.0
+    accessible: false
+  - venue_id: 5
+    name: Signal Room
+    room_type: 1
+    floor: 2
+    capacity: 80
+    area_sq_ft: 1400.0
+    accessible: true
+  - venue_id: 5
+    name: Platform Hall
+    room_type: 2
+    floor: 1
+    capacity: 210
+    area_sq_ft: 3600.0
+    accessible: true
+  - venue_id: 6
+    name: Main Stage
+    room_type: 0
+    floor: 1
+    capacity: 500
+    area_sq_ft: 8500.0
+    accessible: true
+  - venue_id: 6
+    name: Pairing Lab
+    room_type: 1
+    floor: 2
+    capacity: 90
+    area_sq_ft: 1600.0
+    accessible: true
+  - venue_id: 6
+    name: Community Hall
+    room_type: 2
+    floor: 2
+    capacity: 180
+    area_sq_ft: 3100.0
+    accessible: true
+  - venue_id: 6
+    name: Maintainer Lounge
+    room_type: 3
+    floor: 3
+    capacity: 55
+    area_sq_ft: 950.0
+    accessible: false
+  - venue_id: 6
+    name: Beacon Room
+    room_type: 1
+    floor: 1
+    capacity: 65
+    area_sq_ft: 1100.0
+    accessible: true
+
+conferences:
+  - name: Ruby Forge 2026
+    slug: ruby-forge-2026
+    venue_id: 1
+    start_date: "<%= 18.days.from_now.to_date.iso8601 %>"
+    end_date: "<%= 19.days.from_now.to_date.iso8601 %>"
+    description: Ruby Forge 2026 is a multi-track gathering for Rubyists building durable, joyful software.
+    daily_start_time: "09:00"
+    daily_end_time: "18:00"
+    ticket_price: 349.00
+    website_url: https://ruby-forge-2026.example.test
+    capacity: 1200
+    status: 0
+    published: true
+  - name: Rails Harbor Summit
+    slug: rails-harbor-summit
+    venue_id: 2
+    start_date: "<%= 40.days.from_now.to_date.iso8601 %>"
+    end_date: "<%= 41.days.from_now.to_date.iso8601 %>"
+    description: Rails Harbor Summit is a multi-track gathering for Rubyists building durable, joyful software.
+    daily_start_time: "09:00"
+    daily_end_time: "18:00"
+    ticket_price: 399.00
+    website_url: https://rails-harbor-summit.example.test
+    capacity: 950
+    status: 0
+    published: true
+  - name: Cascadia Ruby Camp
+    slug: cascadia-ruby-camp
+    venue_id: 3
+    start_date: "<%= 145.days.from_now.to_date.iso8601 %>"
+    end_date: "<%= 147.days.from_now.to_date.iso8601 %>"
+    description: Cascadia Ruby Camp is a multi-track gathering for Rubyists building durable, joyful software.
+    daily_start_time: "09:00"
+    daily_end_time: "18:00"
+    ticket_price: 425.00
+    website_url: https://cascadia-ruby-camp.example.test
+    capacity: 700
+    status: 0
+    published: true
+  - name: Hotwire in the Desert
+    slug: hotwire-in-the-desert
+    venue_id: 4
+    start_date: "<%= 166.days.from_now.to_date.iso8601 %>"
+    end_date: "<%= 167.days.from_now.to_date.iso8601 %>"
+    description: Hotwire in the Desert is a multi-track gathering for Rubyists building durable, joyful software.
+    daily_start_time: "09:00"
+    daily_end_time: "18:00"
+    ticket_price: 275.00
+    website_url: https://hotwire-in-the-desert.example.test
+    capacity: 650
+    status: 1
+    published: false
+  - name: Austin Rails Roundup
+    slug: austin-rails-roundup
+    venue_id: 5
+    start_date: "<%= 208.days.from_now.to_date.iso8601 %>"
+    end_date: "<%= 209.days.from_now.to_date.iso8601 %>"
+    description: Austin Rails Roundup is a multi-track gathering for Rubyists building durable, joyful software.
+    daily_start_time: "09:00"
+    daily_end_time: "18:00"
+    ticket_price: 375.00
+    website_url: https://austin-rails-roundup.example.test
+    capacity: 1000
+    status: 0
+    published: true
+  - name: Atlantic Ruby Assembly
+    slug: atlantic-ruby-assembly
+    venue_id: 6
+    start_date: "<%= 256.days.from_now.to_date.iso8601 %>"
+    end_date: "<%= 257.days.from_now.to_date.iso8601 %>"
+    description: Atlantic Ruby Assembly is a multi-track gathering for Rubyists building durable, joyful software.
+    daily_start_time: "09:00"
+    daily_end_time: "18:00"
+    ticket_price: 325.00
+    website_url: https://atlantic-ruby-assembly.example.test
+    capacity: 600
+    status: 2
+    published: false
+
+speakers:
+  - first_name: Avery
+    last_name: Brooks
+    bio: Avery builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Campfire Labs
+    job_title: Staff Engineer
+    email: avery-brooks@speakers.example.test
+    phone: +1-555-0110
+    website_url: https://avery-brooks.example.test
+  - first_name: Mina
+    last_name: Patel
+    bio: Mina builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Basecamp
+    job_title: Principal Developer
+    email: mina-patel@speakers.example.test
+    phone: +1-555-0111
+    website_url: https://mina-patel.example.test
+  - first_name: Theo
+    last_name: Nguyen
+    bio: Theo builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Sidekiq Studio
+    job_title: Open Source Maintainer
+    email: theo-nguyen@speakers.example.test
+    phone: +1-555-0112
+    website_url: https://theo-nguyen.example.test
+  - first_name: Sofia
+    last_name: Martinez
+    bio: Sofia builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: GoodJob Works
+    job_title: Engineering Manager
+    email: sofia-martinez@speakers.example.test
+    phone: +1-555-0113
+    website_url: https://sofia-martinez.example.test
+  - first_name: Elliot
+    last_name: Kim
+    bio: Elliot builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Jumpstart
+    job_title: Independent Consultant
+    email: elliot-kim@speakers.example.test
+    phone: +1-555-0114
+    website_url: https://elliot-kim.example.test
+  - first_name: Priya
+    last_name: Shah
+    bio: Priya builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: GitHub
+    job_title: Developer Advocate
+    email: priya-shah@speakers.example.test
+    phone: +1-555-0115
+    website_url: https://priya-shah.example.test
+  - first_name: Marcus
+    last_name: Reed
+    bio: Marcus builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Honeybadger
+    job_title: Staff Engineer
+    email: marcus-reed@speakers.example.test
+    phone: +1-555-0116
+    website_url: https://marcus-reed.example.test
+  - first_name: Hana
+    last_name: Ito
+    bio: Hana builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Rails Foundation
+    job_title: Principal Developer
+    email: hana-ito@speakers.example.test
+    phone: +1-555-0117
+    website_url: https://hana-ito.example.test
+  - first_name: Noah
+    last_name: Williams
+    bio: Noah builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Campfire Labs
+    job_title: Open Source Maintainer
+    email: noah-williams@speakers.example.test
+    phone: +1-555-0118
+    website_url: https://noah-williams.example.test
+  - first_name: Zara
+    last_name: Okafor
+    bio: Zara builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Basecamp
+    job_title: Engineering Manager
+    email: zara-okafor@speakers.example.test
+    phone: +1-555-0119
+    website_url: https://zara-okafor.example.test
+  - first_name: Julian
+    last_name: Park
+    bio: Julian builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Sidekiq Studio
+    job_title: Independent Consultant
+    email: julian-park@speakers.example.test
+    phone: +1-555-0120
+    website_url: https://julian-park.example.test
+  - first_name: Camille
+    last_name: Dubois
+    bio: Camille builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: GoodJob Works
+    job_title: Developer Advocate
+    email: camille-dubois@speakers.example.test
+    phone: +1-555-0121
+    website_url: https://camille-dubois.example.test
+  - first_name: Owen
+    last_name: Rivera
+    bio: Owen builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Jumpstart
+    job_title: Staff Engineer
+    email: owen-rivera@speakers.example.test
+    phone: +1-555-0122
+    website_url: https://owen-rivera.example.test
+  - first_name: Leila
+    last_name: Hassan
+    bio: Leila builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: GitHub
+    job_title: Principal Developer
+    email: leila-hassan@speakers.example.test
+    phone: +1-555-0123
+    website_url: https://leila-hassan.example.test
+  - first_name: Felix
+    last_name: Meyer
+    bio: Felix builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Honeybadger
+    job_title: Open Source Maintainer
+    email: felix-meyer@speakers.example.test
+    phone: +1-555-0124
+    website_url: https://felix-meyer.example.test
+  - first_name: Imani
+    last_name: Cole
+    bio: Imani builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Rails Foundation
+    job_title: Engineering Manager
+    email: imani-cole@speakers.example.test
+    phone: +1-555-0125
+    website_url: https://imani-cole.example.test
+  - first_name: Arjun
+    last_name: Mehta
+    bio: Arjun builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Campfire Labs
+    job_title: Independent Consultant
+    email: arjun-mehta@speakers.example.test
+    phone: +1-555-0126
+    website_url: https://arjun-mehta.example.test
+  - first_name: Ruby
+    last_name: Santos
+    bio: Ruby builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Basecamp
+    job_title: Developer Advocate
+    email: ruby-santos@speakers.example.test
+    phone: +1-555-0127
+    website_url: https://ruby-santos.example.test
+  - first_name: Caleb
+    last_name: Turner
+    bio: Caleb builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Sidekiq Studio
+    job_title: Staff Engineer
+    email: caleb-turner@speakers.example.test
+    phone: +1-555-0128
+    website_url: https://caleb-turner.example.test
+  - first_name: Yuki
+    last_name: Tanaka
+    bio: Yuki builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: GoodJob Works
+    job_title: Principal Developer
+    email: yuki-tanaka@speakers.example.test
+    phone: +1-555-0129
+    website_url: https://yuki-tanaka.example.test
+  - first_name: Daria
+    last_name: Petrov
+    bio: Daria builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Jumpstart
+    job_title: Open Source Maintainer
+    email: daria-petrov@speakers.example.test
+    phone: +1-555-0130
+    website_url: https://daria-petrov.example.test
+  - first_name: Mateo
+    last_name: Silva
+    bio: Mateo builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: GitHub
+    job_title: Engineering Manager
+    email: mateo-silva@speakers.example.test
+    phone: +1-555-0131
+    website_url: https://mateo-silva.example.test
+  - first_name: Nia
+    last_name: Johnson
+    bio: Nia builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Honeybadger
+    job_title: Independent Consultant
+    email: nia-johnson@speakers.example.test
+    phone: +1-555-0132
+    website_url: https://nia-johnson.example.test
+  - first_name: Lucas
+    last_name: Bennett
+    bio: Lucas builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Rails Foundation
+    job_title: Developer Advocate
+    email: lucas-bennett@speakers.example.test
+    phone: +1-555-0133
+    website_url: https://lucas-bennett.example.test
+  - first_name: Amara
+    last_name: Diallo
+    bio: Amara builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Campfire Labs
+    job_title: Staff Engineer
+    email: amara-diallo@speakers.example.test
+    phone: +1-555-0134
+    website_url: https://amara-diallo.example.test
+  - first_name: Ethan
+    last_name: Wright
+    bio: Ethan builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Basecamp
+    job_title: Principal Developer
+    email: ethan-wright@speakers.example.test
+    phone: +1-555-0135
+    website_url: https://ethan-wright.example.test
+  - first_name: Keiko
+    last_name: Mori
+    bio: Keiko builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Sidekiq Studio
+    job_title: Open Source Maintainer
+    email: keiko-mori@speakers.example.test
+    phone: +1-555-0136
+    website_url: https://keiko-mori.example.test
+  - first_name: Samira
+    last_name: Khan
+    bio: Samira builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: GoodJob Works
+    job_title: Engineering Manager
+    email: samira-khan@speakers.example.test
+    phone: +1-555-0137
+    website_url: https://samira-khan.example.test
+  - first_name: Miles
+    last_name: Foster
+    bio: Miles builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Jumpstart
+    job_title: Independent Consultant
+    email: miles-foster@speakers.example.test
+    phone: +1-555-0138
+    website_url: https://miles-foster.example.test
+  - first_name: Ana
+    last_name: Costa
+    bio: Ana builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: GitHub
+    job_title: Developer Advocate
+    email: ana-costa@speakers.example.test
+    phone: +1-555-0139
+    website_url: https://ana-costa.example.test
+  - first_name: Dev
+    last_name: Raman
+    bio: Dev builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Honeybadger
+    job_title: Staff Engineer
+    email: dev-raman@speakers.example.test
+    phone: +1-555-0140
+    website_url: https://dev-raman.example.test
+  - first_name: Tessa
+    last_name: Moore
+    bio: Tessa builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Rails Foundation
+    job_title: Principal Developer
+    email: tessa-moore@speakers.example.test
+    phone: +1-555-0141
+    website_url: https://tessa-moore.example.test
+  - first_name: Jonah
+    last_name: Lee
+    bio: Jonah builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Campfire Labs
+    job_title: Open Source Maintainer
+    email: jonah-lee@speakers.example.test
+    phone: +1-555-0142
+    website_url: https://jonah-lee.example.test
+  - first_name: Maya
+    last_name: Green
+    bio: Maya builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Basecamp
+    job_title: Engineering Manager
+    email: maya-green@speakers.example.test
+    phone: +1-555-0143
+    website_url: https://maya-green.example.test
+  - first_name: Rafael
+    last_name: Alvarez
+    bio: Rafael builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: Sidekiq Studio
+    job_title: Independent Consultant
+    email: rafael-alvarez@speakers.example.test
+    phone: +1-555-0144
+    website_url: https://rafael-alvarez.example.test
+  - first_name: Claire
+    last_name: Adams
+    bio: Claire builds pragmatic Ruby systems and enjoys teaching teams how to keep their applications understandable.
+    company: GoodJob Works
+    job_title: Developer Advocate
+    email: claire-adams@speakers.example.test
+    phone: +1-555-0145
+    website_url: https://claire-adams.example.test
+
+session_templates:
+  keynote: &keynote
+    title: "Keynote: Ruby for the Long Haul"
+    description: "A practical look at designing Ruby applications that stay pleasant to change over a decade."
+    session_type: 0
+    audience_level: 0
+  hotwire: &hotwire
+    title: "Hotwire Without the Mystery"
+    description: "Build a responsive interface by following the request, response, and DOM lifecycle end to end."
+    session_type: 1
+    audience_level: 1
+  queue: &queue
+    title: "The Queue Is the Product"
+    description: "Use Active Job boundaries, retries, and observability to make asynchronous work dependable."
+    session_type: 1
+    audience_level: 2
+  testing: &testing
+    title: "Testing the Edges"
+    description: "Find the handful of integration tests that make a Rails application safe to refactor."
+    session_type: 2
+    audience_level: 1
+  postgres: &postgres
+    title: "Postgres Patterns for Rails Teams"
+    description: "Reach for indexes, constraints, and query plans before reaching for a cache."
+    session_type: 1
+    audience_level: 2
+  ractors: &ractors
+    title: "A Gentle Introduction to Ractors"
+    description: "Explore Ruby concurrency with a small, concrete system and its trade-offs."
+    session_type: 1
+    audience_level: 3
+  gems: &gems
+    title: "Shipping Gems with Confidence"
+    description: "Versioning, compatibility, and release automation for maintainers of useful libraries."
+    session_type: 2
+    audience_level: 2
+  components: &components
+    title: "View Components That Age Well"
+    description: "Keep presentation code explicit without turning a component library into a framework."
+    session_type: 1
+    audience_level: 1
+  incidents: &incidents
+    title: "Incident Reviews Without Blame"
+    description: "Turn production surprises into durable improvements for both systems and teams."
+    session_type: 2
+    audience_level: 2
+  performance: &performance
+    title: "Rails Performance Field Notes"
+    description: "A tour of real bottlenecks, from N+1 queries to slow template rendering."
+    session_type: 1
+    audience_level: 2
+  office_hours: &office_hours
+    title: "Open Source Office Hours"
+    description: "Bring a maintainer question, a patch idea, or simply listen in on the craft of stewardship."
+    session_type: 3
+    audience_level: 0
+  closing: &closing
+    title: "Closing Circle: What We Will Build Next"
+    description: "A facilitated conversation on the experiments worth taking home after the conference."
+    session_type: 0
+    audience_level: 0
+
+sessions:
+  - <<: *keynote
+    conference_id: 1
+    room_id: 1
+    starts_at: "2026-10-14T09:00:00Z"
+    ends_at: "2026-10-14T10:15:00Z"
+    status: 0
+  - <<: *hotwire
+    conference_id: 1
+    room_id: 2
+    starts_at: "2026-10-14T10:15:00Z"
+    ends_at: "2026-10-14T11:05:00Z"
+    status: 0
+  - <<: *queue
+    conference_id: 1
+    room_id: 3
+    starts_at: "2026-10-14T13:00:00Z"
+    ends_at: "2026-10-14T13:50:00Z"
+    status: 0
+  - <<: *testing
+    conference_id: 1
+    room_id: 4
+    starts_at: "2026-10-14T15:15:00Z"
+    ends_at: "2026-10-14T16:05:00Z"
+    status: 0
+  - <<: *postgres
+    conference_id: 1
+    room_id: 1
+    starts_at: "2026-10-15T09:00:00Z"
+    ends_at: "2026-10-15T09:50:00Z"
+    status: 0
+  - <<: *ractors
+    conference_id: 1
+    room_id: 2
+    starts_at: "2026-10-15T10:15:00Z"
+    ends_at: "2026-10-15T11:05:00Z"
+    status: 0
+  - <<: *gems
+    conference_id: 1
+    room_id: 3
+    starts_at: "2026-10-15T13:00:00Z"
+    ends_at: "2026-10-15T13:50:00Z"
+    status: 0
+  - <<: *components
+    conference_id: 1
+    room_id: 4
+    starts_at: "2026-10-15T15:15:00Z"
+    ends_at: "2026-10-15T16:05:00Z"
+    status: 0
+  - <<: *incidents
+    conference_id: 1
+    room_id: 1
+    starts_at: "2026-10-16T09:00:00Z"
+    ends_at: "2026-10-16T09:50:00Z"
+    status: 0
+  - <<: *performance
+    conference_id: 1
+    room_id: 2
+    starts_at: "2026-10-16T10:15:00Z"
+    ends_at: "2026-10-16T11:05:00Z"
+    status: 0
+  - <<: *office_hours
+    conference_id: 1
+    room_id: 3
+    starts_at: "2026-10-16T13:00:00Z"
+    ends_at: "2026-10-16T13:50:00Z"
+    status: 0
+  - <<: *closing
+    conference_id: 1
+    room_id: 4
+    starts_at: "2026-10-16T15:15:00Z"
+    ends_at: "2026-10-16T16:00:00Z"
+    status: 0
+  - <<: *keynote
+    conference_id: 2
+    room_id: 7
+    starts_at: "2026-11-05T09:00:00Z"
+    ends_at: "2026-11-05T10:15:00Z"
+    status: 0
+  - <<: *hotwire
+    conference_id: 2
+    room_id: 8
+    starts_at: "2026-11-05T10:15:00Z"
+    ends_at: "2026-11-05T11:05:00Z"
+    status: 0
+  - <<: *queue
+    conference_id: 2
+    room_id: 9
+    starts_at: "2026-11-05T13:00:00Z"
+    ends_at: "2026-11-05T13:50:00Z"
+    status: 0
+  - <<: *testing
+    conference_id: 2
+    room_id: 10
+    starts_at: "2026-11-05T15:15:00Z"
+    ends_at: "2026-11-05T16:05:00Z"
+    status: 0
+  - <<: *postgres
+    conference_id: 2
+    room_id: 7
+    starts_at: "2026-11-06T09:00:00Z"
+    ends_at: "2026-11-06T09:50:00Z"
+    status: 0
+  - <<: *ractors
+    conference_id: 2
+    room_id: 8
+    starts_at: "2026-11-06T10:15:00Z"
+    ends_at: "2026-11-06T11:05:00Z"
+    status: 0
+  - <<: *gems
+    conference_id: 2
+    room_id: 9
+    starts_at: "2026-11-06T13:00:00Z"
+    ends_at: "2026-11-06T13:50:00Z"
+    status: 0
+  - <<: *components
+    conference_id: 2
+    room_id: 10
+    starts_at: "2026-11-06T15:15:00Z"
+    ends_at: "2026-11-06T16:05:00Z"
+    status: 0
+  - <<: *incidents
+    conference_id: 2
+    room_id: 7
+    starts_at: "2026-11-07T09:00:00Z"
+    ends_at: "2026-11-07T09:50:00Z"
+    status: 0
+  - <<: *performance
+    conference_id: 2
+    room_id: 8
+    starts_at: "2026-11-07T10:15:00Z"
+    ends_at: "2026-11-07T11:05:00Z"
+    status: 0
+  - <<: *office_hours
+    conference_id: 2
+    room_id: 9
+    starts_at: "2026-11-07T13:00:00Z"
+    ends_at: "2026-11-07T13:50:00Z"
+    status: 0
+  - <<: *closing
+    conference_id: 2
+    room_id: 10
+    starts_at: "2026-11-07T15:15:00Z"
+    ends_at: "2026-11-07T16:00:00Z"
+    status: 0
+  - <<: *keynote
+    conference_id: 3
+    room_id: 12
+    starts_at: "2027-02-18T09:00:00Z"
+    ends_at: "2027-02-18T10:15:00Z"
+    status: 0
+  - <<: *hotwire
+    conference_id: 3
+    room_id: 13
+    starts_at: "2027-02-18T10:15:00Z"
+    ends_at: "2027-02-18T11:05:00Z"
+    status: 0
+  - <<: *queue
+    conference_id: 3
+    room_id: 14
+    starts_at: "2027-02-18T13:00:00Z"
+    ends_at: "2027-02-18T13:50:00Z"
+    status: 0
+  - <<: *testing
+    conference_id: 3
+    room_id: 15
+    starts_at: "2027-02-18T15:15:00Z"
+    ends_at: "2027-02-18T16:05:00Z"
+    status: 0
+  - <<: *postgres
+    conference_id: 3
+    room_id: 12
+    starts_at: "2027-02-19T09:00:00Z"
+    ends_at: "2027-02-19T09:50:00Z"
+    status: 0
+  - <<: *ractors
+    conference_id: 3
+    room_id: 13
+    starts_at: "2027-02-19T10:15:00Z"
+    ends_at: "2027-02-19T11:05:00Z"
+    status: 0
+  - <<: *gems
+    conference_id: 3
+    room_id: 14
+    starts_at: "2027-02-19T13:00:00Z"
+    ends_at: "2027-02-19T13:50:00Z"
+    status: 0
+  - <<: *components
+    conference_id: 3
+    room_id: 15
+    starts_at: "2027-02-19T15:15:00Z"
+    ends_at: "2027-02-19T16:05:00Z"
+    status: 0
+  - <<: *incidents
+    conference_id: 3
+    room_id: 12
+    starts_at: "2027-02-20T09:00:00Z"
+    ends_at: "2027-02-20T09:50:00Z"
+    status: 0
+  - <<: *performance
+    conference_id: 3
+    room_id: 13
+    starts_at: "2027-02-20T10:15:00Z"
+    ends_at: "2027-02-20T11:05:00Z"
+    status: 0
+  - <<: *office_hours
+    conference_id: 3
+    room_id: 14
+    starts_at: "2027-02-20T13:00:00Z"
+    ends_at: "2027-02-20T13:50:00Z"
+    status: 0
+  - <<: *closing
+    conference_id: 3
+    room_id: 15
+    starts_at: "2027-02-20T15:15:00Z"
+    ends_at: "2027-02-20T16:00:00Z"
+    status: 0
+  - <<: *keynote
+    conference_id: 4
+    room_id: 19
+    starts_at: "2027-03-11T09:00:00Z"
+    ends_at: "2027-03-11T10:15:00Z"
+    status: 0
+  - <<: *hotwire
+    conference_id: 4
+    room_id: 20
+    starts_at: "2027-03-11T10:15:00Z"
+    ends_at: "2027-03-11T11:05:00Z"
+    status: 0
+  - <<: *queue
+    conference_id: 4
+    room_id: 21
+    starts_at: "2027-03-11T13:00:00Z"
+    ends_at: "2027-03-11T13:50:00Z"
+    status: 0
+  - <<: *testing
+    conference_id: 4
+    room_id: 22
+    starts_at: "2027-03-11T15:15:00Z"
+    ends_at: "2027-03-11T16:05:00Z"
+    status: 0
+  - <<: *postgres
+    conference_id: 4
+    room_id: 19
+    starts_at: "2027-03-12T09:00:00Z"
+    ends_at: "2027-03-12T09:50:00Z"
+    status: 0
+  - <<: *ractors
+    conference_id: 4
+    room_id: 20
+    starts_at: "2027-03-12T10:15:00Z"
+    ends_at: "2027-03-12T11:05:00Z"
+    status: 0
+  - <<: *gems
+    conference_id: 4
+    room_id: 21
+    starts_at: "2027-03-12T13:00:00Z"
+    ends_at: "2027-03-12T13:50:00Z"
+    status: 0
+  - <<: *components
+    conference_id: 4
+    room_id: 22
+    starts_at: "2027-03-12T15:15:00Z"
+    ends_at: "2027-03-12T16:05:00Z"
+    status: 0
+  - <<: *incidents
+    conference_id: 4
+    room_id: 19
+    starts_at: "2027-03-13T09:00:00Z"
+    ends_at: "2027-03-13T09:50:00Z"
+    status: 0
+  - <<: *performance
+    conference_id: 4
+    room_id: 20
+    starts_at: "2027-03-13T10:15:00Z"
+    ends_at: "2027-03-13T11:05:00Z"
+    status: 0
+  - <<: *office_hours
+    conference_id: 4
+    room_id: 21
+    starts_at: "2027-03-13T13:00:00Z"
+    ends_at: "2027-03-13T13:50:00Z"
+    status: 0
+  - <<: *closing
+    conference_id: 4
+    room_id: 22
+    starts_at: "2027-03-13T15:15:00Z"
+    ends_at: "2027-03-13T16:00:00Z"
+    status: 0
+  - <<: *keynote
+    conference_id: 5
+    room_id: 24
+    starts_at: "2027-04-22T09:00:00Z"
+    ends_at: "2027-04-22T10:15:00Z"
+    status: 0
+  - <<: *hotwire
+    conference_id: 5
+    room_id: 25
+    starts_at: "2027-04-22T10:15:00Z"
+    ends_at: "2027-04-22T11:05:00Z"
+    status: 0
+  - <<: *queue
+    conference_id: 5
+    room_id: 26
+    starts_at: "2027-04-22T13:00:00Z"
+    ends_at: "2027-04-22T13:50:00Z"
+    status: 0
+  - <<: *testing
+    conference_id: 5
+    room_id: 27
+    starts_at: "2027-04-22T15:15:00Z"
+    ends_at: "2027-04-22T16:05:00Z"
+    status: 0
+  - <<: *postgres
+    conference_id: 5
+    room_id: 24
+    starts_at: "2027-04-23T09:00:00Z"
+    ends_at: "2027-04-23T09:50:00Z"
+    status: 0
+  - <<: *ractors
+    conference_id: 5
+    room_id: 25
+    starts_at: "2027-04-23T10:15:00Z"
+    ends_at: "2027-04-23T11:05:00Z"
+    status: 0
+  - <<: *gems
+    conference_id: 5
+    room_id: 26
+    starts_at: "2027-04-23T13:00:00Z"
+    ends_at: "2027-04-23T13:50:00Z"
+    status: 0
+  - <<: *components
+    conference_id: 5
+    room_id: 27
+    starts_at: "2027-04-23T15:15:00Z"
+    ends_at: "2027-04-23T16:05:00Z"
+    status: 0
+  - <<: *incidents
+    conference_id: 5
+    room_id: 24
+    starts_at: "2027-04-24T09:00:00Z"
+    ends_at: "2027-04-24T09:50:00Z"
+    status: 0
+  - <<: *performance
+    conference_id: 5
+    room_id: 25
+    starts_at: "2027-04-24T10:15:00Z"
+    ends_at: "2027-04-24T11:05:00Z"
+    status: 0
+  - <<: *office_hours
+    conference_id: 5
+    room_id: 26
+    starts_at: "2027-04-24T13:00:00Z"
+    ends_at: "2027-04-24T13:50:00Z"
+    status: 0
+  - <<: *closing
+    conference_id: 5
+    room_id: 27
+    starts_at: "2027-04-24T15:15:00Z"
+    ends_at: "2027-04-24T16:00:00Z"
+    status: 0
+  - <<: *keynote
+    conference_id: 6
+    room_id: 30
+    starts_at: "2027-06-09T09:00:00Z"
+    ends_at: "2027-06-09T10:15:00Z"
+    status: 2
+  - <<: *hotwire
+    conference_id: 6
+    room_id: 31
+    starts_at: "2027-06-09T10:15:00Z"
+    ends_at: "2027-06-09T11:05:00Z"
+    status: 2
+  - <<: *queue
+    conference_id: 6
+    room_id: 32
+    starts_at: "2027-06-09T13:00:00Z"
+    ends_at: "2027-06-09T13:50:00Z"
+    status: 2
+  - <<: *testing
+    conference_id: 6
+    room_id: 33
+    starts_at: "2027-06-09T15:15:00Z"
+    ends_at: "2027-06-09T16:05:00Z"
+    status: 2
+  - <<: *postgres
+    conference_id: 6
+    room_id: 30
+    starts_at: "2027-06-10T09:00:00Z"
+    ends_at: "2027-06-10T09:50:00Z"
+    status: 2
+  - <<: *ractors
+    conference_id: 6
+    room_id: 31
+    starts_at: "2027-06-10T10:15:00Z"
+    ends_at: "2027-06-10T11:05:00Z"
+    status: 2
+  - <<: *gems
+    conference_id: 6
+    room_id: 32
+    starts_at: "2027-06-10T13:00:00Z"
+    ends_at: "2027-06-10T13:50:00Z"
+    status: 2
+  - <<: *components
+    conference_id: 6
+    room_id: 33
+    starts_at: "2027-06-10T15:15:00Z"
+    ends_at: "2027-06-10T16:05:00Z"
+    status: 2
+  - <<: *incidents
+    conference_id: 6
+    room_id: 30
+    starts_at: "2027-06-11T09:00:00Z"
+    ends_at: "2027-06-11T09:50:00Z"
+    status: 2
+  - <<: *performance
+    conference_id: 6
+    room_id: 31
+    starts_at: "2027-06-11T10:15:00Z"
+    ends_at: "2027-06-11T11:05:00Z"
+    status: 2
+  - <<: *office_hours
+    conference_id: 6
+    room_id: 32
+    starts_at: "2027-06-11T13:00:00Z"
+    ends_at: "2027-06-11T13:50:00Z"
+    status: 2
+  - <<: *closing
+    conference_id: 6
+    room_id: 33
+    starts_at: "2027-06-11T15:15:00Z"
+    ends_at: "2027-06-11T16:00:00Z"
+    status: 2
