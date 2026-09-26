@@ -28,4 +28,10 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        session_speaker:
+          attributes:
+            session_id:
+              taken: "has already been assigned to speaker"
