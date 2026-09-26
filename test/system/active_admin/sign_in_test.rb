@@ -2,7 +2,7 @@
 
 require "application_system_test_case"
 
-class SessionsTest < ApplicationSystemTestCase
+class SignInTest < ApplicationSystemTestCase
   test "visiting the root redirects to admin login" do
     visit root_path
 
