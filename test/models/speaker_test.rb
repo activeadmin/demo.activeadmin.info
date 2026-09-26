@@ -1,6 +1,11 @@
 require "test_helper"
 
 class SpeakerTest < ActiveSupport::TestCase
+  test "#full_name" do
+    speaker = Speaker.new(first_name: "John", last_name: "Smith")
+    assert_equal "John Smith", speaker.full_name
+  end
+
   test "deleting a speaker is successful" do
     speaker = speakers(:one)
 

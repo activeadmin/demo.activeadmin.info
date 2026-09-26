@@ -4,4 +4,8 @@ class Speaker < ApplicationRecord
   has_many :conferences, through: :sessions
 
   validates :bio, :email, :first_name, :last_name, :phone, :website_url, presence: true
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end
