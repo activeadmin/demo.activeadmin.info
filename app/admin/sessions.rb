@@ -60,8 +60,8 @@ ActiveAdmin.register Session do
       f.input :description
       f.input :session_type
       f.input :audience_level
-      f.input :starts_at
-      f.input :ends_at
+      f.input :starts_at, as: :datetime_picker, selected: f.object.starts_at || Time.current
+      f.input :ends_at, as: :datetime_picker, selected: f.object.ends_at || Time.current
       f.input :status
     end
     f.inputs "Speakers" do
