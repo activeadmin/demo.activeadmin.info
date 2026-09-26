@@ -14,7 +14,7 @@ https://activeadmin-demo.onrender.com
 - `bin/rails db:reset`
 - `bin/dev`
 
-Open http://localhost:5000 and login using `admin@example.com` and `password`.
+Open http://localhost:5000 and sign in with `admin@example.com` and `password`.
 
 ### Tests
 
