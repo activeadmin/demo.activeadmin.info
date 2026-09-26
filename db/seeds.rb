@@ -9,7 +9,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-AdminUser.create_with(password: "password", password_confirmation: "password").find_or_create_by!(email: AdminUser::DEFAULT_EMAIL)
+AdminUser
+  .create_with(password: AdminUser::DEFAULT_PASSWORD, password_confirmation: AdminUser::DEFAULT_PASSWORD)
+  .find_or_create_by!(email: AdminUser::DEFAULT_EMAIL)
 
 # This data intentionally uses bulk operations. Re-running the seed task replaces
 # the event demo data with the same deterministic dataset without issuing a query
