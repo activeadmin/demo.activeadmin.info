@@ -9,7 +9,7 @@ class AdminUsersTest < ApplicationSystemTestCase
     visit admin_admin_users_path
 
     assert_text "Admin Users"
-    assert_text "Showing 1 of 1"
+    assert_text "Showing all 2"
     assert_text "admin@example.com"
   end
 
@@ -28,14 +28,14 @@ class AdminUsersTest < ApplicationSystemTestCase
 
     visit new_admin_admin_user_path
 
-    fill_in "Email", with: "test@example.com"
+    fill_in "Email", with: "testing@example.com"
     fill_in "Password", with: "password", id: "admin_user_password"
     fill_in "Password confirmation", with: "password"
     click_on "Create Admin user"
 
     assert_text "Admin user was successfully created."
     assert_current_path admin_admin_user_path(AdminUser.last)
-    assert_text "test@example.com"
+    assert_text "testing@example.com"
   end
 
   test "visiting the edit" do
@@ -43,14 +43,15 @@ class AdminUsersTest < ApplicationSystemTestCase
 
     visit edit_admin_admin_user_path(default_admin_user)
 
-    assert_text "admin@example.com"
+    assert_text AdminUser::DEFAULT_EMAIL
   end
 
   test "updating an admin user is successful" do
-    admin_user = AdminUser.create!(email: "test@example.com", password: "password", password_confirmation: "password")
+    admin_user = admin_users(:one)
     sign_in default_admin_user
 
     visit edit_admin_admin_user_path(admin_user)
+    assert_text "test1@example.com"
     fill_in "Email", with: "updated@example.com"
     fill_in "Password", with: "password", id: "admin_user_password"
     fill_in "Password confirmation", with: "password"
@@ -59,7 +60,7 @@ class AdminUsersTest < ApplicationSystemTestCase
     assert_current_path admin_admin_user_path(admin_user)
     assert_text "Admin user was successfully updated."
     assert_text "updated@example.com"
-    refute_text "test@example.com"
+    refute_text "test1@example.com"
   end
 
   test "updating the default admin user is blocked" do
@@ -76,7 +77,7 @@ class AdminUsersTest < ApplicationSystemTestCase
   end
 
   test "deleting an admin user is successful" do
-    admin_user = AdminUser.create!(email: "test@example.com", password: "password", password_confirmation: "password")
+    admin_user = admin_users(:one)
     sign_in default_admin_user
 
     visit admin_admin_user_path(admin_user)
@@ -86,7 +87,7 @@ class AdminUsersTest < ApplicationSystemTestCase
 
     assert_current_path admin_admin_users_path
     assert_text "Admin user was successfully destroyed."
-    refute_text "test@example.com"
+    refute_text "test1@example.com"
   end
 
   test "deleting the default admin user is blocked" do
