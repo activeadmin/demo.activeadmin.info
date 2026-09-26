@@ -67,8 +67,8 @@ ActiveAdmin.register Conference do
       f.input :slug
       f.input :description
       f.input :status
-      f.input :start_date
-      f.input :end_date
+      f.input :start_date, as: :date_picker, selected: f.object.start_date || Date.current
+      f.input :end_date, as: :date_picker, selected: f.object.end_date || Date.current
       f.input :daily_start_time
       f.input :daily_end_time
       f.input :ticket_price
