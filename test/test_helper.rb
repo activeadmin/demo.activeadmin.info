@@ -3,7 +3,7 @@
 if ENV.fetch("COVERAGE", false)
   require "simplecov"
   require "simplecov-cobertura"
-  SimpleCov.start do
+  SimpleCov.start :rails do
     cover_views
     formatter SimpleCov::Formatter::CoberturaFormatter
   end
