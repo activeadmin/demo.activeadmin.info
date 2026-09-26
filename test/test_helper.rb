@@ -4,6 +4,7 @@ if ENV.fetch("COVERAGE", false)
   require "simplecov"
   require "simplecov-cobertura"
   SimpleCov.start :rails do
+    group 'Admin', 'app/admin'
     cover_views
     formatter SimpleCov::Formatter::CoberturaFormatter
   end
