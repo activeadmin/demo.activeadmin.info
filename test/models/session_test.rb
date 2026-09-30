@@ -37,4 +37,14 @@ class SessionTest < ActiveSupport::TestCase
     assert_predicate session, :invalid?
     assert_includes session.errors[:audience_level], "is not included in the list"
   end
+
+  test "deleting a session is successful" do
+    session = sessions(:one)
+
+    assert_no_difference [-> { Conference.count }, -> { Room.count }, -> { Speaker.count }] do
+      assert_difference -> { Session.count } => -1, -> { SessionSpeaker.count } => -1 do
+        session.destroy
+      end
+    end
+  end
 end
