@@ -1,0 +1,41 @@
+<div id="update-session-details-modal" tabindex="-1" aria-hidden="true"
+  class="fixed inset-bs-0 inset-s-0 inset-e-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+  data-batch-action-modal>
+  <div class="relative w-full max-w-md max-h-full">
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-800 dark:border dark:border-white/10">
+      <button type="button"
+        class="absolute inset-bs-5 inset-e-4 flex h-8 w-8 items-center justify-center bg-transparent text-gray-400 hover:text-gray-500 rounded-lg dark:hover:text-gray-300"
+        data-modal-hide="update-session-details-modal">
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+        <span class="sr-only">Close modal</span>
+      </button>
+      <div class="px-6 py-6 lg:px-8">
+        <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Update Sessions</h3>
+        <%= form_tag false, "data-batch-action-form": "" do %>
+          <div class="space-y-4 py-4">
+            <div>
+              <label for="session-status" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-100">Status</label>
+              <%= select_tag "status", options_for_select(Session.statuses.map { |name, value| [name.humanize, value] }), id: "session-status", class: "w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white" %>
+            </div>
+            <div>
+              <label for="session-session-type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-100">Session type</label>
+              <%= select_tag "session_type", options_for_select(Session.session_types.map { |name, value| [name.humanize, value] }), id: "session-session-type", class: "w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white" %>
+            </div>
+            <div>
+              <label for="session-audience-level" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-100">Audience level</label>
+              <%= select_tag "audience_level", options_for_select(Session.audience_levels.map { |name, value| [name.humanize, value] }), id: "session-audience-level", class: "w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:border-gray-700 dark:bg-gray-700 dark:text-white" %>
+            </div>
+          </div>
+          <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-hidden focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Update sessions
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -21,3 +21,14 @@ two:
   starts_at: 2026-09-24 19:57:53
   ends_at: 2026-09-24 19:57:53
   status: 1
+
+three:
+  conference: two
+  room: two
+  title: MyString
+  description: MyText
+  session_type:
+  audience_level:
+  starts_at: 2026-09-24 19:57:53
+  ends_at: 2026-09-24 19:57:53
+  status: 0

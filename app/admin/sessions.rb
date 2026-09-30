@@ -18,6 +18,22 @@ ActiveAdmin.register Session do
   filter :created_at
   filter :updated_at
 
+  batch_action(
+    :update_session_details,
+    partial: "update_session_details_batch_action_form",
+    link_html_options: {
+      "data-modal-target": "update-session-details-modal",
+      "data-modal-show": "update-session-details-modal"
+    }
+  ) do |ids, inputs|
+    Session.where(id: ids).update_all(
+      status: inputs["status"],
+      session_type: inputs["session_type"],
+      audience_level: inputs["audience_level"]
+    )
+    redirect_to collection_path, notice: I18n.t("admin.session.batch_actions.update_session_details_notice")
+  end
+
   index do
     selectable_column
     id_column
