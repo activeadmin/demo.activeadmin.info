@@ -35,3 +35,8 @@ en:
           attributes:
             session_id:
               taken: "has already been assigned to speaker"
+  admin:
+    conference:
+      batch_actions:
+        toggle_published_confirmation: "Are you sure you want to toggle the published status for the selected conferences?"
+        toggle_published_notice: "The conferences' published status has been toggled."

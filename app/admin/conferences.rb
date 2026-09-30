@@ -20,6 +20,11 @@ ActiveAdmin.register Conference do
   filter :created_at
   filter :updated_at
 
+  batch_action :toggle_published, confirm: proc { I18n.t("admin.conference.batch_actions.toggle_published_confirmation") } do |ids|
+    Conference.where(id: ids).update_all("published = NOT published")
+    redirect_to collection_path, notice: I18n.t("admin.conference.batch_actions.toggle_published_notice")
+  end
+
   index do
     selectable_column
     id_column

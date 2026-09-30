@@ -68,4 +68,22 @@ class ConferencesTest < ApplicationSystemTestCase
     assert_current_path admin_conferences_path
     assert_text "Conference was successfully destroyed."
   end
+
+  test "batch action toggles published status" do
+    published = conferences(:one).tap { it.update_columns(published: true) }
+    unpublished = conferences(:two).tap { it.update_columns(published: false) }
+    sign_in default_admin_user
+
+    visit admin_conferences_path
+    check "batch_action_item_#{published.id}"
+    check "batch_action_item_#{unpublished.id}"
+    click_on "Batch Actions"
+    accept_confirm I18n.t("admin.conference.batch_actions.toggle_published_confirmation") do
+      click_on "Toggle Published"
+    end
+
+    assert_text I18n.t("admin.conference.batch_actions.toggle_published_notice")
+    assert_not published.reload.published?
+    assert unpublished.reload.published?
+  end
 end
