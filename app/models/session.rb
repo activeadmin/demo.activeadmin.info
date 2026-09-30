@@ -10,6 +10,5 @@ class Session < ApplicationRecord
 
   accepts_nested_attributes_for :session_speakers, allow_destroy: true
 
-  validates :title, :description, :starts_at, :ends_at, :status, presence: true
-  validates :session_type, :audience_level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, allow_nil: true
+  validates :title, :description, :starts_at, :ends_at, presence: true
 end
