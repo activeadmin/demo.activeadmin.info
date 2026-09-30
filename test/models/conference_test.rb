@@ -1,6 +1,14 @@
 require "test_helper"
 
 class ConferenceTest < ActiveSupport::TestCase
+  test "rejects an invalid status enum value" do
+    conference = conferences(:one)
+    conference.status = :bogus
+
+    assert_predicate conference, :invalid?
+    assert_includes conference.errors[:status], "is not included in the list"
+  end
+
   test "deleting a conference is successful" do
     conference = conferences(:one)
 
