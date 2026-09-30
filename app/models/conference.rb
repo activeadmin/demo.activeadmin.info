@@ -9,7 +9,6 @@ class Conference < ApplicationRecord
   accepts_nested_attributes_for :sessions, allow_destroy: true
 
   validates :name, :description, :start_date, :end_date, :daily_start_time, :daily_end_time, :website_url, presence: true
-  validates :status, presence: true, inclusion: { in: statuses.keys }
   validates :capacity, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validates :ticket_price, presence: true, numericality: { greater_than_or_equal_to: 0 }
 end
