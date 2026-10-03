@@ -56,6 +56,33 @@ class SessionsTest < ApplicationSystemTestCase
     assert_text "Sample Session Title"
   end
 
+  test "invalid session creation is rejected" do
+    sign_in default_admin_user
+
+    assert_no_difference -> { Session.count } do
+      visit new_admin_session_path
+      bypass_native_form_validation
+      click_on "Create Session"
+
+      assert_text "can't be blank"
+    end
+  end
+
+  test "invalid session updates are rejected" do
+    session = sessions(:one)
+    original_title = session.title
+    assert_predicate session.title, :present?
+    sign_in default_admin_user
+
+    visit edit_admin_session_path(session)
+    fill_in "Title", with: ""
+    bypass_native_form_validation
+    click_on "Update Session"
+
+    assert_text "can't be blank"
+    assert_equal original_title, session.reload.title
+  end
+
   test "deleting a session is successful" do
     session = sessions(:one)
     sign_in default_admin_user
