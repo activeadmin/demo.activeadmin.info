@@ -46,6 +46,32 @@ class AdminUsersTest < ApplicationSystemTestCase
     assert_text AdminUser::DEFAULT_EMAIL
   end
 
+  test "invalid admin user creation is rejected" do
+    sign_in default_admin_user
+
+    assert_no_difference -> { AdminUser.count } do
+      visit new_admin_admin_user_path
+      bypass_native_form_validation
+      click_on "Create Admin user"
+
+      assert_text "can't be blank"
+    end
+  end
+
+  test "invalid admin user updates are rejected" do
+    admin_user = admin_users(:one)
+    original_email = admin_user.email
+    assert_predicate admin_user.email, :present?
+    sign_in default_admin_user
+
+    visit edit_admin_admin_user_path(admin_user)
+    fill_in "Email", with: AdminUser::DEFAULT_EMAIL
+    click_on "Update Admin user"
+
+    assert_text "has already been taken"
+    assert_equal original_email, admin_user.reload.email
+  end
+
   test "updating an admin user is successful" do
     admin_user = admin_users(:one)
     sign_in default_admin_user
