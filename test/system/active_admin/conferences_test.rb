@@ -45,6 +45,33 @@ class ConferencesTest < ApplicationSystemTestCase
     assert_text conference.description
   end
 
+  test "invalid conference creation is rejected" do
+    sign_in default_admin_user
+
+    assert_no_difference -> { Conference.count } do
+      visit new_admin_conference_path
+      bypass_native_form_validation
+      click_on "Create Conference"
+
+      assert_text "can't be blank"
+    end
+  end
+
+  test "invalid conference updates are rejected" do
+    conference = conferences(:one)
+    original_name = conference.name
+    assert_predicate conference.name, :present?
+    sign_in default_admin_user
+
+    visit edit_admin_conference_path(conference)
+    fill_in "Name", with: ""
+    bypass_native_form_validation
+    click_on "Update Conference"
+
+    assert_text "can't be blank"
+    assert_equal original_name, conference.reload.name
+  end
+
   test "updating a conference is successful" do
     conference = conferences(:one)
     sign_in default_admin_user
