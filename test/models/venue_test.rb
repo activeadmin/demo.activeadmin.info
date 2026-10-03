@@ -13,6 +13,21 @@ class VenueTest < ActiveSupport::TestCase
     assert_nil Venue.new.coordinates
   end
 
+  test "validates timezone, numeric coordinates, and non-negative capacity" do
+    venue = venues(:one).dup
+    assert_predicate venue, :valid?
+    venue.time_zone = "Bogus"
+    venue.latitude = "not-a-number"
+    venue.longitude = "not-a-number"
+    venue.capacity = -1
+
+    assert_predicate venue, :invalid?
+    assert_predicate venue.errors[:time_zone], :present?
+    assert_includes venue.errors[:latitude], "is not a number"
+    assert_includes venue.errors[:longitude], "is not a number"
+    assert_includes venue.errors[:capacity], "must be greater than or equal to 0"
+  end
+
   test "deleting a venue is successful" do
     venue = venues(:one)
 

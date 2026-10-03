@@ -1,6 +1,24 @@
 require "test_helper"
 
 class SessionTest < ActiveSupport::TestCase
+  test "requires title, description, starts_at, ends_at, conference, and room" do
+    session = sessions(:one).dup
+    assert_predicate session, :valid?
+    session.assign_attributes(
+      title: nil,
+      description: nil,
+      starts_at: nil,
+      ends_at: nil,
+      conference: nil,
+      room: nil
+    )
+
+    assert_predicate session, :invalid?
+    %i[title description starts_at ends_at conference room].each do |attribute|
+      assert_predicate session.errors[attribute], :present?
+    end
+  end
+
   test "requires a valid status" do
     session = sessions(:one).dup
     session.status = nil
