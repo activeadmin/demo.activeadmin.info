@@ -32,8 +32,12 @@ ActiveAdmin.register Venue do
     column :indoor
     column :accessible
     column :time_zone
-    column :created_at, class: "min-w-48"
-    column :updated_at, class: "min-w-48"
+    column :created_at, class: "min-w-48" do |venue|
+      format_time(venue.created_at)
+    end
+    column :updated_at, class: "min-w-48" do |venue|
+      format_time(venue.updated_at)
+    end
     actions
   end
 
@@ -60,8 +64,12 @@ ActiveAdmin.register Venue do
       row :indoor
       row :accessible
       row :time_zone
-      row :created_at
-      row :updated_at
+      row :created_at do
+        format_time(resource.created_at)
+      end
+      row :updated_at do
+        format_time(resource.updated_at)
+      end
     end
   end
 

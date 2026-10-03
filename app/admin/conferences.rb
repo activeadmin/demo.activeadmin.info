@@ -37,8 +37,12 @@ ActiveAdmin.register Conference do
     column :capacity
     column :published
     column :venue, class: "min-w-40"
-    column :created_at, class: "min-w-48"
-    column :updated_at, class: "min-w-48"
+    column :created_at, class: "min-w-48" do |conference|
+      format_time(conference.created_at)
+    end
+    column :updated_at, class: "min-w-48" do |conference|
+      format_time(conference.updated_at)
+    end
     actions
   end
 
@@ -60,8 +64,12 @@ ActiveAdmin.register Conference do
       row :capacity
       row :published
       row :venue
-      row :created_at
-      row :updated_at
+      row :created_at do
+        format_time(resource.created_at)
+      end
+      row :updated_at do
+        format_time(resource.updated_at)
+      end
     end
   end
 

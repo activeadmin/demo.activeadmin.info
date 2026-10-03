@@ -25,8 +25,12 @@ ActiveAdmin.register Speaker do
     column :company, class: "min-w-34"
     column :job_title, class: "min-w-34"
     column :phone, class: "min-w-32"
-    column :created_at, class: "min-w-48"
-    column :updated_at, class: "min-w-48"
+    column :created_at, class: "min-w-48" do |speaker|
+      format_time(speaker.created_at)
+    end
+    column :updated_at, class: "min-w-48" do |speaker|
+      format_time(speaker.updated_at)
+    end
     actions
   end
 
@@ -47,8 +51,12 @@ ActiveAdmin.register Speaker do
       row :website_url do
         link_to resource.website_url, resource.website_url, target: "_blank" if resource.website_url.present?
       end
-      row :created_at
-      row :updated_at
+      row :created_at do
+        format_time(resource.created_at)
+      end
+      row :updated_at do
+        format_time(resource.updated_at)
+      end
     end
   end
 

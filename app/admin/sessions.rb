@@ -43,10 +43,18 @@ ActiveAdmin.register Session do
     column :session_type
     column :audience_level
     column :status
-    column :starts_at, class: "min-w-48"
-    column :ends_at, class: "min-w-48"
-    column :created_at, class: "min-w-48"
-    column :updated_at, class: "min-w-48"
+    column :starts_at, class: "min-w-48" do |session|
+      format_time(session.starts_at)
+    end
+    column :ends_at, class: "min-w-48" do |session|
+      format_time(session.ends_at)
+    end
+    column :created_at, class: "min-w-48" do |session|
+      format_time(session.created_at)
+    end
+    column :updated_at, class: "min-w-48" do |session|
+      format_time(session.updated_at)
+    end
     actions
   end
 
@@ -59,11 +67,19 @@ ActiveAdmin.register Session do
       row :description
       row :session_type
       row :audience_level
-      row :starts_at
-      row :ends_at
+      row :starts_at do
+        format_time(resource.starts_at)
+      end
+      row :ends_at do
+        format_time(resource.ends_at)
+      end
       row :status
-      row :created_at
-      row :updated_at
+      row :created_at do
+        format_time(resource.created_at)
+      end
+      row :updated_at do
+        format_time(resource.updated_at)
+      end
     end
   end
 

@@ -26,8 +26,12 @@ ActiveAdmin.register Room do
     column :capacity
     column :area_sq_ft, class: "min-w-24"
     column :accessible
-    column :created_at, class: "min-w-48"
-    column :updated_at, class: "min-w-48"
+    column :created_at, class: "min-w-48" do |room|
+      format_time(room.created_at)
+    end
+    column :updated_at, class: "min-w-48" do |room|
+      format_time(room.updated_at)
+    end
     actions
   end
 
@@ -41,8 +45,12 @@ ActiveAdmin.register Room do
       row :capacity
       row :area_sq_ft
       row :accessible
-      row :created_at
-      row :updated_at
+      row :created_at do
+        format_time(resource.created_at)
+      end
+      row :updated_at do
+        format_time(resource.updated_at)
+      end
     end
   end
 

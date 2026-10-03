@@ -28,6 +28,9 @@
 #       enabled: "ON"
 
 en:
+  time:
+    formats:
+      admin_custom: "%b %-d, %Y %I:%M%p %Z"
   activerecord:
     errors:
       models:
