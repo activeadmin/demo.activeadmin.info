@@ -7,6 +7,12 @@ class VenueTest < ActiveSupport::TestCase
     assert_equal [40.7128, -74.0060], venue.coordinates
   end
 
+  test "#coordinates is nil unless both coordinates are present" do
+    assert_nil Venue.new(latitude: 40.7128).coordinates
+    assert_nil Venue.new(longitude: -74.0060).coordinates
+    assert_nil Venue.new.coordinates
+  end
+
   test "deleting a venue is successful" do
     venue = venues(:one)
 
