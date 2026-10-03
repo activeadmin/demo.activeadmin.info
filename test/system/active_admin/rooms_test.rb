@@ -41,6 +41,33 @@ class RoomsTest < ApplicationSystemTestCase
     assert_text rooms(:one).name
   end
 
+  test "invalid room creation is rejected" do
+    sign_in default_admin_user
+
+    assert_no_difference -> { Room.count } do
+      visit new_admin_room_path
+      bypass_native_form_validation
+      click_on "Create Room"
+
+      assert_text "can't be blank"
+    end
+  end
+
+  test "invalid room updates are rejected" do
+    room = rooms(:one)
+    original_name = room.name
+    assert_predicate room.name, :present?
+    sign_in default_admin_user
+
+    visit edit_admin_room_path(room)
+    fill_in "Name", with: ""
+    bypass_native_form_validation
+    click_on "Update Room"
+
+    assert_text "can't be blank"
+    assert_equal original_name, room.reload.name
+  end
+
   test "updating a room is successful" do
     room = rooms(:one)
     sign_in default_admin_user
