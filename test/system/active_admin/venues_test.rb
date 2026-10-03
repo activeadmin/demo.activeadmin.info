@@ -68,6 +68,18 @@ class VenuesTest < ApplicationSystemTestCase
     assert_text ActiveSupport::TimeZone["Eastern Time (US & Canada)"].to_s
   end
 
+  test "invalid venue creation is rejected" do
+    sign_in default_admin_user
+
+    assert_no_difference -> { Venue.count } do
+      visit new_admin_venue_path
+      bypass_native_form_validation
+      click_on "Create Venue"
+
+      assert_text "can't be blank"
+    end
+  end
+
   test "updating a venue is successful" do
     venue = venues(:one)
     sign_in default_admin_user
@@ -79,6 +91,20 @@ class VenuesTest < ApplicationSystemTestCase
     assert_current_path admin_venue_path(venue)
     assert_text "Venue was successfully updated."
     assert_text "Awesome Venue!"
+  end
+
+  test "invalid venue updates are rejected" do
+    venue = venues(:one)
+    original_capacity = venue.capacity
+    assert_predicate venue.capacity, :positive?
+    sign_in default_admin_user
+
+    visit edit_admin_venue_path(venue)
+    fill_in "Capacity", with: "-1"
+    click_on "Update Venue"
+
+    assert_text "must be greater than or equal to 0"
+    assert_equal original_capacity, venue.reload.capacity
   end
 
   test "deleting a venue is successful" do
