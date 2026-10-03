@@ -42,6 +42,33 @@ class SpeakersTest < ApplicationSystemTestCase
     assert_text speakers(:one).first_name
   end
 
+  test "invalid speaker creation is rejected" do
+    sign_in default_admin_user
+
+    assert_no_difference -> { Speaker.count } do
+      visit new_admin_speaker_path
+      bypass_native_form_validation
+      click_on "Create Speaker"
+
+      assert_text "can't be blank"
+    end
+  end
+
+  test "invalid speaker updates are rejected" do
+    speaker = speakers(:one)
+    original_first_name = speaker.first_name
+    assert_predicate speaker.first_name, :present?
+    sign_in default_admin_user
+
+    visit edit_admin_speaker_path(speaker)
+    fill_in "First name", with: ""
+    bypass_native_form_validation
+    click_on "Update Speaker"
+
+    assert_text "can't be blank"
+    assert_equal original_first_name, speaker.reload.first_name
+  end
+
   test "updating a speaker is successful" do
     speaker = speakers(:one)
     sign_in default_admin_user
