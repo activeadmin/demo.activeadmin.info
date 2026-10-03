@@ -11,8 +11,8 @@ one:
   website_url: MyString
 
 two:
-  first_name: MyString
-  last_name: MyString
+  first_name: John
+  last_name: Smith
   bio: MyText
   company: MyString
   job_title: MyString

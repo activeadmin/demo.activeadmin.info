@@ -3,7 +3,7 @@
 one:
   conference: one
   room: one
-  title: MyString
+  title: Title One
   description: MyText
   session_type: 1
   audience_level: 1
@@ -14,7 +14,7 @@ one:
 two:
   conference: two
   room: two
-  title: MyString
+  title: Title Two
   description: MyText
   session_type: 1
   audience_level: 1
@@ -25,7 +25,7 @@ two:
 three:
   conference: two
   room: two
-  title: MyString
+  title: Title Three
   description: MyText
   session_type:
   audience_level:

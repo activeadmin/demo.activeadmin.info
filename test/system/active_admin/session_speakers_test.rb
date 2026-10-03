@@ -42,6 +42,37 @@ class SessionSpeakersTest < ApplicationSystemTestCase
     assert_text session_speakers(:one).session.title
   end
 
+  test "duplicate session speaker creation is rejected" do
+    sign_in default_admin_user
+    first_assignment = session_speakers(:one)
+
+    assert_no_difference -> { SessionSpeaker.count } do
+      visit new_admin_session_speaker_path
+      select first_assignment.session.title, from: "Session"
+      select first_assignment.speaker.full_name, from: "Speaker"
+      click_on "Create Session speaker"
+
+      assert_text "has already been assigned to speaker"
+    end
+  end
+
+  test "duplicate session speaker updates are rejected" do
+    first_assignment = session_speakers(:one)
+    assignment = session_speakers(:two)
+    original_session_id = assignment.session_id
+    original_speaker_id = assignment.speaker_id
+    sign_in default_admin_user
+
+    visit edit_admin_session_speaker_path(assignment)
+    select first_assignment.session.title, from: "Session"
+    select first_assignment.speaker.full_name, from: "Speaker"
+    click_on "Update Session speaker"
+
+    assert_text "has already been assigned to speaker"
+    assert_equal original_session_id, assignment.reload.session_id
+    assert_equal original_speaker_id, assignment.speaker_id
+  end
+
   test "updating a session speaker is successful" do
     session_speaker = session_speakers(:one)
     sign_in default_admin_user
