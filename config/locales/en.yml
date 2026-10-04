@@ -45,4 +45,5 @@ en:
         toggle_published_notice: "The conferences' published status has been toggled."
     session:
       batch_actions:
+        update_session_details_invalid: "Invalid session details. No sessions were updated."
         update_session_details_notice: "The sessions have been updated."

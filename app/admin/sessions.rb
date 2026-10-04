@@ -26,12 +26,22 @@ ActiveAdmin.register Session do
       "data-modal-show": "update-session-details-modal"
     }
   ) do |ids, inputs|
-    Session.where(id: ids).update_all(
-      status: inputs["status"],
-      session_type: inputs["session_type"],
-      audience_level: inputs["audience_level"]
-    )
-    redirect_to collection_path, notice: I18n.t("admin.session.batch_actions.update_session_details_notice")
+    enum_values = {
+      "status" => Session.statuses.values.map(&:to_s),
+      "session_type" => Session.session_types.values.map(&:to_s),
+      "audience_level" => Session.audience_levels.values.map(&:to_s)
+    }
+
+    if enum_values.all? { |attribute, values| inputs[attribute].in?(values) }
+      Session.where(id: ids).update_all(
+        status: inputs["status"],
+        session_type: inputs["session_type"],
+        audience_level: inputs["audience_level"]
+      )
+      redirect_to collection_path, notice: I18n.t("admin.session.batch_actions.update_session_details_notice")
+    else
+      redirect_to collection_path, alert: I18n.t("admin.session.batch_actions.update_session_details_invalid")
+    end
   end
 
   index do

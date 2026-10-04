@@ -122,4 +122,23 @@ class SessionsTest < ApplicationSystemTestCase
     assert_nil unselected.session_type
     assert_nil unselected.audience_level
   end
+
+  test "batch action rejects invalid enum values" do
+    session = sessions(:one)
+    session.update_columns(status: :draft, session_type: :plenary, audience_level: :all_levels)
+    sign_in default_admin_user
+
+    visit admin_sessions_path
+    check "batch_action_item_#{session.id}"
+    click_on "Batch Actions"
+    click_on "Update Session Details"
+    # Simulate submitting an invalid enum value to fail validation check
+    execute_script("document.querySelector('#session-status option').value = '999'")
+    click_on "Update sessions"
+
+    assert_text I18n.t("admin.session.batch_actions.update_session_details_invalid")
+    assert_predicate session.reload, :draft?
+    assert_predicate session, :plenary?
+    assert_predicate session, :all_levels?
+  end
 end
