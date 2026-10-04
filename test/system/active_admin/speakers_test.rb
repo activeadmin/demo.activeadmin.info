@@ -47,7 +47,7 @@ class SpeakersTest < ApplicationSystemTestCase
 
     assert_no_difference -> { Speaker.count } do
       visit new_admin_speaker_path
-      bypass_native_form_validation
+      assert_button "Create Speaker"
       click_on "Create Speaker"
 
       assert_text "can't be blank"
@@ -61,8 +61,8 @@ class SpeakersTest < ApplicationSystemTestCase
     sign_in default_admin_user
 
     visit edit_admin_speaker_path(speaker)
+    assert_button "Update Speaker"
     fill_in "First name", with: ""
-    bypass_native_form_validation
     click_on "Update Speaker"
 
     assert_text "can't be blank"

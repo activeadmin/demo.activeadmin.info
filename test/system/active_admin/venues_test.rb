@@ -73,7 +73,7 @@ class VenuesTest < ApplicationSystemTestCase
 
     assert_no_difference -> { Venue.count } do
       visit new_admin_venue_path
-      bypass_native_form_validation
+      assert_button "Create Venue"
       click_on "Create Venue"
 
       assert_text "can't be blank"

@@ -27,7 +27,7 @@ class AdminUsersTest < ApplicationSystemTestCase
     sign_in default_admin_user
 
     visit new_admin_admin_user_path
-
+    assert_button "Create Admin user"
     fill_in "Email", with: "testing@example.com"
     fill_in "Password", with: "password", id: "admin_user_password"
     fill_in "Password confirmation", with: "password"
@@ -51,7 +51,7 @@ class AdminUsersTest < ApplicationSystemTestCase
 
     assert_no_difference -> { AdminUser.count } do
       visit new_admin_admin_user_path
-      bypass_native_form_validation
+      assert_button "Create Admin user"
       click_on "Create Admin user"
 
       assert_text "can't be blank"
@@ -65,6 +65,7 @@ class AdminUsersTest < ApplicationSystemTestCase
     sign_in default_admin_user
 
     visit edit_admin_admin_user_path(admin_user)
+    assert_button "Update Admin user"
     fill_in "Email", with: AdminUser::DEFAULT_EMAIL
     click_on "Update Admin user"
 

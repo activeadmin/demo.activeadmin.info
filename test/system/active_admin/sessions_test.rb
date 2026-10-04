@@ -61,7 +61,7 @@ class SessionsTest < ApplicationSystemTestCase
 
     assert_no_difference -> { Session.count } do
       visit new_admin_session_path
-      bypass_native_form_validation
+      assert_button "Create Session"
       click_on "Create Session"
 
       assert_text "can't be blank"
@@ -75,8 +75,8 @@ class SessionsTest < ApplicationSystemTestCase
     sign_in default_admin_user
 
     visit edit_admin_session_path(session)
+    assert_button "Update Session"
     fill_in "Title", with: ""
-    bypass_native_form_validation
     click_on "Update Session"
 
     assert_text "can't be blank"

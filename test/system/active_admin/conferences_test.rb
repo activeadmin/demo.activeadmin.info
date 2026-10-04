@@ -50,7 +50,7 @@ class ConferencesTest < ApplicationSystemTestCase
 
     assert_no_difference -> { Conference.count } do
       visit new_admin_conference_path
-      bypass_native_form_validation
+      assert_button "Create Conference"
       click_on "Create Conference"
 
       assert_text "can't be blank"
@@ -64,8 +64,8 @@ class ConferencesTest < ApplicationSystemTestCase
     sign_in default_admin_user
 
     visit edit_admin_conference_path(conference)
+    assert_button "Update Conference"
     fill_in "Name", with: ""
-    bypass_native_form_validation
     click_on "Update Conference"
 
     assert_text "can't be blank"
