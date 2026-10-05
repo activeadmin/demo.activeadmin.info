@@ -25,6 +25,20 @@ ActiveAdmin.register Conference do
     redirect_to collection_path, notice: I18n.t("admin.conference.batch_actions.toggle_published_notice")
   end
 
+  member_action :toggle_published, method: :patch do
+    resource.update_columns(published: !resource.published?)
+    redirect_to resource_path, notice: I18n.t("admin.conference.action_items.toggle_published_notice")
+  end
+
+  action_item :toggle_published, only: :show do
+    label_key = resource.published? ? "unpublish" : "publish"
+    link_to(
+      I18n.t("admin.conference.action_items.#{label_key}"),
+      toggle_published_admin_conference_path(resource),
+      method: :patch
+    )
+  end
+
   index do
     selectable_column
     id_column

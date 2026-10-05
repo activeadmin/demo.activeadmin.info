@@ -43,6 +43,10 @@ en:
       batch_actions:
         toggle_published_confirmation: "Are you sure you want to toggle the published status for the selected conferences?"
         toggle_published_notice: "The conferences' published status has been toggled."
+      action_items:
+        publish: "Publish Conference"
+        toggle_published_notice: "The conference's published status has been toggled."
+        unpublish: "Unpublish Conference"
     session:
       batch_actions:
         update_session_details_invalid: "Invalid session details. No sessions were updated."

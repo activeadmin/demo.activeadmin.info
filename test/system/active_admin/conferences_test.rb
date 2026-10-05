@@ -25,6 +25,20 @@ class ConferencesTest < ApplicationSystemTestCase
     assert_selector "a", text: "Delete Conference"
   end
 
+  test "action item toggles published status" do
+    conference = conferences(:one)
+    assert_not_predicate conference, :published?
+    sign_in default_admin_user
+
+    visit admin_conference_path(conference)
+    click_on I18n.t("admin.conference.action_items.publish")
+
+    assert_current_path admin_conference_path(conference)
+    assert_text I18n.t("admin.conference.action_items.toggle_published_notice")
+    assert_link I18n.t("admin.conference.action_items.unpublish"), href: toggle_published_admin_conference_path(conference)
+    assert_predicate conference.reload, :published?
+  end
+
   test "visiting the new form" do
     sign_in default_admin_user
 
