@@ -20,8 +20,8 @@ class SessionSpeakersTest < ApplicationSystemTestCase
 
     assert_text session_speaker.session.title
     assert_text session_speaker.speaker.first_name
-    assert_selector "a", text: "Edit Session Speaker"
-    assert_selector "a", text: "Delete Session Speaker"
+    assert_link "Edit Session Speaker", href: edit_admin_session_speaker_path(session_speaker)
+    assert_link "Delete Session Speaker", href: admin_session_speaker_path(session_speaker)
   end
 
   test "visiting the new form" do

@@ -19,8 +19,8 @@ class AdminUsersTest < ApplicationSystemTestCase
     visit admin_admin_user_path(default_admin_user)
 
     assert_text "admin@example.com"
-    assert_selector "a", text: "Edit Admin User"
-    assert_selector "a", text: "Delete Admin User"
+    assert_link "Edit Admin User", href: edit_admin_admin_user_path(default_admin_user)
+    assert_link "Delete Admin User", href: admin_admin_user_path(default_admin_user)
   end
 
   test "visiting the new and submitting" do

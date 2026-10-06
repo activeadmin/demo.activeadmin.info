@@ -19,8 +19,8 @@ class RoomsTest < ApplicationSystemTestCase
     visit admin_room_path(room)
 
     assert_text room.name
-    assert_selector "a", text: "Edit Room"
-    assert_selector "a", text: "Delete Room"
+    assert_link "Edit Room", href: edit_admin_room_path(room)
+    assert_link "Delete Room", href: admin_room_path(room)
   end
 
   test "visiting the new form" do

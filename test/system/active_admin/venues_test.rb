@@ -22,8 +22,8 @@ class VenuesTest < ApplicationSystemTestCase
     assert_text venue.name
     assert_text venue.description
     assert_text venue.time_zone
-    assert_selector "a", text: "Edit Venue"
-    assert_selector "a", text: "Delete Venue"
+    assert_link "Edit Venue", href: edit_admin_venue_path(venue)
+    assert_link "Delete Venue", href: admin_venue_path(venue)
   end
 
   test "visiting the new and submitting" do

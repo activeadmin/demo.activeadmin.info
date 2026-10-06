@@ -20,8 +20,8 @@ class SessionsTest < ApplicationSystemTestCase
 
     assert_text session.title
     assert_text session.description
-    assert_selector "a", text: "Edit Session"
-    assert_selector "a", text: "Delete Session"
+    assert_link "Edit Session", href: edit_admin_session_path(session)
+    assert_link "Delete Session", href: admin_session_path(session)
   end
 
   test "action item cancels a session" do

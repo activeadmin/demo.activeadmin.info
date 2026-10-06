@@ -20,8 +20,8 @@ class SpeakersTest < ApplicationSystemTestCase
 
     assert_text speaker.first_name
     assert_text speaker.last_name
-    assert_selector "a", text: "Edit Speaker"
-    assert_selector "a", text: "Delete Speaker"
+    assert_link "Edit Speaker", href: edit_admin_speaker_path(speaker)
+    assert_link "Delete Speaker", href: admin_speaker_path(speaker)
   end
 
   test "visiting the new form" do

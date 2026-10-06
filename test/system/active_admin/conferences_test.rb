@@ -21,8 +21,8 @@ class ConferencesTest < ApplicationSystemTestCase
 
     assert_text conference.name
     assert_text conference.description
-    assert_selector "a", text: "Edit Conference"
-    assert_selector "a", text: "Delete Conference"
+    assert_link "Edit Conference", href: edit_admin_conference_path(conference)
+    assert_link "Delete Conference", href: admin_conference_path(conference)
   end
 
   test "action item toggles published status" do
