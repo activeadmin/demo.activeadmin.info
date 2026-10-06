@@ -1,0 +1,8 @@
+<article class="schedule-card<%= " has-conflicts" if warnings.any? %>" data-session-id="<%= session.id %>">
+  <%= link_to session.title, admin_session_path(session), class: "schedule-title" %>
+  <p class="schedule-meta"><%= session.starts_at.in_time_zone(time_zone).strftime("%H:%M") %>–<%= session.ends_at.in_time_zone(time_zone).strftime("%H:%M") %> · <%= session.status.humanize %></p>
+  <p class="schedule-meta"><%= session.session_speakers.map { it.speaker.full_name }.join(", ") %></p>
+  <% warnings.each do |warning| %>
+    <p class="schedule-conflict"><%= warning.message %></p>
+  <% end %>
+</article>

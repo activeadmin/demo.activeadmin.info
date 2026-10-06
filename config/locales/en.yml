@@ -34,10 +34,21 @@ en:
   activerecord:
     errors:
       models:
+        session:
+          attributes:
+            ends_at:
+              after_start: "must be after the start time"
+            room:
+              wrong_venue: "must belong to the conference's venue"
+            session_speakers:
+              duplicate_speaker: "cannot assign the same speaker twice"
         session_speaker:
           attributes:
             session_id:
               taken: "has already been assigned to speaker"
+  schedule_conflicts:
+    room: "Room conflict with %{session_title}"
+    speaker: "Speaker conflict: %{speaker_name} is also in %{session_title}"
   admin:
     conference:
       batch_actions:

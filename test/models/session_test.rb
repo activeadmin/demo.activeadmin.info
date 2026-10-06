@@ -65,4 +65,23 @@ class SessionTest < ActiveSupport::TestCase
       end
     end
   end
+
+  test "requires an end after the start and a room in the conference venue" do
+    session = sessions(:one)
+    session.ends_at = session.starts_at
+    session.room = rooms(:two)
+
+    assert_predicate session, :invalid?
+    assert_includes session.errors[:ends_at], I18n.t!("activerecord.errors.models.session.attributes.ends_at.after_start")
+    assert_includes session.errors[:room], I18n.t!("activerecord.errors.models.session.attributes.room.wrong_venue")
+  end
+
+  test "nested speaker assignments cannot duplicate a speaker" do
+    session = sessions(:one)
+    session.session_speakers.build(speaker: speakers(:one))
+
+    assert_predicate session, :invalid?
+    assert_includes session.errors[:session_speakers], I18n.t!("activerecord.errors.models.session.attributes.session_speakers.duplicate_speaker")
+  end
+
 end

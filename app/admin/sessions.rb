@@ -1,7 +1,8 @@
 ActiveAdmin.register Session do
   config.per_page = [10, 20, 30]
 
-  permit_params :conference_id, :room_id, :title, :description, :session_type, :audience_level, :starts_at, :ends_at, :status, session_speakers_attributes: %i[id speaker_id _destroy]
+  permit_params :conference_id, :room_id, :title, :description, :session_type, :audience_level, :starts_at, :ends_at, :status,
+    session_speakers_attributes: %i[id speaker_id _destroy]
 
   actions :all
 
@@ -119,6 +120,12 @@ ActiveAdmin.register Session do
       f.input :starts_at, as: :datetime_picker, selected: f.object.starts_at || Time.current
       f.input :ends_at, as: :datetime_picker, selected: f.object.ends_at || Time.current
       f.input :status
+    end
+    f.inputs "Speakers" do
+      f.has_many :session_speakers, heading: false, allow_destroy: true,
+        new_record: "Add speaker", class: "program-speakers" do |assignment|
+        assignment.input :speaker, collection: Speaker.order(:last_name, :first_name).map { [it.full_name, it.id] }
+      end
     end
     f.actions
   end

@@ -92,11 +92,14 @@ class ConferencesTest < ApplicationSystemTestCase
 
     visit edit_admin_conference_path(conference)
     fill_in "Name", with: "Sample Conference Name"
+    fill_in "conference_description", with: "A plain conference description"
     click_on "Update Conference"
 
     assert_current_path admin_conference_path(conference)
     assert_text "Conference was successfully updated."
     assert_text "Sample Conference Name"
+    assert_text "A plain conference description"
+    assert_equal "A plain conference description", conference.reload.description
   end
 
   test "deleting a conference is successful" do
@@ -126,5 +129,27 @@ class ConferencesTest < ApplicationSystemTestCase
     assert_text I18n.t("admin.conference.batch_actions.toggle_published_notice")
     assert_not published.reload.published?
     assert unpublished.reload.published?
+  end
+
+  test "program editor creates a session and its speaker together" do
+    conference = conferences(:one)
+    sign_in default_admin_user
+    visit edit_admin_conference_path(conference)
+    assert_no_selector '.has-many-container input[name$="[position]"], [draggable]', visible: :all
+    click_on "Add session"
+    within all("fieldset.program-session").last do
+      fill_in "Title", with: "Program editor talk"
+      fill_in "Description", with: "Created with a nested speaker"
+      find("select[id$='_room_id'] option[value='#{rooms(:one).id}']").select_option
+      find("input[id$='_starts_at']").set(Time.utc(2026, 9, 25, 9))
+      find("input[id$='_ends_at']").set(Time.utc(2026, 9, 25, 10))
+      click_on "Add speaker"
+      select "John Smith", from: "Speaker"
+    end
+    click_on "Update Conference"
+    assert_current_path admin_conference_path(conference)
+    assert_text "Program editor talk"
+    session = conference.sessions.find_by!(title: "Program editor talk")
+    assert_equal [speakers(:two)], session.speakers
   end
 end

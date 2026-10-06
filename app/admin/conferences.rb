@@ -1,7 +1,27 @@
 ActiveAdmin.register Conference do
-  permit_params :name, :slug, :description, :status, :start_date, :end_date, :daily_start_time, :daily_end_time, :ticket_price, :website_url, :capacity, :published, :venue_id
+  permit_params :name, :slug, :description, :status, :start_date, :end_date, :daily_start_time, :daily_end_time,
+    :ticket_price, :website_url, :capacity, :published, :venue_id,
+    sessions_attributes: [
+      :id, :title, :description, :room_id, :session_type, :audience_level, :starts_at, :ends_at, :status, :_destroy,
+      { session_speakers_attributes: %i[id speaker_id _destroy] }
+    ]
 
   actions :all
+
+  member_action :schedule, method: :get do
+    @conference = resource
+    authorize! :read, @conference
+    @page_title = "Conference Schedule"
+    @time_zone = Time.find_zone!(@conference.venue.time_zone)
+    @rooms = @conference.venue.rooms.order(:name).to_a
+    @sessions = @conference.sessions.includes(:room, session_speakers: :speaker).order(starts_at: :asc, id: :asc).to_a
+    @conflicts = ScheduleConflicts.new(@sessions)
+    render "admin/conferences/schedule"
+  end
+
+  action_item :schedule, only: :show do
+    link_to "View Schedule", schedule_admin_conference_path(resource), class: "action-item-button"
+  end
 
   filter :id
   filter :name
@@ -86,6 +106,20 @@ ActiveAdmin.register Conference do
         format_time(resource.updated_at)
       end
     end
+    panel "Program" do
+      table_for resource.sessions.includes(:room, session_speakers: :speaker).order(starts_at: :asc, id: :asc) do
+        column :title do |session|
+          link_to session.title, admin_session_path(session)
+        end
+        column :room
+        column :speakers do |session|
+          session.session_speakers.map { it.speaker.full_name }.join(", ")
+        end
+        column :starts_at do |session|
+          format_time(session.starts_at, time_zone: resource.venue.time_zone)
+        end
+      end
+    end
   end
 
   form do |f|
@@ -104,6 +138,25 @@ ActiveAdmin.register Conference do
       f.input :capacity
       f.input :published
       f.input :venue
+    end
+    f.inputs "Program" do
+      rooms = Room.includes(:venue).order(:name).map { ["#{it.venue.name} — #{it.name}", it.id] }
+      speakers = Speaker.order(:last_name, :first_name).map { [it.full_name, it.id] }
+      f.has_many :sessions, heading: false, allow_destroy: true,
+        new_record: "Add session", class: "program-session" do |session|
+        session.input :title
+        session.input :description
+        session.input :room, collection: rooms
+        session.input :session_type
+        session.input :audience_level
+        session.input :starts_at, as: :datetime_picker
+        session.input :ends_at, as: :datetime_picker
+        session.input :status
+        session.has_many :session_speakers, heading: "Speakers", allow_destroy: true,
+          new_record: "Add speaker", class: "program-speakers" do |assignment|
+          assignment.input :speaker, collection: speakers
+        end
+      end
     end
     f.actions
   end

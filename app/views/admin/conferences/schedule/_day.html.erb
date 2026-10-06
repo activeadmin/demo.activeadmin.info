@@ -1,0 +1,25 @@
+<section class="schedule-day">
+  <h3><%= l(date, format: :long) %></h3>
+  <div class="schedule-scroll">
+    <div class="schedule-grid" style="grid-template-columns: 5rem repeat(<%= rooms.size %>, minmax(15rem, 1fr))">
+      <div class="schedule-heading">Time</div>
+      <% rooms.each do |room| %>
+        <div class="schedule-heading"><%= room.name %></div>
+      <% end %>
+
+      <% first = sessions.map(&:starts_at).min.in_time_zone(time_zone).beginning_of_hour %>
+      <% last = sessions.map(&:ends_at).max %>
+      <% (first.to_i...last.to_i).step(30.minutes) do |timestamp| %>
+        <% slot = Time.at(timestamp).in_time_zone(time_zone) %>
+        <div class="schedule-time"><%= slot.strftime("%H:%M") %></div>
+        <% rooms.each do |room| %>
+          <div class="schedule-cell" aria-label="<%= room.name %>, <%= slot.strftime("%H:%M") %>">
+            <% sessions.select { it.room_id == room.id && it.starts_at >= slot && it.starts_at < slot + 30.minutes }.each do |session| %>
+              <%= render "admin/conferences/schedule/session", session: session, time_zone: time_zone, warnings: conflicts.for(session) %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</section>
