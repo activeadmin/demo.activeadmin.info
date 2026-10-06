@@ -35,7 +35,8 @@ ActiveAdmin.register Conference do
     link_to(
       I18n.t("admin.conference.action_items.#{label_key}"),
       toggle_published_admin_conference_path(resource),
-      method: :patch
+      method: :patch,
+      class: "action-item-button"
     )
   end
 
