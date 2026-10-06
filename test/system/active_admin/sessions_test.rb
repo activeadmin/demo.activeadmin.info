@@ -24,6 +24,19 @@ class SessionsTest < ApplicationSystemTestCase
     assert_selector "a", text: "Delete Session"
   end
 
+  test "action item cancels a session" do
+    session = sessions(:one)
+    assert_not_predicate session, :cancelled?
+    sign_in default_admin_user
+
+    visit admin_session_path(session)
+    click_on I18n.t("admin.session.action_items.cancel")
+
+    assert_text I18n.t("admin.session.action_items.cancelled_notice")
+    assert_text(/Status Cancelled/i)
+    assert_predicate session.reload, :cancelled?
+  end
+
   test "visiting the new form" do
     sign_in default_admin_user
 

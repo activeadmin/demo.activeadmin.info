@@ -44,6 +44,20 @@ ActiveAdmin.register Session do
     end
   end
 
+  member_action :cancel, method: :patch do
+    resource.update_columns(status: :cancelled)
+    redirect_to resource_path, notice: I18n.t("admin.session.action_items.cancelled_notice")
+  end
+
+  action_item :cancel, only: :show, if: -> { !resource.cancelled? } do
+    link_to(
+      I18n.t("admin.session.action_items.cancel"),
+      cancel_admin_session_path(resource),
+      method: :patch,
+      class: "action-item-button"
+    )
+  end
+
   index do
     selectable_column
     id_column
