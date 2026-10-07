@@ -42,6 +42,7 @@ class ConferenceTest < ActiveSupport::TestCase
 
   test "publishing rejects an incomplete program while saving a draft remains possible" do
     conference = conferences(:one)
+    sessions(:one).update!(ends_at: sessions(:one).starts_at)
     conference.published = true
 
     assert_predicate conference, :invalid?
@@ -62,7 +63,6 @@ class ConferenceTest < ActiveSupport::TestCase
 
   test "publishing validates submitted conference dates against the existing sessions" do
     conference = conferences(:one)
-    sessions(:one).update!(ends_at: sessions(:one).starts_at + 1.hour)
 
     assert conference.update(published: true)
     assert_predicate conference, :published?
@@ -75,6 +75,7 @@ class ConferenceTest < ActiveSupport::TestCase
 
   test "editing an existing published conference does not run the publication gate again" do
     conference = conferences(:one)
+    sessions(:one).update!(ends_at: sessions(:one).starts_at)
     conference.update_columns(published: true)
 
     assert conference.update(name: "Updated published conference")

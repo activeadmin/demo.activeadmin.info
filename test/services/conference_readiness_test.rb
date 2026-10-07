@@ -4,7 +4,6 @@ class ConferenceReadinessTest < ActiveSupport::TestCase
   setup do
     @conference = conferences(:one)
     @session = sessions(:one)
-    @session.update!(ends_at: @session.starts_at + 1.hour)
   end
 
   test "a program with speakers, positive session durations, and rooms at the venue is ready" do

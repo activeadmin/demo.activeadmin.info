@@ -4,7 +4,6 @@ class ConferencePublishingTest < ActionDispatch::IntegrationTest
   setup do
     @conference = conferences(:one)
     @session = sessions(:one)
-    @session.update!(ends_at: @session.starts_at + 1.hour)
     sign_in default_admin_user
   end
 

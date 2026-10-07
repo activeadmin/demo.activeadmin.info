@@ -51,7 +51,6 @@ class ConferencesTest < ApplicationSystemTestCase
 
   test "action item toggles published status" do
     conference = conferences(:one)
-    make_program_ready(conference)
     assert_not_predicate conference, :published?
     sign_in default_admin_user
 
@@ -138,7 +137,6 @@ class ConferencesTest < ApplicationSystemTestCase
   test "batch action toggles published status" do
     published = conferences(:one).tap { it.update_columns(published: true) }
     unpublished = conferences(:two).tap { it.update_columns(published: false) }
-    make_program_ready(unpublished)
     sign_in default_admin_user
 
     visit admin_conferences_path
@@ -156,6 +154,7 @@ class ConferencesTest < ApplicationSystemTestCase
 
   test "publishing an incomplete program opens the readiness report" do
     conference = conferences(:one)
+    sessions(:one).update!(ends_at: sessions(:one).starts_at)
     sign_in default_admin_user
 
     visit admin_conference_path(conference)
@@ -170,7 +169,6 @@ class ConferencesTest < ApplicationSystemTestCase
   test "fixing missing speakers through a readiness edit link allows publishing" do
     conference = conferences(:one)
     session = sessions(:one)
-    session.update!(ends_at: session.starts_at + 1.hour)
     session.session_speakers.destroy_all
     sign_in default_admin_user
 
@@ -187,14 +185,5 @@ class ConferencesTest < ApplicationSystemTestCase
 
     assert_current_path admin_conference_path(conference)
     assert_predicate conference.reload, :published?
-  end
-
-  private
-
-  def make_program_ready(conference)
-    conference.sessions.each do |session|
-      session.update!(ends_at: session.starts_at + 1.hour)
-      session.session_speakers.create!(speaker: speakers(:one)) if session.session_speakers.empty?
-    end
   end
 end

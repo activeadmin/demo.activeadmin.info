@@ -7,8 +7,8 @@ one:
   status: 1
   start_date: 2026-09-24
   end_date: 2026-09-24
-  daily_start_time: 2026-09-24 19:56:51
-  daily_end_time: 2026-09-24 19:56:51
+  daily_start_time: 2000-01-01 09:00:00
+  daily_end_time: 2000-01-01 17:00:00
   ticket_price: 9.99
   website_url: MyString
   capacity: 1
@@ -22,8 +22,8 @@ two:
   status: 1
   start_date: 2026-09-24
   end_date: 2026-09-24
-  daily_start_time: 2026-09-24 19:56:51
-  daily_end_time: 2026-09-24 19:56:51
+  daily_start_time: 2000-01-01 09:00:00
+  daily_end_time: 2000-01-01 17:00:00
   ticket_price: 9.99
   website_url: MyString
   capacity: 1

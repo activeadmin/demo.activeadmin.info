@@ -7,8 +7,8 @@ one:
   description: MyText
   session_type: 1
   audience_level: 1
-  starts_at: 2026-09-24 19:57:53
-  ends_at: 2026-09-24 19:57:53
+  starts_at: 2026-09-24 13:00:00
+  ends_at: 2026-09-24 14:00:00
   status: 1
 
 two:
@@ -18,8 +18,8 @@ two:
   description: MyText
   session_type: 1
   audience_level: 1
-  starts_at: 2026-09-24 19:57:53
-  ends_at: 2026-09-24 19:57:53
+  starts_at: 2026-09-24 13:00:00
+  ends_at: 2026-09-24 14:00:00
   status: 1
 
 three:
@@ -29,6 +29,6 @@ three:
   description: MyText
   session_type:
   audience_level:
-  starts_at: 2026-09-24 19:57:53
-  ends_at: 2026-09-24 19:57:53
+  starts_at: 2026-09-24 14:00:00
+  ends_at: 2026-09-24 15:00:00
   status: 0

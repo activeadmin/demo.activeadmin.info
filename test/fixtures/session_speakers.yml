@@ -7,3 +7,7 @@ one:
 two:
   session: two
   speaker: two
+
+three:
+  session: three
+  speaker: two
