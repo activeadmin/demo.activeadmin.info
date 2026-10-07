@@ -24,6 +24,7 @@ class ConferencesTest < ApplicationSystemTestCase
     assert_link "Edit Conference", href: edit_admin_conference_path(conference)
     assert_link "Delete Conference", href: admin_conference_path(conference)
     assert_link I18n.t("admin.conference.action_items.clone"), href: clone_as_draft_admin_conference_path(conference)
+    assert_link I18n.t("admin.conference.action_items.readiness"), href: readiness_admin_conference_path(conference)
   end
 
   test "cloning a conference as a draft" do
@@ -50,6 +51,7 @@ class ConferencesTest < ApplicationSystemTestCase
 
   test "action item toggles published status" do
     conference = conferences(:one)
+    make_program_ready(conference)
     assert_not_predicate conference, :published?
     sign_in default_admin_user
 
@@ -136,6 +138,7 @@ class ConferencesTest < ApplicationSystemTestCase
   test "batch action toggles published status" do
     published = conferences(:one).tap { it.update_columns(published: true) }
     unpublished = conferences(:two).tap { it.update_columns(published: false) }
+    make_program_ready(unpublished)
     sign_in default_admin_user
 
     visit admin_conferences_path
@@ -149,5 +152,49 @@ class ConferencesTest < ApplicationSystemTestCase
     assert_text I18n.t("admin.conference.batch_actions.toggle_published_notice")
     assert_not published.reload.published?
     assert unpublished.reload.published?
+  end
+
+  test "publishing an incomplete program opens the readiness report" do
+    conference = conferences(:one)
+    sign_in default_admin_user
+
+    visit admin_conference_path(conference)
+    click_on I18n.t("admin.conference.action_items.publish")
+
+    assert_current_path readiness_admin_conference_path(conference)
+    assert_text I18n.t("admin.conference.readiness.publish_blocked")
+    assert_link "Edit #{sessions(:one).title}", href: edit_admin_session_path(sessions(:one))
+    assert_not_predicate conference.reload, :published?
+  end
+
+  test "fixing missing speakers through a readiness edit link allows publishing" do
+    conference = conferences(:one)
+    session = sessions(:one)
+    session.update!(ends_at: session.starts_at + 1.hour)
+    session.session_speakers.destroy_all
+    sign_in default_admin_user
+
+    visit readiness_admin_conference_path(conference)
+    click_on "Edit #{session.title}"
+    click_on "Add New Session speaker"
+    select speakers(:one).full_name, from: "Speaker"
+    click_on "Update Session"
+
+    assert_text "Session was successfully updated."
+    visit readiness_admin_conference_path(conference)
+    assert_text I18n.t("admin.conference.readiness.ready")
+    click_on I18n.t("admin.conference.action_items.publish")
+
+    assert_current_path admin_conference_path(conference)
+    assert_predicate conference.reload, :published?
+  end
+
+  private
+
+  def make_program_ready(conference)
+    conference.sessions.each do |session|
+      session.update!(ends_at: session.starts_at + 1.hour)
+      session.session_speakers.create!(speaker: speakers(:one)) if session.session_speakers.empty?
+    end
   end
 end

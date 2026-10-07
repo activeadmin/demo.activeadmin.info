@@ -1,0 +1,41 @@
+<div class="space-y-6">
+  <section class="space-y-4 rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+    <h2 class="text-xl font-semibold"><%= t(@readiness.ready? ? "admin.conference.readiness.ready" : "admin.conference.readiness.blocked") %></h2>
+    <p><%= t("admin.conference.readiness.description") %></p>
+    <% if resource.venue %>
+      <p><%= t("admin.conference.readiness.program_summary", count: @readiness.sessions.size, time_zone: resource.venue.time_zone) %></p>
+    <% end %>
+    <ul class="list-disc space-y-1 ps-5">
+      <% [:speakers, :times, :dates, :rooms].each do |check| %>
+        <li><%= t("admin.conference.readiness.checks.#{check}") %></li>
+      <% end %>
+    </ul>
+  </section>
+
+  <% if @readiness.issues.any? %>
+    <section class="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+      <h2 class="mb-4 text-lg font-semibold"><%= t("admin.conference.readiness.fix_heading", count: @readiness.issues.size) %></h2>
+      <ul class="space-y-4">
+        <% @readiness.issues.each do |issue| %>
+          <li class="flex flex-wrap items-center justify-between gap-3 border-b border-gray-200 pb-4 last:border-b-0 dark:border-gray-700">
+            <span><%= issue.message %></span>
+            <% if issue.key == :empty_program %>
+              <%= link_to t("admin.conference.readiness.add_session"), new_admin_session_path(session: { conference_id: resource.id }), class: "text-blue-700 underline dark:text-blue-400" %>
+            <% elsif issue.record.is_a?(Session) && issue.record.persisted? %>
+              <%= link_to t("admin.conference.readiness.edit_session", title: issue.record.title), edit_admin_session_path(issue.record), class: "text-blue-700 underline dark:text-blue-400" %>
+            <% else %>
+              <%= link_to t("admin.conference.readiness.edit_conference"), edit_admin_conference_path(resource), class: "text-blue-700 underline dark:text-blue-400" %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </section>
+  <% end %>
+
+  <div class="flex flex-wrap items-center gap-4">
+    <% if @readiness.ready? && !resource.published? %>
+      <%= link_to t("admin.conference.action_items.publish"), toggle_published_admin_conference_path(resource), method: :patch, class: "action-item-button" %>
+    <% end %>
+    <%= link_to t("admin.conference.readiness.back"), admin_conference_path(resource), class: "action-item-button" %>
+  </div>
+</div>

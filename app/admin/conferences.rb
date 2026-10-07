@@ -38,14 +38,32 @@ ActiveAdmin.register Conference do
     link_to I18n.t("admin.conference.action_items.clone"), clone_as_draft_admin_conference_path(resource), class: "action-item-button"
   end
 
+  member_action :readiness, method: :get do
+    @readiness = ConferenceReadiness.new(resource)
+    @page_title = I18n.t("admin.conference.readiness.title", name: resource.name)
+  end
+
+  action_item :readiness, only: :show do
+    link_to I18n.t("admin.conference.action_items.readiness"), readiness_admin_conference_path(resource), class: "action-item-button"
+  end
+
   batch_action :toggle_published, confirm: proc { I18n.t("admin.conference.batch_actions.toggle_published_confirmation") } do |ids|
-    Conference.where(id: ids).update_all("published = NOT published")
+    Conference.transaction do
+      batch_action_collection.where(id: ids).find_each do |conference|
+        conference.update!(published: !conference.published?)
+      end
+    end
     redirect_to collection_path, notice: I18n.t("admin.conference.batch_actions.toggle_published_notice")
+  rescue ActiveRecord::RecordInvalid => error
+    redirect_to readiness_admin_conference_path(error.record), alert: I18n.t("admin.conference.batch_actions.toggle_published_blocked")
   end
 
   member_action :toggle_published, method: :patch do
-    resource.update_columns(published: !resource.published?)
-    redirect_to resource_path, notice: I18n.t("admin.conference.action_items.toggle_published_notice")
+    if resource.update(published: !resource.published?)
+      redirect_to resource_path, notice: I18n.t("admin.conference.action_items.toggle_published_notice")
+    else
+      redirect_to readiness_admin_conference_path(resource), alert: I18n.t("admin.conference.readiness.publish_blocked")
+    end
   end
 
   action_item :toggle_published, only: :show do

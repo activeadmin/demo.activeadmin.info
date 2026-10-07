@@ -120,6 +120,11 @@ ActiveAdmin.register Session do
       f.input :ends_at, as: :datetime_picker, selected: f.object.ends_at || Time.current
       f.input :status
     end
+    f.inputs I18n.t("admin.session.form.speakers") do
+      f.has_many :session_speakers, heading: false, allow_destroy: true do |assignment|
+        assignment.input :speaker, collection: Speaker.order(:last_name, :first_name).map { |speaker| [speaker.full_name, speaker.id] }
+      end
+    end
     f.actions
   end
 end

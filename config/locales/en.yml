@@ -47,6 +47,35 @@ en:
               before_start_date: "must be on or after the start date"
   admin:
     conference:
+      readiness:
+        title: "Publish readiness: %{name}"
+        ready: "Ready to publish"
+        blocked: "Changes needed before publishing"
+        description: "All checks must pass when publishing through the conference form, action button, or batch action. Cancelled sessions are excluded. Drafts can be saved while their program is incomplete."
+        program_summary:
+          one: "%{count} active session. Dates are checked in %{time_zone}."
+          other: "%{count} active sessions. Dates are checked in %{time_zone}."
+        checks:
+          speakers: "Every active session has at least one speaker."
+          times: "Session end times follow their start times."
+          dates: "Session start and end dates fall within the conference dates in the venue's time zone."
+          rooms: "Each session's room belongs to the conference venue."
+        fix_heading:
+          one: "%{count} issue to resolve"
+          other: "%{count} issues to resolve"
+        edit_session: "Edit %{title}"
+        add_session: "Add Session"
+        edit_conference: "Edit Conference"
+        back: "Back to Conference"
+        publish_blocked: "The conference cannot be published until the readiness issues are resolved."
+        issues:
+          empty_program: "Add at least one active session to the conference."
+          invalid_dates: "Set conference dates with the end date on or after the start date."
+          missing_venue: "Choose a venue for the conference."
+          missing_speakers: "%{title} has no speakers assigned."
+          invalid_times: "%{title} must have an end time after its start time."
+          outside_dates: "%{title} starts or ends outside the conference dates."
+          wrong_venue: "%{title} needs a room at the conference venue."
       clone:
         title: "Clone %{name} as a draft"
         default_name: "%{name} (copy)"
@@ -62,12 +91,16 @@ en:
       batch_actions:
         toggle_published_confirmation: "Are you sure you want to toggle the published status for the selected conferences?"
         toggle_published_notice: "The conferences' published status has been toggled."
+        toggle_published_blocked: "No conferences were changed. Resolve the readiness issues before retrying the batch action."
       action_items:
         clone: "Clone as Draft"
+        readiness: "Publish Readiness"
         publish: "Publish Conference"
         toggle_published_notice: "The conference's published status has been toggled."
         unpublish: "Unpublish Conference"
     session:
+      form:
+        speakers: "Speakers"
       action_items:
         cancel: "Cancel Session"
         cancelled_notice: "The session has been cancelled."

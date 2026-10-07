@@ -11,4 +11,13 @@ class Conference < ApplicationRecord
   validates :name, :description, :start_date, :end_date, :daily_start_time, :daily_end_time, :website_url, presence: true
   validates :capacity, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validates :ticket_price, presence: true, numericality: { greater_than_or_equal_to: 0 }
+  validate :ready_to_publish, if: -> { published? && will_save_change_to_published? }
+
+  private
+
+  def ready_to_publish
+    ConferenceReadiness.new(self).issues.each do |issue|
+      errors.add(:base, issue.message)
+    end
+  end
 end

@@ -39,4 +39,45 @@ class ConferenceTest < ActiveSupport::TestCase
     refute conference.speakers.any?
     refute conference.session_speakers.any?
   end
+
+  test "publishing rejects an incomplete program while saving a draft remains possible" do
+    conference = conferences(:one)
+    conference.published = true
+
+    assert_predicate conference, :invalid?
+    assert_includes conference.errors[:base], I18n.t("admin.conference.readiness.issues.invalid_times", title: sessions(:one).title)
+
+    conference.published = false
+    assert_predicate conference, :valid?
+  end
+
+  test "creating an already published conference requires a ready program" do
+    conference = conferences(:one).dup
+    conference.slug = "published-conference"
+    conference.published = true
+
+    assert_predicate conference, :invalid?
+    assert_includes conference.errors[:base], I18n.t("admin.conference.readiness.issues.empty_program")
+  end
+
+  test "publishing validates submitted conference dates against the existing sessions" do
+    conference = conferences(:one)
+    sessions(:one).update!(ends_at: sessions(:one).starts_at + 1.hour)
+
+    assert conference.update(published: true)
+    assert_predicate conference, :published?
+
+    conference.update!(published: false)
+    conference.assign_attributes(published: true, start_date: Date.new(2027, 9, 24), end_date: Date.new(2027, 9, 24))
+    assert_predicate conference, :invalid?
+    assert_includes conference.errors[:base], I18n.t("admin.conference.readiness.issues.outside_dates", title: sessions(:one).title)
+  end
+
+  test "editing an existing published conference does not run the publication gate again" do
+    conference = conferences(:one)
+    conference.update_columns(published: true)
+
+    assert conference.update(name: "Updated published conference")
+    assert conference.update(published: false)
+  end
 end

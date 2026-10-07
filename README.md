@@ -9,6 +9,13 @@ form. It copies the conference and sessions in a transaction, optionally retains
 speaker assignments, and shifts session dates while preserving venue-local times.
 The source records, venue, rooms, and speakers remain available for reuse.
 
+The **Publish Readiness** report uses an ERB member-action view and the same
+service as the publication validation. It checks active sessions for speakers,
+valid times, dates within the conference's venue-local date range, and rooms at
+the conference venue. Cancelled sessions are excluded. Incomplete drafts remain
+editable; publishing is checked through forms, individual actions, and batch
+actions. A failed batch rolls back every selected conference's publication change.
+
 ## Development Setup
 
 - Clone this repository
