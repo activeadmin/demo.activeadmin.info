@@ -23,6 +23,29 @@ class ConferencesTest < ApplicationSystemTestCase
     assert_text conference.description
     assert_link "Edit Conference", href: edit_admin_conference_path(conference)
     assert_link "Delete Conference", href: admin_conference_path(conference)
+    assert_link I18n.t("admin.conference.action_items.clone"), href: clone_as_draft_admin_conference_path(conference)
+  end
+
+  test "cloning a conference as a draft" do
+    conference = conferences(:one)
+    sign_in default_admin_user
+
+    visit admin_conference_path(conference)
+    click_on I18n.t("admin.conference.action_items.clone")
+    fill_in "Name", with: "Next conference"
+    fill_in "Slug", with: "next-conference"
+    fill_in "New start date", with: Date.new(2027, 9, 24)
+    fill_in "New end date", with: Date.new(2027, 9, 24)
+    uncheck I18n.t("admin.conference.clone.include_speakers")
+    click_on I18n.t("admin.conference.clone.submit")
+
+    assert_text I18n.t("admin.conference.clone.notice")
+    copy = Conference.find_by!(slug: "next-conference")
+    assert_current_path edit_admin_conference_path(copy)
+    assert_predicate copy, :draft?
+    assert_not_predicate copy, :published?
+    assert_equal conference.sessions.count, copy.sessions.count
+    assert_empty copy.session_speakers
   end
 
   test "action item toggles published status" do

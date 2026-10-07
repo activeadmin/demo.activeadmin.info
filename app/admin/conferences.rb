@@ -20,6 +20,24 @@ ActiveAdmin.register Conference do
   filter :created_at
   filter :updated_at
 
+  member_action :clone_as_draft, method: [:get, :post] do
+    attributes = request.post? ? params.require(:conference_cloner).permit(:name, :slug, :start_date, :end_date, :include_speakers).to_h.symbolize_keys : {}
+    @cloner = ConferenceCloner.new(resource, attributes)
+    @page_title = I18n.t("admin.conference.clone.title", name: resource.name)
+
+    if request.post?
+      if @cloner.save
+        redirect_to edit_admin_conference_path(@cloner.conference), notice: I18n.t("admin.conference.clone.notice")
+      else
+        render :clone_as_draft, status: :unprocessable_entity
+      end
+    end
+  end
+
+  action_item :clone, only: :show do
+    link_to I18n.t("admin.conference.action_items.clone"), clone_as_draft_admin_conference_path(resource), class: "action-item-button"
+  end
+
   batch_action :toggle_published, confirm: proc { I18n.t("admin.conference.batch_actions.toggle_published_confirmation") } do |ids|
     Conference.where(id: ids).update_all("published = NOT published")
     redirect_to collection_path, notice: I18n.t("admin.conference.batch_actions.toggle_published_notice")

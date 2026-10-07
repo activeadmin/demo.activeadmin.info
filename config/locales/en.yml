@@ -38,12 +38,32 @@ en:
           attributes:
             session_id:
               taken: "has already been assigned to speaker"
+  activemodel:
+    errors:
+      models:
+        conference_cloner:
+          attributes:
+            end_date:
+              before_start_date: "must be on or after the start date"
   admin:
     conference:
+      clone:
+        title: "Clone %{name} as a draft"
+        default_name: "%{name} (copy)"
+        description: "Copy the conference and all its sessions as unpublished drafts at the same venue. Session dates shift relative to the new start date, keeping the venue's local times. Rooms and existing speakers are reused. Review the program if you change the conference's duration."
+        name: "Name"
+        slug: "Slug"
+        start_date: "New start date"
+        end_date: "New end date"
+        include_speakers: "Copy speaker assignments"
+        submit: "Create draft copy"
+        notice: "The draft conference and its sessions have been copied."
+        invalid_copy: "The conference could not be copied: %{errors}"
       batch_actions:
         toggle_published_confirmation: "Are you sure you want to toggle the published status for the selected conferences?"
         toggle_published_notice: "The conferences' published status has been toggled."
       action_items:
+        clone: "Clone as Draft"
         publish: "Publish Conference"
         toggle_published_notice: "The conference's published status has been toggled."
         unpublish: "Unpublish Conference"

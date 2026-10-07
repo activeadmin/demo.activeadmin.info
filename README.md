@@ -4,6 +4,11 @@ This is a sample application to demo Active Admin.
 
 https://activeadmin-demo.onrender.com
 
+Conferences demonstrate a custom **Clone as Draft** member action with an ERB
+form. It copies the conference and sessions in a transaction, optionally retains
+speaker assignments, and shifts session dates while preserving venue-local times.
+The source records, venue, rooms, and speakers remain available for reuse.
+
 ## Development Setup
 
 - Clone this repository

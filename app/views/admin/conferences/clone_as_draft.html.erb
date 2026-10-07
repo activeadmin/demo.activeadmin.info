@@ -1,0 +1,34 @@
+<div class="max-w-2xl space-y-6 rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+  <p><%= t("admin.conference.clone.description") %></p>
+
+  <% if @cloner.errors.any? %>
+    <ul role="alert" class="list-disc space-y-1 ps-5 text-red-700 dark:text-red-400">
+      <% @cloner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= form_with model: @cloner, url: clone_as_draft_admin_conference_path(resource), method: :post, class: "space-y-4" do |form| %>
+    <% [:name, :slug].each do |attribute| %>
+      <div>
+        <%= form.label attribute, t("admin.conference.clone.#{attribute}"), class: "block mb-2 font-medium" %>
+        <%= form.text_field attribute, required: true, class: "w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 dark:border-gray-600 dark:bg-gray-700" %>
+      </div>
+    <% end %>
+    <% [:start_date, :end_date].each do |attribute| %>
+      <div>
+        <%= form.label attribute, t("admin.conference.clone.#{attribute}"), class: "block mb-2 font-medium" %>
+        <%= form.date_field attribute, required: true, class: "w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 dark:border-gray-600 dark:bg-gray-700" %>
+      </div>
+    <% end %>
+    <div>
+      <%= form.check_box :include_speakers %>
+      <%= form.label :include_speakers, t("admin.conference.clone.include_speakers") %>
+    </div>
+    <div class="flex items-center gap-4">
+      <%= form.submit t("admin.conference.clone.submit"), class: "action-item-button" %>
+      <%= link_to t("active_admin.cancel"), admin_conference_path(resource) %>
+    </div>
+  <% end %>
+</div>
