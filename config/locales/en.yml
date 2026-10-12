@@ -38,6 +38,8 @@ en:
           attributes:
             ends_at:
               after_start: "must be after the start time"
+            room:
+              wrong_venue: "must belong to the conference's venue"
             session_speakers:
               duplicate_speaker: "cannot assign the same speaker twice"
         session_speaker:
