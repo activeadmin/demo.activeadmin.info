@@ -36,6 +36,8 @@ en:
       models:
         session:
           attributes:
+            ends_at:
+              after_start: "must be after the start time"
             session_speakers:
               duplicate_speaker: "cannot assign the same speaker twice"
         session_speaker:

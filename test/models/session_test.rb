@@ -66,6 +66,14 @@ class SessionTest < ActiveSupport::TestCase
     end
   end
 
+  test "requires an end_at after the start_at" do
+    session = sessions(:one)
+    session.ends_at = session.starts_at
+
+    assert_predicate session, :invalid?
+    assert_includes session.errors[:ends_at], I18n.t("activerecord.errors.models.session.attributes.ends_at.after_start")
+  end
+
   test "nested speaker assignments cannot duplicate a speaker" do
     session = sessions(:one)
     session.session_speakers.build(speaker: speakers(:one))
