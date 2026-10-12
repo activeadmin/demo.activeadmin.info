@@ -34,6 +34,10 @@ en:
   activerecord:
     errors:
       models:
+        session:
+          attributes:
+            session_speakers:
+              duplicate_speaker: "cannot assign the same speaker twice"
         session_speaker:
           attributes:
             session_id:

@@ -65,4 +65,12 @@ class SessionTest < ActiveSupport::TestCase
       end
     end
   end
+
+  test "nested speaker assignments cannot duplicate a speaker" do
+    session = sessions(:one)
+    session.session_speakers.build(speaker: speakers(:one))
+
+    assert_predicate session, :invalid?
+    assert_includes session.errors[:session_speakers], I18n.t("activerecord.errors.models.session.attributes.session_speakers.duplicate_speaker")
+  end
 end

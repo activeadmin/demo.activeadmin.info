@@ -154,4 +154,20 @@ class SessionsTest < ApplicationSystemTestCase
     assert_predicate session, :plenary?
     assert_predicate session, :all_levels?
   end
+
+  test "session editor adds a speaker and removes an existing assignment" do
+    session = sessions(:one)
+    sign_in default_admin_user
+    visit edit_admin_session_path(session)
+    within "fieldset.program-speakers" do
+      check "Delete"
+    end
+    click_on "Add speaker"
+    within all("fieldset.program-speakers").last do
+      select "John Smith", from: "Speaker"
+    end
+    click_on "Update Session"
+    assert_current_path admin_session_path(session)
+    assert_equal [speakers(:two)], session.speakers.reload
+  end
 end

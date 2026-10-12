@@ -11,4 +11,12 @@ class Session < ApplicationRecord
   accepts_nested_attributes_for :session_speakers, allow_destroy: true
 
   validates :title, :description, :starts_at, :ends_at, presence: true
+  validate :distinct_speakers
+
+  private
+
+  def distinct_speakers
+    speaker_ids = session_speakers.reject(&:marked_for_destruction?).filter_map(&:speaker_id)
+    errors.add(:session_speakers, :duplicate_speaker) if speaker_ids.uniq.size != speaker_ids.size
+  end
 end
