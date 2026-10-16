@@ -1,0 +1,18 @@
+<div class="schedule-board">
+  <div class="schedule-intro">
+    <h2><%= conference.name %></h2>
+    <p>Times shown in <%= time_zone.name %>.</p>
+  </div>
+
+  <% if sessions.empty? %>
+    <p class="schedule-empty">No sessions yet. Add sessions in the conference program editor.</p>
+  <% else %>
+    <% attention_count = sessions.count { conflicts.for(it).any? } %>
+    <% if attention_count.positive? %>
+      <p class="schedule-warning"><%= pluralize(attention_count, "session") %> <%= attention_count == 1 ? "has" : "have" %> scheduling conflicts.</p>
+    <% end %>
+    <% sessions.group_by { it.starts_at.in_time_zone(time_zone).to_date }.sort.each do |date, day_sessions| %>
+      <%= render "admin/conferences/schedule/day", date: date, sessions: day_sessions, rooms: rooms, time_zone: time_zone, conflicts: conflicts %>
+    <% end %>
+  <% end %>
+</div>

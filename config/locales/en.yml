@@ -46,6 +46,9 @@ en:
           attributes:
             session_id:
               taken: "has already been assigned to speaker"
+  schedule_conflicts:
+    room: "Room conflict with %{session_title}"
+    speaker: "Speaker conflict: %{speaker_name} is also in %{session_title}"
   admin:
     conference:
       batch_actions:
