@@ -13,6 +13,7 @@ gem "cssbundling-rails", "1.4.2" # TODO: relax this dependency when rails/cssbun
 gem "importmap-rails"
 
 gem "activeadmin", "4.0.0.beta23" # github: "activeadmin/activeadmin", branch: "master"
+gem "ransack", ">= 4.0", "< 6.0" # TODO: remove version constraint when https://github.com/activeadmin/activeadmin/issues/9135 is resolved
 gem "devise"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

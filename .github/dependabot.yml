@@ -21,6 +21,10 @@ updates:
           - "*"
     cooldown:
       default-days: 5
+    ignore:
+      - dependency-name: "ransack"
+        versions: [">= 6.0.0"]
+        # TODO: remove when https://github.com/activeadmin/activeadmin/issues/9135 is resolved
   - package-ecosystem: npm
     directory: /
     schedule:
